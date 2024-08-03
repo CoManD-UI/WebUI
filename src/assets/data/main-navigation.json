@@ -1,0 +1,23 @@
+[
+  {
+    "text": "Section 1",
+    "path": "#anchor-section1",
+    "target": "",
+    "subentries": [],
+    "type": "href"
+  },
+  {
+    "text": "Section 2",
+    "path": "#anchor-section2",
+    "target": "",
+    "subentries": [],
+    "type": "href"
+  },
+  {
+    "text": "Section 3",
+    "path": "#anchor-section3",
+    "target": "",
+    "subentries": [],
+    "type": "router"
+  }
+]

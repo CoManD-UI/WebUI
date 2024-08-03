@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "title": "FAQ",
+    "description": "Description for FAQ",
+    "rating": "",
+    "robots": "index/follow",
+    "author": ""
+  },
+  "mainContent": {
+    "pageHeadlineText": "FAQ: Frequently Asked Questions",
+    "sections": [
+      {
+        "id": "section1",
+        "iconClass": "icon-home",
+        "allowAddComponent": true,
+        "showLinkInMainNavigation": true,
+        "navEntry": "Text Block",
+        "order": 3,
+        "components": [
+          {
+            "name": "MultipleBoxWrapper",
+            "props": {
+              "cmdHeadline": {
+                "headlineText": "Headline FAQ",
+                "headlineLevel": "2"
+              },
+              "segments": [
+                {
+                  "boxesPerRow": 4,
+                  "useRowViewAsDefault": true,
+                  "useGap": true,
+                  "cmdHeadline": {
+                    "headlineText": "Frequently Asked Questions",
+                    "headlineLevel": 4
+                  },
+                  "boxes": [
+                    {
+                      "boxType": "content",
+                      "cmdHeadline": {
+                        "headlineText": "Question 1",
+                        "headlineLevel": 5
+                      },
+                      "textBody": "This is the answer for the question!"
+                    },
+                    {
+                      "boxType": "content",
+                      "cmdHeadline": {
+                        "headlineText": "Question 2",
+                        "headlineLevel": 5
+                      },
+                      "textBody": "This is the answer for the question!"
+                    },
+                    {
+                      "boxType": "content",
+                      "cmdHeadline": {
+                        "headlineText": "Question 3",
+                        "headlineLevel": 5
+                      },
+                      "textBody": "This is the answer for the question!"
+                    },
+                    {
+                      "boxType": "content",
+                      "cmdHeadline": {
+                        "headlineText": "Question 4",
+                        "headlineLevel": 5
+                      },
+                      "textBody": "This is the answer for the question!"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

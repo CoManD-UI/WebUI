@@ -1,0 +1,117 @@
+.edit-mode {
+    .cmd-sidebar {
+        display: flex;
+
+        &.open {
+            width: 30rem;
+        }
+
+        h3 {
+            text-transform: none;
+        }
+
+        .box-header h4 {
+            text-transform: none;
+        }
+
+        .inner-sidebar-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .open-slot-wrapper {
+            display: flex;
+            flex-direction: column;
+
+            .box:not(:first-of-type) {
+                border-top: var(--default-border) !important;
+                border-top-color: var(--pure-white) !important;
+            }
+        }
+
+        .comand-versions {
+            padding: var(--default-padding);
+            margin: 0;
+        }
+    }
+
+    .section-wrapper {
+        flex-shrink: 0;
+    }
+
+    .section-wrapper.active .cmd-width-limitation-wrapper, .edit-component-wrapper.active {
+        --odd-lines-color: hsl(var(--hyperlink-color-hue), var(--hyperlink-color-saturation), 30%);
+        background-image: repeating-linear-gradient(-45deg, var(--odd-lines-color), var(--odd-lines-color) .7rem, var(--hyperlink-color) .7rem, var(--hyperlink-color) 1.4rem) !important;
+        transition: var(--default-transition);
+
+        h1, h2, h3, h4, h5, h6, figcaption, p, dl, dt, dt, li, a, a > span, .label-text span {
+            color: var(--pure-white);
+
+            :is(input, select, textarea).edit-mode {
+                color: var(--default-text-color);
+            }
+        }
+
+        .cmd-container {
+            border: var(--default-border);
+            border-color: var(--pure-white);
+        }
+
+        .inner-thumbnail-wrapper {
+            border-color: var(--pure-white);
+            background: none;
+
+            figcaption {
+                color: var(--pure-white);
+            }
+        }
+
+        fieldset {
+            background: none;
+            border-color: var(--pure-white);
+
+            span, span[class*="icon"], legend, .label-text :is(span, sup), a {
+                color: var(--pure-white);
+            }
+
+            :is(button, .button) :is(span) {
+                color: var(--button-text-color)
+            }
+
+            sup {
+                color: var(--asterisk-color) !important;
+            }
+
+            ::placeholder {
+                color: var(--placeholder-text-color);
+            }
+        }
+    }
+
+    footer .cmd-list-of-links {
+        padding: calc(var(--default-padding) * 2)
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        &.has-icon {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .button-delete.use-icon-as-background {
+        background: var(--pure-black) !important;
+
+        span[class*="icon"]::before {
+            color: var(--pure-white) !important;
+        }
+
+        &::before {
+            color: var(--pure-black);
+        }
+
+        &:is(:hover, :active, :focus-visible)::before {
+            color: hsl(0, 0%, 20%);
+        }
+    }
+}

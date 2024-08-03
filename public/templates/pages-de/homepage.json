@@ -1,0 +1,655 @@
+{
+  "metadata": {
+    "title": "CoManD-UI-Website",
+    "description": "Kurzbeschreibung für Startseite",
+    "rating": "",
+    "robots": "index/follow",
+    "author": ""
+  },
+  "topContent": {
+    "sections": [
+      {
+        "id": "slideshow",
+        "useInnerClass": true,
+        "innerClass": "no-padding",
+        "useFullDeviceWidth": true,
+        "iconClass": "icon-image",
+        "showLinkInMainNavigation": false,
+        "allowAddComponent": false,
+        "order": 1,
+        "components": [
+          {
+            "name": "CmdSlideshow",
+            "props": {
+              "slideshowItems": [
+                {
+                  "image": {
+                    "src": {
+                      "large": "/media/images/slideshow-images/large/slide1.jpg",
+                      "medium": "/media/images/slideshow-images/medium/slide1.jpg",
+                      "small": "/media/images/slideshow-images/small/slide1.jpg"
+                    },
+                    "alt": "Alternative Text 1",
+                    "tooltip": "Tooltip 1"
+                  },
+                  "figcaption": {
+                    "text": "figcaption DE 1",
+                    "position": "bottom",
+                    "textAlign": "center",
+                    "show": true
+                  },
+                  "link": {
+                    "href": "#-anchor-section",
+                    "target": null
+                  }
+                },
+                {
+                  "image": {
+                    "src": {
+                      "large": "/media/images/slideshow-images/large/slide2.jpg",
+                      "medium": "/media/images/slideshow-images/medium/slide2.jpg",
+                      "small": "/media/images/slideshow-images/small/slide2.jpg"
+                    },
+                    "alt": "Alternative Text 2",
+                    "tooltip": "Tooltip 2"
+                  },
+                  "figcaption": {
+                    "text": "figcaption DE 2",
+                    "position": "bottom",
+                    "textAlign": "center",
+                    "show": true
+                  },
+                  "link": {
+                    "href": "#-anchor-section",
+                    "target": null
+                  }
+                },
+                {
+                  "image": {
+                    "src": {
+                      "large": "/media/images/slideshow-images/large/slide3.jpg",
+                      "medium": "/media/images/slideshow-images/medium/slide3.jpg",
+                      "small": "/media/images/slideshow-images/small/slide3.jpg"
+                    },
+                    "alt": "Alternative Text 3",
+                    "tooltip": "Tooltip 3"
+                  },
+                  "figcaption": {
+                    "text": "figcaption DE 3",
+                    "position": "bottom",
+                    "textAlign": "center",
+                    "show": true
+                  },
+                  "link": {
+                    "href": "#-anchor-section",
+                    "target": null
+                  }
+                },
+                {
+                  "image": {
+                    "src": {
+                      "large": "/media/images/slideshow-images/large/slide4.jpg",
+                      "medium": "/media/images/slideshow-images/medium/slide4.jpg",
+                      "small": "/media/images/slideshow-images/small/slide4.jpg"
+                    },
+                    "alt": "Alternative Text 4",
+                    "tooltip": "Tooltip 4"
+                  },
+                  "figcaption": {
+                    "text": "figcaption DE 4",
+                    "position": "bottom",
+                    "textAlign": "center",
+                    "show": true
+                  },
+                  "link": {
+                    "href": "#-anchor-section",
+                    "target": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "mainContent": {
+    "useFullWidth": false,
+    "aside": {
+      "leftColumn": {
+        "show": true,
+        "components": [
+          {
+            "name": "CmdBox",
+            "props": {
+              "stretchVertically": false,
+              "cmdHeadline": {
+                "headlineLevel": 4,
+                "headlineText": "Box with text"
+              },
+              "textBody": "Ich bin eine Box!"
+            }
+          },
+          {
+            "name": "CmdBox",
+            "props": {
+              "stretchVertically": false,
+              "cmdHeadline": {
+                "headlineLevel": 4,
+                "headlineText": "Box mit Bild"
+              },
+              "image": {
+                "src": "/media/images/gallery-images/landscape-05.jpg",
+                "altText": "Alternative Text"
+              }
+            }
+          }
+        ]
+      },
+      "rightColumn": {
+        "show": true,
+        "components": [
+          {
+            "name": "CmdLoginForm",
+            "props": {}
+          },
+          {
+            "name": "CmdNewsletterSubscription",
+            "props": {}
+          },
+          {
+            "name": "CmdToggleDarkMode",
+            "props": {
+              "showLabel": true,
+              "useStyledLayout": true,
+              "labelTextDarkMode": "Dark-mode aktiviert",
+              "labelTextLightMode": "Light-mode aktiviert"
+            }
+          }
+        ]
+      }
+    },
+    "sections": [
+      {
+        "id": "slideshow",
+        "class": "no-padding",
+        "useFullDeviceWidth": true,
+        "iconClass": "icon-image",
+        "showLinkInMainNavigation": false,
+        "allowAddComponent": false,
+        "order": 1,
+        "components": [
+          {
+            "name": "CmdSlideshow",
+            "props": {
+              "slideshowItems": [
+                {
+                  "image": {
+                    "src": {
+                      "large": "/media/images/slideshow-images/large/slide1.jpg",
+                      "medium": "/media/images/slideshow-images/medium/slide1.jpg",
+                      "small": "/media/images/slideshow-images/small/slide1.jpg"
+                    },
+                    "alt": "Alternative Text 1",
+                    "tooltip": "Tooltip 1"
+                  },
+                  "figcaption": {
+                    "text": "figcaption DE 1",
+                    "position": "bottom",
+                    "textAlign": "center",
+                    "show": true
+                  },
+                  "link": {
+                    "href": "#-anchor-section",
+                    "target": null
+                  }
+                },
+                {
+                  "image": {
+                    "src": {
+                      "large": "/media/images/slideshow-images/large/slide2.jpg",
+                      "medium": "/media/images/slideshow-images/medium/slide2.jpg",
+                      "small": "/media/images/slideshow-images/small/slide2.jpg"
+                    },
+                    "alt": "Alternative Text 2",
+                    "tooltip": "Tooltip 2"
+                  },
+                  "figcaption": {
+                    "text": "figcaption DE 2",
+                    "position": "bottom",
+                    "textAlign": "center",
+                    "show": true
+                  },
+                  "link": {
+                    "href": "#-anchor-section",
+                    "target": null
+                  }
+                },
+                {
+                  "image": {
+                    "src": {
+                      "large": "/media/images/slideshow-images/large/slide3.jpg",
+                      "medium": "/media/images/slideshow-images/medium/slide3.jpg",
+                      "small": "/media/images/slideshow-images/small/slide3.jpg"
+                    },
+                    "alt": "Alternative Text 3",
+                    "tooltip": "Tooltip 3"
+                  },
+                  "figcaption": {
+                    "text": "figcaption DE 3",
+                    "position": "bottom",
+                    "textAlign": "center",
+                    "show": true
+                  },
+                  "link": {
+                    "href": "#-anchor-section",
+                    "target": null
+                  }
+                },
+                {
+                  "image": {
+                    "src": {
+                      "large": "/media/images/slideshow-images/large/slide4.jpg",
+                      "medium": "/media/images/slideshow-images/medium/slide4.jpg",
+                      "small": "/media/images/slideshow-images/small/slide4.jpg"
+                    },
+                    "alt": "Alternative Text 4",
+                    "tooltip": "Tooltip 4"
+                  },
+                  "figcaption": {
+                    "text": "figcaption DE 4",
+                    "position": "bottom",
+                    "textAlign": "center",
+                    "show": true
+                  },
+                  "link": {
+                    "href": "#-anchor-section",
+                    "target": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "main-headline",
+        "iconClass": "icon-file",
+        "showLinkInMainNavigation": false,
+        "allowAddComponent": true,
+        "order": 2,
+        "components": [
+          {
+            "name": "CmdHeadline",
+            "props": {
+              "headlineText": "Hauptüberschrift",
+              "headlineLevel": "1"
+            }
+          }
+        ]
+      },
+      {
+        "id": "section1",
+        "iconClass": "icon-home",
+        "allowAddComponent": true,
+        "showLinkInMainNavigation": true,
+        "order": 3,
+        "components": [
+          {
+            "name": "CmdTextImageBlock",
+            "props": {
+              "cmdHeadline": {
+                "headlineText": "Überschrift Text Block",
+                "headlineLevel": "2"
+              },
+              "htmlContent": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.</p><p> Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugia a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. <br />Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc.</p>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "section2",
+        "iconClass": "icon-info",
+        "showLinkInMainNavigation": true,
+        "alignImage": "right",
+        "allowAddComponent": true,
+        "order": 4,
+        "components": [
+          {
+            "name": "CmdTextImageBlock",
+            "props": {
+              "cmdHeadline": {
+                "headlineText": "Überschrift Text Image Block",
+                "headlineLevel": "2"
+              },
+              "cmdImage": {
+                "image": {
+                  "src": "/media/images/gallery-images/landscape-05.jpg",
+                  "alt": "Alternativer Text",
+                  "tooltip": "tooltip"
+                },
+                "figcaption": {
+                  "text": "Bildunterschrift",
+                  "position": "bottom",
+                  "textAlign": "center",
+                  "show": true
+                }
+              },
+              "htmlContent": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.</p><p> Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugia a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. <br />Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc.</p>"
+            }
+          },
+          {
+            "name": "CmdImage",
+            "props": {
+              "image": {
+                "src": "/media/images/gallery-images/landscape-05.jpg",
+                "alt": "Alternativer Text",
+                "tooltip": "tooltip"
+              },
+              "figcaption": {
+                "text": "Bildunterschrift",
+                "position": "bottom",
+                "textAlign": "center",
+                "show": true
+              },
+              "editModeConfig": {
+                "allowAddItem": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "section3",
+        "iconClass": "icon-user-profile",
+        "showLinkInMainNavigation": true,
+        "allowAddComponent": true,
+        "headlineText": "Überschrift für Section 3",
+        "order": 5,
+        "components": [
+          {
+            "name": "CmdImageGallery",
+            "props": {
+              "cmdHeadline": {
+                "headlineText": "Überschrift für Bildergalerie",
+                "headlineLevel": "3"
+              },
+              "images": [
+                {
+                  "image": {
+                    "src": "/media/images/demo-images/medium/landscape-01.jpg",
+                    "srcImageLarge": "/media/images/demo-images/large/landscape-01.jpg",
+                    "alt": "Alternative Text 1"
+                  },
+                  "figcaption": {
+                    "show": true,
+                    "position": "bottom",
+                    "text": "figcaption 1",
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "image": {
+                    "src": "/media/images/demo-images/medium/landscape-02.jpg",
+                    "srcImageLarge": "/media/images/demo-images/large/landscape-02.jpg",
+                    "alt": "Alternative Text 2"
+                  },
+                  "figcaption": {
+                    "show": true,
+                    "position": "bottom",
+                    "text": "figcaption 2",
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "image": {
+                    "src": "/media/images/demo-images/medium/landscape-03.jpg",
+                    "srcImageLarge": "/media/images/demo-images/large/landscape-03.jpg",
+                    "alt": "Alternative Text 3"
+                  },
+                  "figcaption": {
+                    "show": true,
+                    "position": "bottom",
+                    "text": "figcaption 3",
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "image": {
+                    "src": "/media/images/demo-images/medium/landscape-04.jpg",
+                    "srcImageLarge": "/media/images/demo-images/large/landscape-04.jpg",
+                    "alt": "Alternative Text 4"
+                  },
+                  "figcaption": {
+                    "show": true,
+                    "position": "bottom",
+                    "text": "figcaption 4",
+                    "textAlign": "center"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "section4",
+        "showLinkInMainNavigation": false,
+        "iconClass": "icon-user-profile",
+        "allowAddComponent": true,
+        "headlineText": "Überschrift Section 4",
+        "order": 6,
+        "components": [
+          {
+            "name": "CmdThumbnailScroller",
+            "props": {
+              "cmdHeadline": {
+                "headlineText": "Überschrift für Thumbnail Scroller",
+                "headlineLevel": "3"
+              },
+              "thumbnailScrollerItems": [
+                {
+                  "image": {
+                    "id": 1,
+                    "src": "/media/images/demo-images/small/landscape-01.jpg",
+                    "srcImageLarge": "/media/images/demo-images/large/landscape-01.jpg",
+                    "alt": "Alternative Text 1"
+                  },
+                  "figcaption": {
+                    "show": true,
+                    "position": "bottom",
+                    "text": "figcaption 1",
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "image": {
+                    "id": 2,
+                    "src": "/media/images/demo-images/small/landscape-02.jpg",
+                    "srcImageLarge": "/media/images/demo-images/large/landscape-02.jpg",
+                    "alt": "Alternative Text 2"
+                  },
+                  "figcaption": {
+                    "show": true,
+                    "position": "bottom",
+                    "text": "figcaption 2",
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "image": {
+                    "id": 3,
+                    "src": "/media/images/demo-images/small/landscape-03.jpg",
+                    "srcImageLarge": "/media/images/demo-images/large/landscape-03.jpg",
+                    "alt": "Alternative Text 3"
+                  },
+                  "figcaption": {
+                    "show": true,
+                    "position": "bottom",
+                    "text": "figcaption 3",
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "image": {
+                    "id": 4,
+                    "src": "/media/images/demo-images/small/landscape-04.jpg",
+                    "srcImageLarge": "/media/images/demo-images/large/landscape-04.jpg",
+                    "alt": "Alternative Text 4"
+                  },
+                  "figcaption": {
+                    "show": true,
+                    "position": "bottom",
+                    "text": "figcaption 4",
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "image": {
+                    "id": 5,
+                    "src": "/media/images/demo-images/small/landscape-05.jpg",
+                    "srcImageLarge": "/media/images/demo-images/large/landscape-05.jpg",
+                    "alt": "Alternative Text 5"
+                  },
+                  "figcaption": {
+                    "show": true,
+                    "position": "bottom",
+                    "text": "figcaption 5",
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "image": {
+                    "id": 6,
+                    "src": "/media/images/demo-images/small/landscape-06.jpg",
+                    "srcImageLarge": "/media/images/demo-images/large/landscape-06.jpg",
+                    "alt": "Alternative Text 6"
+                  },
+                  "figcaption": {
+                    "show": true,
+                    "position": "bottom",
+                    "text": "figcaption 6",
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "image": {
+                    "id": 7,
+                    "src": "/media/images/demo-images/small/landscape-07.jpg",
+                    "srcImageLarge": "/media/images/demo-images/large/landscape-07.jpg",
+                    "alt": "Alternative Text 7"
+                  },
+                  "figcaption": {
+                    "show": true,
+                    "position": "bottom",
+                    "text": "figcaption 7",
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "image": {
+                    "id": 8,
+                    "src": "/media/images/demo-images/small/landscape-08.jpg",
+                    "srcImageLarge": "/media/images/demo-images/large/landscape-08.jpg",
+                    "alt": "Alternative Text 8"
+                  },
+                  "figcaption": {
+                    "show": true,
+                    "position": "bottom",
+                    "text": "figcaption 8",
+                    "textAlign": "center"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "section5",
+        "iconClass": "icon-mail",
+        "showLinkInMainNavigation": true,
+        "order": 7,
+        "components": [
+          {
+            "name": "CmdBasicForm",
+            "props": {
+              "configuration": {
+                "salutation": {
+                  "default": "m",
+                  "replaceInputType": true
+                },
+                "lastName": {
+                  "required": true,
+                  "type": "text"
+                },
+                "firstName": {
+                  "required": false,
+                  "type": "text"
+                },
+                "email": {
+                  "required": true,
+                  "type": "email"
+                },
+                "phone": {
+                  "required": false,
+                  "type": "phone"
+                },
+                "additionalText": {
+                  "required": true,
+                  "type": "textarea"
+                },
+                "acceptPrivacy": {
+                  "required": true,
+                  "replaceInputType": true
+                }
+              },
+              "submitButton": {
+                "type": "submit",
+                "position": "belowFieldset",
+                "primary": true,
+                "iconClass": "icon-message-send",
+                "text": "Nachricht senden"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "section-login",
+        "iconClass": "icon-logon",
+        "showLinkInMainNavigation": false,
+        "show": false,
+        "order": 8,
+        "components": [
+          {
+            "name": "LoginArea",
+            "props": {
+              "cmdHeadline": {
+                "headlineText": "Loginbereich",
+                "headlineLevel": "2"
+              },
+              "cmdForm": {
+                "textLegend": "Login",
+                "showLegend": false
+              },
+              "passwordLabelText": "Passwort",
+              "submitButtonText": "Anmelden",
+              "baseUrl": "http://localhost:42000",
+              "filesToDownload": [
+                {
+                  "iconClass": "icon-file-pdf",
+                  "type": "href",
+                  "target": "_blank",
+                  "text": "Test",
+                  "name": "test.pdf",
+                  "tooltip": "PDF in neuem Tab öffnen"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

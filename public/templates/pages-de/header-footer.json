@@ -1,0 +1,270 @@
+{
+  "siteHeader": {
+    "navigationInline": true,
+    "propsLogo": {
+      "pathDefaultLogo": "/media/images/logos/logo.svg",
+      "pathDarkmodeLogo": "/media/images/logos/logo-darkmode.svg",
+      "altText": "Company Logo"
+    },
+    "props": {
+      "cmdMainNavigation": {
+        "closeOffcanvas": {
+          "iconClass": "icon-cancel",
+          "text": "Navigation schließen",
+          "showText": false
+        }
+      }
+    }
+  },
+  "siteFooter": {
+    "orientation": "horizontal",
+    "components": [
+      {
+        "name": "CmdContainer",
+        "allowAddComponent": true,
+        "props": {
+          "class": "flex-container vertical"
+        },
+        "components": [
+          {
+            "name": "CmdListOfLinks",
+            "handlers": "toggleSection",
+            "props": {
+              "cmdHeadline": {
+              },
+              "orientation": "vertical",
+              "textAlign": "right",
+              "links": [
+                {
+                  "iconClass": "icon-user-profile",
+                  "type": "href",
+                  "text": "",
+                  "path": "#",
+                  "tooltip": "Link ohne text (nur Tooltip)"
+                },
+                {
+                  "type": "href",
+                  "text": "Data privacy",
+                  "path": "/content/data-privacy-de.html",
+                  "tooltip": "Lokae Datei FancyBox öffnen",
+                  "fancybox": true
+                },
+                {
+                  "iconClass": "icon-export",
+                  "type": "href",
+                  "text": "External link",
+                  "path": "http://www.comand-cms.com",
+                  "target": "_blank",
+                  "tooltip": "CoManD-Website in neuem Tab öffnen"
+                },
+                {
+                  "iconClass": "icon-security-settings",
+                  "type": "href",
+                  "text": "Login",
+                  "path": "#",
+                  "sectionId": "section-login"
+                }
+              ]
+            }
+          },
+          {
+            "name": "CmdToggleDarkMode",
+            "props": {
+              "showLabel": true,
+              "labelTextDarkMode": "Dark Mode aktiviert",
+              "labelTextLightMode": "Light Mode aktiviert"
+            }
+          }
+        ]
+      },
+      {
+        "name": "CmdOpeningHours",
+        "props": {
+          "cmdHeadline": {
+          },
+          "textHolidays": "",
+          "textMiscInfo": "",
+          "openingHours": [
+            {
+              "day": "Mo",
+              "am": {
+                "fromTime": "08:00",
+                "tillTime": "12:00",
+                "displayText": "geöffnet"
+              },
+              "pm": {
+                "fromTime": "13:00",
+                "tillTime": "18:00",
+                "displayText": "geschlossen"
+              }
+            },
+            {
+              "day": "Di",
+              "am": {
+                "fromTime": "08:00",
+                "tillTime": "12:01"
+              },
+              "pm": {
+                "fromTime": "13:00",
+                "tillTime": "18:00"
+              }
+            },
+            {
+              "day": "Mi",
+              "am": {
+                "fromTime": "08:00",
+                "tillTime": "12:00"
+              },
+              "pm": {
+                "fromTime": "13:00",
+                "tillTime": "18:00"
+              }
+            },
+            {
+              "day": "Do",
+              "am": {
+                "fromTime": "08:00",
+                "tillTime": "12:00"
+              },
+              "pm": {
+                "fromTime": "13:00",
+                "tillTime": "18:00"
+              }
+            },
+            {
+              "day": "Fr",
+              "am": {
+                "fromTime": "08:00",
+                "tillTime": "12:00"
+              },
+              "pm": {
+                "fromTime": "13:00",
+                "tillTime": "18:00"
+              }
+            },
+            {
+              "day": "Sa",
+              "am": {
+                "fromTime": "08:00",
+                "tillTime": "12:00"
+              },
+              "pm": {
+                "fromTime": "13:00",
+                "tillTime": "18:00"
+              }
+            },
+            {
+              "day": "So",
+              "am": {
+                "fromTime": "08:00",
+                "tillTime": "12:00"
+              },
+              "pm": {
+                "fromTime": "13:00",
+                "tillTime": "18:00"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "CmdAddressData",
+        "props": {
+          "cmdHeadline": {
+          },
+          "addressData": [
+            {
+              "name": "company",
+              "iconClass": "icon-company",
+              "data": "Ihr Firmenname",
+              "labelText": "Firma"
+            },
+            {
+              "name": "address",
+              "iconClass": "icon-home",
+              "labelText": "Adresse",
+              "streetNo": "Ihre Straße/Nr.",
+              "zip": "Ihre Postleitzahl",
+              "city": "Ihre Stadt",
+              "miscInfo": "Sonstige Informationen",
+              "country": "Ihr Land",
+              "longitude": "0.0",
+              "latitude": "0.0,",
+              "location": "",
+              "linkGoogleMaps": false
+            },
+            {
+              "name": "phone",
+              "iconClass": "icon-phone",
+              "data": "Ihre Telefonnnummer",
+              "labelText": "Telefon",
+              "tooltip": "Nummer anrufen",
+              "href": "#"
+            },
+            {
+              "name": "phone",
+              "iconClass": "icon-device-smartphone",
+              "data": "Ihre Mobilnummer",
+              "labelText": "Mobil",
+              "tooltip": "Nummer anrufen",
+              "href": "#"
+            },
+            {
+              "name": "fax",
+              "iconClass": "icon-fax",
+              "data": "Ihre Fax-Nummer",
+              "labelText": "Fax"
+            },
+            {
+              "name": "email",
+              "iconClass": "icon-mail",
+              "data": "Ihre E-Mail-Adresse",
+              "labelText": "E-Mail",
+              "tooltip": "Mail versenden",
+              "href": "mail@provider.de"
+            },
+            {
+              "name": "url",
+              "iconClass": "icon-globe",
+              "data": "Ihre Website",
+              "labelText": "Website",
+              "tooltip": "Website in neuem Tab öffnen",
+              "href": "https://www.domain.toplevel"
+            },
+            {
+              "name": "custom",
+              "iconClass": "icon-questionmark-circle",
+              "data": "Custom data",
+              "labelText": "Sonstige"
+            }
+          ]
+        }
+      },
+      {
+        "name": "CmdSwitchLanguage",
+        "props": {
+          "languages": [
+            {
+              "iso2": "de",
+              "name": "Deutsch",
+              "tooltip": "Sprache zu deutsch wechseln",
+              "link": {
+                "type": "router"
+              },
+              "path": "/de"
+            },
+            {
+              "iso2": "en",
+              "name": "English",
+              "tooltip": "Switch language to English",
+              "link": {
+                "type": "router"
+              },
+              "path": "/en"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

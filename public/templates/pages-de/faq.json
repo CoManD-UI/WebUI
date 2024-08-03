@@ -1,0 +1,206 @@
+{
+  "metadata": {
+    "title": "FAQ",
+    "description": "Kurzbeschreibung für FAQ-Seite",
+    "rating": "",
+    "robots": "index/follow",
+    "author": ""
+  },
+  "mainContent": {
+    "pageHeadlineText": "FAQ: Häufig gestellte Fragen",
+    "sections": [
+      {
+        "id": "section1",
+        "iconClass": "icon-home",
+        "allowAddComponent": true,
+        "showLinkInMainNavigation": true,
+        "navEntry": "Text Block",
+        "order": 3,
+        "components": [
+          {
+            "name": "MultipleBoxWrapper",
+            "props": {
+              "cmdHeadline": {
+                "headlineText": "Überschrift FAQ",
+                "headlineLevel": "2"
+              },
+              "segments": [
+                {
+                  "boxesPerRow": 4,
+                  "useRowViewAsDefault": true,
+                  "useGap": true,
+                  "cmdHeadline": {
+                    "headlineText": "Frequently Asked Questions",
+                    "headlineLevel": 4
+                  },
+                  "boxes": [
+                    {
+                      "boxType": "content",
+                      "cmdHeadline": {
+                        "headlineText": "Question 1",
+                        "headlineLevel": 5
+                      },
+                      "textBody": "This is the answer for the question!"
+                    },
+                    {
+                      "boxType": "content",
+                      "cmdHeadline": {
+                        "headlineText": "Question 2",
+                        "headlineLevel": 5
+                      },
+                      "textBody": "This is the answer for the question!"
+                    },
+                    {
+                      "boxType": "content",
+                      "cmdHeadline": {
+                        "headlineText": "Question 3",
+                        "headlineLevel": 5
+                      },
+                      "textBody": "This is the answer for the question!"
+                    },
+                    {
+                      "boxType": "content",
+                      "cmdHeadline": {
+                        "headlineText": "Question 4",
+                        "headlineLevel": 5
+                      },
+                      "textBody": "This is the answer for the question!"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "section2",
+        "iconClass": "icon-home",
+        "allowAddComponent": true,
+        "showLinkInMainNavigation": true,
+        "navEntry": "Text Block",
+        "order": 3,
+        "components": [
+          {
+            "name": "MultipleBoxWrapper",
+            "props": {
+              "cmdHeadline": {
+                "headlineText": "Überschrift FAQ",
+                "headlineLevel": "2"
+              },
+              "segments": [
+                {
+                  "boxesPerRow": 4,
+                  "useRowViewAsDefault": true,
+                  "useGap": true,
+                  "cmdHeadline": {
+                    "headlineText": "Frequently Asked Questions",
+                    "headlineLevel": 4
+                  },
+                  "boxes": [
+                    {
+                      "boxType": "content",
+                      "cmdHeadline": {
+                        "headlineText": "Question 1",
+                        "headlineLevel": 5
+                      },
+                      "textBody": "This is the answer for the question!"
+                    },
+                    {
+                      "boxType": "content",
+                      "cmdHeadline": {
+                        "headlineText": "Question 2",
+                        "headlineLevel": 5
+                      },
+                      "textBody": "This is the answer for the question!"
+                    },
+                    {
+                      "boxType": "content",
+                      "cmdHeadline": {
+                        "headlineText": "Question 3",
+                        "headlineLevel": 5
+                      },
+                      "textBody": "This is the answer for the question!"
+                    },
+                    {
+                      "boxType": "content",
+                      "cmdHeadline": {
+                        "headlineText": "Question 4",
+                        "headlineLevel": 5
+                      },
+                      "textBody": "This is the answer for the question!"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "section3",
+        "iconClass": "icon-home",
+        "allowAddComponent": true,
+        "showLinkInMainNavigation": true,
+        "navEntry": "Text Block",
+        "order": 3,
+        "components": [
+          {
+            "name": "MultipleBoxWrapper",
+            "props": {
+              "cmdHeadline": {
+                "headlineText": "Überschrift FAQ",
+                "headlineLevel": "2"
+              },
+              "segments": [
+                {
+                  "boxesPerRow": 4,
+                  "useRowViewAsDefault": true,
+                  "useGap": true,
+                  "cmdHeadline": {
+                    "headlineText": "Frequently Asked Questions",
+                    "headlineLevel": 4
+                  },
+                  "boxes": [
+                    {
+                      "boxType": "content",
+                      "cmdHeadline": {
+                        "headlineText": "Question 1",
+                        "headlineLevel": 5
+                      },
+                      "textBody": "This is the answer for the question!"
+                    },
+                    {
+                      "boxType": "content",
+                      "cmdHeadline": {
+                        "headlineText": "Question 2",
+                        "headlineLevel": 5
+                      },
+                      "textBody": "This is the answer for the question!"
+                    },
+                    {
+                      "boxType": "content",
+                      "cmdHeadline": {
+                        "headlineText": "Question 3",
+                        "headlineLevel": 5
+                      },
+                      "textBody": "This is the answer for the question!"
+                    },
+                    {
+                      "boxType": "content",
+                      "cmdHeadline": {
+                        "headlineText": "Question 4",
+                        "headlineLevel": 5
+                      },
+                      "textBody": "This is the answer for the question!"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

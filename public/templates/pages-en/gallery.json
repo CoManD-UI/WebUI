@@ -1,0 +1,140 @@
+{
+  "metadata": {
+    "title": "Image Gallery",
+    "description": "Description for image gallery",
+    "rating": "",
+    "robots": "index/follow",
+    "author": ""
+  },
+  "mainContent": {
+    "pageHeadlineText": "Image Gallery",
+    "sections": [
+      {
+        "id": "section3",
+        "iconClass": "icon-images",
+        "showLinkInMainNavigation": true,
+        "navEntry": "Image Gallery",
+        "allowAddComponent": true,
+        "headlineText": "Headline for Section 3",
+        "order": 5,
+        "components": [
+          {
+            "name": "CmdImageGallery",
+            "props": {
+              "cmdHeadline": {
+                "headlineText": "Headline for Image Gallery",
+                "headlineLevel": "3"
+              },
+              "images": [
+                {
+                  "image": {
+                    "src": "/media/images/demo-images/medium/landscape-01.jpg",
+                    "srcImageLarge": "/media/images/demo-images/large/landscape-01.jpg",
+                    "alt": "Alternative text 1"
+                  },
+                  "figcaption": {
+                    "show": true,
+                    "position": "bottom",
+                    "text": "Figcaption 1",
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "image": {
+                    "src": "/media/images/demo-images/medium/landscape-02.jpg",
+                    "srcImageLarge": "/media/images/demo-images/large/landscape-02.jpg",
+                    "alt": "Alternative text 2"
+                  },
+                  "figcaption": {
+                    "show": true,
+                    "position": "bottom",
+                    "text": "Figcaption 2",
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "image": {
+                    "src": "/media/images/demo-images/medium/landscape-03.jpg",
+                    "srcImageLarge": "/media/images/demo-images/large/landscape-03.jpg",
+                    "alt": "Alternative text 3"
+                  },
+                  "figcaption": {
+                    "show": true,
+                    "position": "bottom",
+                    "text": "Figcaption 3",
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "image": {
+                    "src": "/media/images/demo-images/medium/landscape-04.jpg",
+                    "srcImageLarge": "/media/images/demo-images/large/landscape-04.jpg",
+                    "alt": "Alternative text 4"
+                  },
+                  "figcaption": {
+                    "show": true,
+                    "position": "bottom",
+                    "text": "Figcaption 4",
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "image": {
+                    "src": "/media/images/demo-images/medium/landscape-05.jpg",
+                    "srcImageLarge": "/media/images/demo-images/large/landscape-05.jpg",
+                    "alt": "Alternative text 5"
+                  },
+                  "figcaption": {
+                    "show": true,
+                    "position": "bottom",
+                    "text": "Figcaption 5",
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "image": {
+                    "src": "/media/images/demo-images/medium/landscape-06.jpg",
+                    "srcImageLarge": "/media/images/demo-images/large/landscape-06.jpg",
+                    "alt": "Alternative text 6"
+                  },
+                  "figcaption": {
+                    "show": true,
+                    "position": "bottom",
+                    "text": "Figcaption 6",
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "image": {
+                    "src": "/media/images/demo-images/medium/landscape-07.jpg",
+                    "srcImageLarge": "/media/images/demo-images/large/landscape-07.jpg",
+                    "alt": "Alternative text 7"
+                  },
+                  "figcaption": {
+                    "show": true,
+                    "position": "bottom",
+                    "text": "Figcaption 7",
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "image": {
+                    "src": "/media/images/demo-images/medium/landscape-08.jpg",
+                    "srcImageLarge": "/media/images/demo-images/large/landscape-08.jpg",
+                    "alt": "Alternative text 8"
+                  },
+                  "figcaption": {
+                    "show": true,
+                    "position": "bottom",
+                    "text": "Figcaption 8",
+                    "textAlign": "center"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

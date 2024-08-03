@@ -1,0 +1,164 @@
+@import "comand-component-library/src/assets/styles/variables.scss";
+
+/* begin table of contents --------------------------------------------------------------------------------------------------------------------------------------------------- */
+/*
+- VARIABLES ------------------------
+
+- BASIC STRUCTURE ------------------------
+	- page-structure
+	- main-container
+	- hotfix for fancybox-behavior
+
+- MEDIA QUERIES ------------------------
+  - styles for small screens
+  - styles for print only
+*/
+/* end table of contents --------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* ---------------------------------------------- BEGIN BASIC STRUCTURE -------------------------------------------------- */
+/* begin page-structure --------------------------------------------------------------------------------------------------------------------------------------------------- */
+html {
+    --headline-font-size-h1: 5rem;
+}
+
+body {
+    &.avoid-scrolling {
+        overflow: hidden;
+        height: 100%;
+    }
+}
+
+body, #page-wrapper {
+    background: var(--color-scheme-background);
+}
+
+#page-wrapper main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    .edit-mode.section-wrapper:only-of-type {
+        height: 100%;
+
+        [id^="section-wrapper"] {
+            height: inherit;
+
+            > section {
+                height: inherit;
+            }
+        }
+    }
+
+    > .cmd-width-limitation-wrapper:has(.cmd-page-footer) {
+        margin-top: auto;
+    }
+}
+
+.cmd-tooltip {
+    box-shadow: .1rem .3rem .3rem var(--dark-gray);
+}
+
+.cmd-width-limitation-wrapper section:has(.cmd-breadcrumbs) {
+    padding-bottom: var(--default-padding) !important;
+}
+
+/* end page-structure --------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* begin main-container --------------------------------------------------------------------------------------------------------------------------------------------------- */
+main {
+    ul, ol {
+        list-style-position: inside; /* list-style-position for all list in main */
+    }
+
+    .cmd-width-limitation-wrapper {
+        &:not(#main-headline) {
+            section {
+                padding-top: calc(var(--default-padding) * 6);
+                padding-bottom: calc(var(--default-padding) * 6);
+            }
+
+            &:nth-child(even) {
+                background: var(--default-background);
+            }
+        }
+    }
+
+    #section-wrapper-main-headline {
+        padding: calc(var(--default-padding) * 5) 0;
+
+        .cmd-headline {
+            margin: 0;
+
+            h1 {
+                font-size: var(--headline-font-size-h1);
+                text-transform: uppercase;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+/* end main-container  --------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* begin hotfix for fancybox-behavior */
+.cmd-fancybox {
+    position: fixed;
+}
+
+/* end hotfix for fancybox-behavior */
+/* ---------------------------------------------- END BASIC STRUCTURE -------------------------------------------------- */
+
+/* ---------------------------------------------- BEGIN MEDIA QUERIES -------------------------------------------------- */
+/* begin styles for medium screens --------------------------------------------------------------------------------------------------------------------------------------------------- */
+@media only screen and (max-width: $medium-max-width) {
+    .cmd-width-limitation-wrapper {
+        &:not(#main-headline) {
+            section {
+                padding-top: calc(var(--default-padding) * 4);
+                padding-bottom: calc(var(--default-padding) * 4);
+            }
+        }
+    }
+}
+
+/* end styles for medium screens --------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* begin styles for small screens --------------------------------------------------------------------------------------------------------------------------------------------------- */
+@media only screen and (max-width: $small-max-width) {
+    .cmd-width-limitation-wrapper {
+        &:not(#main-headline) {
+            section {
+                padding-top: calc(var(--default-padding) * 2);
+                padding-bottom: calc(var(--default-padding) * 2);
+            }
+
+            &:nth-child(even) {
+                background: var(--default-background);
+            }
+        }
+    }
+
+    a[href^="tel"] {
+        text-decoration: underline;
+    }
+}
+
+/* end styles for small screens --------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* begin styles for print only --------------------------------------------------------------------------------------------------------------------------------------------------- */
+@media only print {
+    .cmd-site-header, .cmd-main-navigation, .cmd-slideshow, .button, .cmd-back-to-top-button, .cmd-site-footer, .cmd-copyright-information {
+        display: none !important;
+    }
+
+    #content {
+        width: 180mm;
+    }
+
+    body, .section-wrapper {
+        background: none !important;
+    }
+}
+
+/* end styles for print only --------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------- END MEDIA QUERIES -------------------------------------------------- */

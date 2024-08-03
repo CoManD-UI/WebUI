@@ -1,0 +1,62 @@
+{
+  "required": {
+    "headline": "Required cookies",
+    "cookies": [
+        {
+          "id": "cookie-sessionid",
+          "value": "sessionid",
+          "description": "This cookie is required for functionality",
+          "labelText": "SessionID",
+          "disabled": true,
+          "linkDataPrivacy": {
+            "label": "Details for this cookie:",
+            "link": "/content/data-privacy-en.html",
+            "linkText": "Open data privacy"
+          }
+        },
+        {
+          "id": "cookie-google-recaptcha",
+          "value": "google-recaptcha",
+          "description": "This cookie prevents bots from sending forms",
+          "labelText": "Google reCaptcha™",
+          "disabled": true,
+          "linkDataPrivacy": {
+            "label": "Details for this cookie:",
+            "link": "https://policies.google.com/privacy?hl=en-US",
+            "target": "_blank",
+            "linkText": "Open data privacy from Google"
+          }
+        }
+      ]
+  },
+  "optional": {
+    "headline": "Optional cookies",
+    "cookies": [
+      {
+        "id": "cookie-google-maps",
+        "value": "google-maps",
+        "description": "This cookie enables the Google Map™",
+        "labelText": "Google Maps™",
+        "disabled": false,
+        "linkDataPrivacy": {
+          "label": "Details for this cookie:",
+          "link": "https://policies.google.com/privacy?hl=en-US",
+          "target": "_blank",
+          "linkText": "Open data privacy from Google"
+        }
+      },
+      {
+        "id": "cookie-google-analytics",
+        "value": "google-analytics",
+        "description": "This cookie collects anonymous data for statistics and improvements",
+        "labelText": "Google Analytics™",
+        "linkDataPrivacy": {
+          "label": "Details for this cookie:",
+          "link": "https://policies.google.com/privacy?hl=en-US",
+          "target": "_blank",
+          "linkText": "Open data privacy from Google"
+        }
+      }
+    ]
+  }
+}

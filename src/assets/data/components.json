@@ -1,0 +1,10 @@
+[
+  {
+    "component": "CmdImage",
+    "name": "Image"
+  },
+  {
+    "component": "CmdListOfLinks",
+    "name": "List of links"
+  }
+]
