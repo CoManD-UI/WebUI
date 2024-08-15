@@ -10,10 +10,16 @@
 export default {
     name: "PlaceholderComponentWrapper",
     props: {
+        /**
+         * define tag-name for inner-html
+         */
         tagName: {
             type: String,
             required: true
         },
+        /**
+         * text to display in inner-tag
+         */
         text: {
             type: String,
             required: true

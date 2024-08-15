@@ -1,6 +1,7 @@
 <template>
     <a id="anchor-back-to-top"></a>
-    <div :class="{'overflow-hidden': offCanvasOpen}" id="page-wrapper"
+    <div :class="['page-wrapper', {'overflow-hidden': offCanvasOpen}]"
+         id="template-dating"
          :style="{'scroll-padding-top': heightSiteHeader + 'px'}">
 
         <!-- begin slot site-header -->
@@ -135,7 +136,7 @@
         <CmdBackToTopButton
             href="#anchor-back-to-top"
             :iconBackToTop="iconBackToTop"
-            scroll-container="#page-wrapper"
+            scroll-container=".page-wrapper"
         />
         <!-- end cmd-back-to-top-button -->
 
@@ -175,7 +176,7 @@
 //import {openFancyBox} from "@/components/CmdFancyBox.vue"
 
 // import store
-import {useCmsStore} from "../stores/cms"
+import {useCmsStore} from "../stores/website"
 
 // import mixins
 import BaseI18nComponent from "../components/mixins/BaseI18nComponent"
@@ -240,7 +241,7 @@ export default {
 
         if (siteHeader.length > 0) {
             const resizeObserver = new ResizeObserver(entries => {
-                // get height of site-header to set scroll-padding on #page-wrapper
+                // get height of site-header to set scroll-padding on .page-wrapper
                 this.heightSiteHeader = entries[0].target.offsetHeight
             })
             resizeObserver.observe(siteHeader[0])

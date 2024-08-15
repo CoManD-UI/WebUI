@@ -73,7 +73,7 @@
 
 <script>
 import {mapActions, mapState} from "pinia"
-import {useCmsStore} from "../../stores/cms.js"
+import {useCmsStore} from "../../stores/website.js"
 import packageJson from '../../../package.json'
 
 export default {

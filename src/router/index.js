@@ -1,5 +1,5 @@
 import {createRouter, createWebHistory} from "vue-router"
-import {useCmsStore} from "../stores/cms"
+import {useCmsStore} from "../stores/website"
 
 const routes = []
 

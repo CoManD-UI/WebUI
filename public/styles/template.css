@@ -1,1 +1,18 @@
 /* add you custom styles in this file */
+@font-face {
+    font-family: 'mondaregular';
+    src: url('monda.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html {
+    --default-font-family: "mondaregular" !important;
+    border: 5px solid red;
+}
+
+#welcome {
+    background: url("/public/media/images/content-images/couple.jpg") no-repeat;
+    background-size: cover;
+}

@@ -1,0 +1,106 @@
+{
+  "siteHeader": {
+    "navigationInline": false,
+    "propsLogo": {
+      "pathDefaultLogo": "/media/images/logos/logo-dating.svg",
+      "altText": "Company Logo"
+    },
+    "props": {
+      "cmdMainNavigation": {
+        "closeOffcanvas": {
+          "iconClass": "icon-cancel",
+          "text": "Navigation schließen",
+          "showText": false
+        }
+      }
+    }
+  },
+  "siteFooter": {
+    "orientation": "horizontal",
+    "components": [
+      {
+        "name": "CmdContainer",
+        "allowAddComponent": true,
+        "props": {
+          "class": "flex-container vertical"
+        },
+        "components": [
+          {
+            "name": "CmdListOfLinks",
+            "handlers": "toggleSection",
+            "props": {
+              "cmdHeadline": {
+              },
+              "orientation": "vertical",
+              "textAlign": "right",
+              "links": [
+                {
+                  "iconClass": "icon-user-profile",
+                  "type": "href",
+                  "text": "",
+                  "path": "#",
+                  "tooltip": "Link ohne text (nur Tooltip)"
+                },
+                {
+                  "type": "href",
+                  "text": "Data privacy",
+                  "path": "/content/data-privacy-de.html",
+                  "tooltip": "Lokae Datei FancyBox öffnen",
+                  "fancybox": true
+                },
+                {
+                  "iconClass": "icon-export",
+                  "type": "href",
+                  "text": "External link",
+                  "path": "http://www.comand-cms.com",
+                  "target": "_blank",
+                  "tooltip": "CoManD-Website in neuem Tab öffnen"
+                },
+                {
+                  "iconClass": "icon-security-settings",
+                  "type": "href",
+                  "text": "Login",
+                  "path": "#",
+                  "sectionId": "section-login"
+                }
+              ]
+            }
+          },
+          {
+            "name": "CmdToggleDarkMode",
+            "props": {
+              "showLabel": true,
+              "labelTextDarkMode": "Dark Mode aktiviert",
+              "labelTextLightMode": "Light Mode aktiviert"
+            }
+          }
+        ]
+      },
+      {
+        "name": "CmdSwitchLanguage",
+        "props": {
+          "languages": [
+            {
+              "iso2": "de",
+              "name": "Deutsch",
+              "tooltip": "Sprache zu deutsch wechseln",
+              "link": {
+                "type": "router"
+              },
+              "path": "/de"
+            },
+            {
+              "iso2": "en",
+              "name": "English",
+              "tooltip": "Switch language to English",
+              "link": {
+                "type": "router"
+              },
+              "path": "/en"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

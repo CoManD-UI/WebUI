@@ -119,7 +119,7 @@
             <CmdBackToTopButton
                 href="#anchor-back-to-top"
                 :iconBackToTop="iconBackToTop"
-                scroll-container="#page-wrapper"
+                scroll-container=".page-wrapper"
             />
             <!-- end cmd-back-to-top-button -->
 
@@ -167,7 +167,7 @@ import {createUuid, openFancyBox} from 'comand-component-library'
 // import functions
 import {mapActions, mapState} from "pinia"
 import {usePiniaStore} from "../stores/pinia"
-import {useCmsStore} from "../stores/cms"
+import {useCmsStore} from "../stores/website"
 
 // import mixins
 import BaseI18nComponent from "../components/mixins/BaseI18nComponent"
@@ -226,7 +226,7 @@ export default {
 
         if (siteHeader.length > 0) {
             const resizeObserver = new ResizeObserver(entries => {
-                // get height of site-header to set scroll-padding on #page-wrapper
+                // get height of site-header to set scroll-padding on .page-wrapper
                 this.heightSiteHeader = entries[0].target.offsetHeight
             })
             resizeObserver.observe(siteHeader[0])

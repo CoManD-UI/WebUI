@@ -28,11 +28,11 @@ body {
     }
 }
 
-body, #page-wrapper {
+body, .page-wrapper {
     background: var(--color-scheme-background);
 }
 
-#page-wrapper main {
+.page-wrapper main {
     flex-grow: 1;
     display: flex;
     flex-direction: column;

@@ -109,7 +109,7 @@
 
 <script>
 import {mapState, mapActions} from "pinia"
-import {useCmsStore} from "../../stores/cms.js"
+import {useCmsStore} from "../../stores/website.js"
 import {highlightSection} from "../../utils/editmode.js"
 import {createUuid} from "comand-component-library";
 

@@ -1,9 +1,10 @@
 <template>
-    <CmdWidthLimitationWrapper :innerClass="htmlClasses" :id="'anchor-' + id">
+    <CmdWidthLimitationWrapper :innerClass="htmlClasses" :id="numberOfPages > 1 ? id : 'anchor' + id">
         <component
             v-for="(component, componentIndex) in components"
             :key="componentIndex"
             :is="component.name"
+            :id="component.id"
             v-bind="component.props"
             :i18n="currentLanguageData"
         >
@@ -23,7 +24,7 @@
 import BaseI18nComponent from "./mixins/BaseI18nComponent"
 import {mapState} from "pinia"
 import {usePiniaStore} from "../stores/pinia.js"
-import {useCmsStore} from "../stores/cms.js"
+import {useCmsStore} from "../stores/website.js"
 
 export default {
     mixins: [
@@ -69,11 +70,11 @@ export default {
         }
     },
     computed: {
-        ...mapState(useCmsStore, ["currentLanguageData"]),
+        ...mapState(useCmsStore, ["currentLanguageData", "numberOfPages"]),
 
         // provide states from store as computed-properties inside this component
         ...mapState(usePiniaStore, {
-            editMode: "editMode"
+            editMode: "editMode",
         }),
         htmlClasses() {
             const classes = []

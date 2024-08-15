@@ -1,0 +1,335 @@
+{
+  "metadata": {
+    "title": "Team",
+    "description": "Description for Team",
+    "rating": "",
+    "robots": "index/follow",
+    "author": ""
+  },
+  "mainContent": {
+    "pageHeadlineText": "Team",
+    "sections": [
+      {
+        "id": "section1",
+        "iconClass": "icon-home",
+        "allowAddComponent": true,
+        "showLinkInMainNavigation": true,
+        "navEntry": "Text Block",
+        "order": 3,
+        "components": [
+          {
+            "name": "MultipleBoxWrapper",
+            "props": {
+              "cmdHeadline": {
+                "headlineText": "Headline Team",
+                "headlineLevel": "2"
+              },
+              "segments": [
+                {
+                  "boxesPerRow": 4,
+                  "useRowViewAsDefault": true,
+                  "useGap": true,
+                  "cmdHeadline": {
+                    "headlineText": "Team 1",
+                    "headlineLevel": 3
+                  },
+                  "boxes": [
+                    {
+                      "boxType": "user",
+                      "user": {
+                        "name": "User name 1",
+                        "age": 35,
+                        "gender": "m",
+                        "imageSrc": "/media/images/user-images/fake-user-1.jpg",
+                        "profession": "User profession",
+                        "position": "User position",
+                        "description": "User profile with image",
+                        "tag": [
+                          "Tagname",
+                          "Long tag",
+                          "One more tag"
+                        ],
+                        "links": [
+                          {
+                            "path": "mailto:",
+                            "iconClass": "icon-mail",
+                            "tooltip": "Send mail"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "boxType": "user",
+                      "user": {
+                        "name": "User name 2",
+                        "age": 35,
+                        "gender": "m",
+                        "imageSrc": "/media/images/user-images/fake-user-2.jpg",
+                        "profession": "User profession",
+                        "position": "User position",
+                        "description": "User description",
+                        "links": [
+                          {
+                            "path": "mailto:",
+                            "iconClass": "icon-mail",
+                            "tooltip": "Send mail"
+                          },
+                          {
+                            "path": "https://www.comand-cms.com",
+                            "target": "comand",
+                            "iconClass": "icon-globe",
+                            "tooltip": "Visit website"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "boxType": "user",
+                      "user": {
+                        "name": "User name 3",
+                        "age": 35,
+                        "gender": "m",
+                        "imageSrc": "/media/images/user-images/fake-user-3.jpg",
+                        "profession": "User profession",
+                        "position": "User position",
+                        "description": "User with a long text as description that wraps over multiple lines",
+                        "links": [
+                          {
+                            "path": "mailto:",
+                            "iconClass": "icon-mail",
+                            "tooltip": "Send mail"
+                          },
+                          {
+                            "path": "https://www.comand-cms.com",
+                            "target": "comand",
+                            "iconClass": "icon-globe",
+                            "tooltip": "Visit website"
+                          },
+                          {
+                            "path": "tel:",
+                            "iconClass": "icon-phone",
+                            "tooltip": "Make call"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "boxType": "user",
+                      "user": {
+                        "name": "User name 4",
+                        "age": 35,
+                        "gender": "m",
+                        "imageSrc": "/media/images/user-images/fake-user-4.jpg",
+                        "profession": "User profession",
+                        "position": "User position",
+                        "description": "User description",
+                        "links": [
+                          {
+                            "path": "mailto:",
+                            "iconClass": "icon-mail",
+                            "tooltip": "Send mail"
+                          },
+                          {
+                            "path": "https://www.comand-cms.com",
+                            "target": "comand",
+                            "iconClass": "icon-globe",
+                            "tooltip": "Visit website"
+                          },
+                          {
+                            "path": "tel:",
+                            "iconClass": "icon-phone",
+                            "tooltip": "Make call"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "boxType": "user",
+                      "user": {
+                        "name": "User name 5",
+                        "age": 35,
+                        "gender": "m",
+                        "imageSrc": "/media/images/user-images/fake-user-5.jpg",
+                        "profession": "User profession",
+                        "position": "User position",
+                        "description": "User description",
+                        "links": [
+                          {
+                            "path": "mailto:",
+                            "iconClass": "icon-mail",
+                            "tooltip": "Send mail"
+                          },
+                          {
+                            "path": "https://www.comand-cms.com",
+                            "target": "comand",
+                            "iconClass": "icon-globe",
+                            "tooltip": "Visit website"
+                          },
+                          {
+                            "path": "tel:",
+                            "iconClass": "icon-phone",
+                            "tooltip": "Make call"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "boxesPerRow": 4,
+                  "useRowViewAsDefault": true,
+                  "useGap": true,
+                  "cmdHeadline": {
+                    "headlineText": "Team 2",
+                    "headlineLevel": 3
+                  },
+                  "boxes": [
+                    {
+                      "boxType": "user",
+                      "user": {
+                        "name": "User name 1",
+                        "age": 35,
+                        "gender": "m",
+                        "imageSrc": "/media/images/user-images/fake-user-1.jpg",
+                        "profession": "User profession",
+                        "position": "User position",
+                        "description": "User profile with image",
+                        "tag": [
+                          "Tagname",
+                          "Long tag",
+                          "One more tag"
+                        ],
+                        "links": [
+                          {
+                            "path": "mailto:",
+                            "iconClass": "icon-mail",
+                            "tooltip": "Send mail"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "boxType": "user",
+                      "user": {
+                        "name": "User name 2",
+                        "age": 35,
+                        "gender": "m",
+                        "imageSrc": "/media/images/user-images/fake-user-2.jpg",
+                        "profession": "User profession",
+                        "position": "User position",
+                        "description": "User description",
+                        "links": [
+                          {
+                            "path": "mailto:",
+                            "iconClass": "icon-mail",
+                            "tooltip": "Send mail"
+                          },
+                          {
+                            "path": "https://www.comand-cms.com",
+                            "target": "comand",
+                            "iconClass": "icon-globe",
+                            "tooltip": "Visit website"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "boxType": "user",
+                      "user": {
+                        "name": "User name 3",
+                        "age": 35,
+                        "gender": "m",
+                        "imageSrc": "/media/images/user-images/fake-user-3.jpg",
+                        "profession": "User profession",
+                        "position": "User position",
+                        "description": "User with a long text as description that wraps over multiple lines",
+                        "links": [
+                          {
+                            "path": "mailto:",
+                            "iconClass": "icon-mail",
+                            "tooltip": "Send mail"
+                          },
+                          {
+                            "path": "https://www.comand-cms.com",
+                            "target": "comand",
+                            "iconClass": "icon-globe",
+                            "tooltip": "Visit website"
+                          },
+                          {
+                            "path": "tel:",
+                            "iconClass": "icon-phone",
+                            "tooltip": "Make call"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "boxType": "user",
+                      "user": {
+                        "name": "User name 4",
+                        "age": 35,
+                        "gender": "m",
+                        "imageSrc": "/media/images/user-images/fake-user-4.jpg",
+                        "profession": "User profession",
+                        "position": "User position",
+                        "description": "User description",
+                        "links": [
+                          {
+                            "path": "mailto:",
+                            "iconClass": "icon-mail",
+                            "tooltip": "Send mail"
+                          },
+                          {
+                            "path": "https://www.comand-cms.com",
+                            "target": "comand",
+                            "iconClass": "icon-globe",
+                            "tooltip": "Visit website"
+                          },
+                          {
+                            "path": "tel:",
+                            "iconClass": "icon-phone",
+                            "tooltip": "Make call"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "boxType": "user",
+                      "user": {
+                        "name": "User name 5",
+                        "age": 35,
+                        "gender": "m",
+                        "imageSrc": "/media/images/user-images/fake-user-5.jpg",
+                        "profession": "User profession",
+                        "position": "User position",
+                        "description": "User description",
+                        "links": [
+                          {
+                            "path": "mailto:",
+                            "iconClass": "icon-mail",
+                            "tooltip": "Send mail"
+                          },
+                          {
+                            "path": "https://www.comand-cms.com",
+                            "target": "comand",
+                            "iconClass": "icon-globe",
+                            "tooltip": "Visit website"
+                          },
+                          {
+                            "path": "tel:",
+                            "iconClass": "icon-phone",
+                            "tooltip": "Make call"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

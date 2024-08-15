@@ -1,0 +1,248 @@
+{
+  "metadata": {
+    "title": "CoManD-UI-Website: Dating-Template",
+    "description": "Kurzbeschreibung für Startseite",
+    "rating": "",
+    "robots": "index/follow",
+    "author": ""
+  },
+  "topContent": {
+    "sections": [
+      {
+        "id": "welcome",
+        "numberOfColumns": 2,
+        "useInnerClass": true,
+        "innerClass": "no-padding",
+        "order": 1,
+        "headlineText": "Test",
+        "components": [
+          {
+            "name": "CmdContainer",
+            "id": "top-container",
+            "components": [
+              {
+                "name": "CmdBasicForm"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "mainContent": {
+    "useFullWidth": false,
+    "sections": [
+      {
+        "id": "section4",
+        "showLinkInMainNavigation": false,
+        "iconClass": "icon-user-profile",
+        "allowAddComponent": true,
+        "headlineText": "Neue Profile",
+        "order": 6,
+        "components": [
+          {
+            "name": "CmdThumbnailScroller",
+            "props": {
+              "cmdHeadline": {
+                "headlineText": "Neue Mitglieder",
+                "headlineLevel": 3
+              },
+              "thumbnailScrollerItems": [
+                {
+                  "image": {
+                    "id": 1,
+                    "src": "/media/images/user-images/fake-user-1.jpg",
+                    "alt": "Max Powers"
+                  },
+                  "figcaption": {
+                    "show": true,
+                    "position": "bottom",
+                    "text": "Max Powers 1<br />Alter 43",
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "image": {
+                    "id": 2,
+                    "src": "/media/images/user-images/fake-user-1.jpg",
+                    "alt": "Max Powers"
+                  },
+                  "figcaption": {
+                    "show": true,
+                    "position": "bottom",
+                    "text": "Max Powers 2",
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "image": {
+                    "id": 3,
+                    "src": "/media/images/user-images/fake-user-1.jpg",
+                    "alt": "Max Powers"
+                  },
+                  "figcaption": {
+                    "show": true,
+                    "position": "bottom",
+                    "text": "Max Powers 3",
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "image": {
+                    "id": 4,
+                    "src": "/media/images/user-images/fake-user-1.jpg",
+                    "alt": "Max Powers"
+                  },
+                  "figcaption": {
+                    "show": true,
+                    "position": "bottom",
+                    "text": "Max Powers 4",
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "image": {
+                    "id": 5,
+                    "src": "/media/images/user-images/fake-user-1.jpg",
+                    "alt": "Max Powers"
+                  },
+                  "figcaption": {
+                    "show": true,
+                    "position": "bottom",
+                    "text": "Max Powers 5",
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "image": {
+                    "id": 6,
+                    "src": "/media/images/user-images/fake-user-1.jpg",
+                    "alt": "Max Powers"
+                  },
+                  "figcaption": {
+                    "show": true,
+                    "position": "bottom",
+                    "text": "Max Powers 6",
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "image": {
+                    "id": 7,
+                    "src": "/media/images/user-images/fake-user-1.jpg",
+                    "alt": "Max Powers"
+                  },
+                  "figcaption": {
+                    "show": true,
+                    "position": "bottom",
+                    "text": "Max Powers 7",
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "image": {
+                    "id": 8,
+                    "src": "/media/images/user-images/fake-user-1.jpg",
+                    "alt": "Max Powers"
+                  },
+                  "figcaption": {
+                    "show": true,
+                    "position": "bottom",
+                    "text": "Max Powers 8",
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "image": {
+                    "id": 8,
+                    "src": "/media/images/user-images/fake-user-1.jpg",
+                    "alt": "Max Powers"
+                  },
+                  "figcaption": {
+                    "show": true,
+                    "position": "bottom",
+                    "text": "Max Powers 9",
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "image": {
+                    "id": 8,
+                    "src": "/media/images/user-images/fake-user-1.jpg",
+                    "alt": "Max Powers"
+                  },
+                  "figcaption": {
+                    "show": true,
+                    "position": "bottom",
+                    "text": "Max Powers 10",
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "image": {
+                    "id": 8,
+                    "src": "/media/images/user-images/fake-user-1.jpg",
+                    "alt": "Max Powers"
+                  },
+                  "figcaption": {
+                    "show": true,
+                    "position": "bottom",
+                    "text": "Max Powers 11",
+                    "textAlign": "center"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "section5",
+        "showLinkInMainNavigation": false,
+        "iconClass": "icon-user-profile",
+        "allowAddComponent": true,
+        "headlineText": "Neue Profile",
+        "order": 6,
+        "components": [
+          {
+            "name": "CmdContainer",
+            "allowAddComponent": true,
+            "props": {
+              "class": "flex-container vertical"
+            },
+            "components": [
+              {
+                "name": "CmdBox",
+                "props": {
+                  "stretchVertically": false,
+                  "cmdHeadline": {
+                    "headlineLevel": 4,
+                    "headlineText": "Box mit Bild"
+                  },
+                  "image": {
+                    "src": "/media/images/content-images/couple2.jpg",
+                    "altText": "Alternative Text"
+                  },
+                  "textBody": "Erhöhen Sie die Chancen auf einen erfolgreichen Flirt mit diesen 10 Dating-Tipps.",
+                  "cmdLink": {
+                    "linkType": "href",
+                    "text": "Weiterlesen",
+                    "path": "#",
+                    "styleAsButton": true
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "CmdContainer",
+            "allowAddComponent": true,
+            "props": {
+              "class": "flex-container vertical"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

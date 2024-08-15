@@ -1,6 +1,6 @@
 import {createPinia} from "pinia"
 import {usePiniaStore} from "./stores/pinia.js"
-import {useCmsStore} from "./stores/cms.js"
+import {useCmsStore} from "./stores/website.js"
 import router from "./router"
 import * as components from "comand-component-library"
 

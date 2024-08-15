@@ -80,12 +80,12 @@ import {createUuid, openFancyBox} from 'comand-component-library'
 // import functions
 import {mapActions, mapState} from "pinia"
 import {usePiniaStore} from "../stores/pinia"
-import {useCmsStore} from "../stores/cms"
+import {useCmsStore} from "../stores/website"
 
 // import mixins
 import BaseI18nComponent from "../components/mixins/BaseI18nComponent"
 import {useEditModeContext} from "../composables/editModeContext.js"
-import {computed, watch} from "vue";
+import {computed, watch} from "vue"
 
 export default {
     mixins: [
@@ -116,6 +116,15 @@ export default {
         }
     },
     created() {
+        // append template.css as last css-file
+        if(!document.querySelector("#custom-template")) {
+            const linkTag = document.createElement("link")
+            linkTag.setAttribute("rel", "stylesheet")
+            linkTag.setAttribute("href", "/styles/templates.css")
+            linkTag.setAttribute("id", "custom-template")
+            document.head.append(linkTag)
+        }
+
         // register event-listener to check if location.hash has changed, so 'active'-class for navigation can be set correctly
         addEventListener("hashchange", this.onLocationHashChanged)
 
@@ -139,7 +148,7 @@ export default {
 
         if (siteHeader.length > 0) {
             const resizeObserver = new ResizeObserver(entries => {
-                // get height of site-header to set scroll-padding on #page-wrapper
+                // get height of site-header to set scroll-padding on .page-wrapper
                 this.heightSiteHeader = entries[0].target.offsetHeight
             })
             resizeObserver.observe(siteHeader[0])

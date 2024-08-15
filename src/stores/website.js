@@ -193,6 +193,9 @@ export const useCmsStore = defineStore("cms", {
         },
         currentLanguageData(state) {
             return state.languageData[state.currentLanguage] || {}
+        },
+        numberOfPages(state) {
+            return state.pages.length
         }
     },
     actions: {
@@ -222,14 +225,14 @@ export const useCmsStore = defineStore("cms", {
                 return
             }
             this.pageContent[this.currentLanguage] = {}
-            const url = new URL(`/templates/pages-${this.currentLanguage}/${name}.json`, location.href);
+            const url = new URL(`/templates/dating/pages-${this.currentLanguage}/${name}.json`, location.href);
             axios(url.href)
                 .then(response => response.data)
                 .then(pageContent => this.pageContent[this.currentLanguage][name] = pageContent)
         },
         loadSiteStructure(siteStructure) {
             this.siteStructure = siteStructure || []
-            const url = new URL(`/templates/pages-${this.currentLanguage}/header-footer.json`, location.href);
+            const url = new URL(`/templates/dating/pages-${this.currentLanguage}/header-footer.json`, location.href);
             axios(url.href)
                 .then(response => response.data)
                 .then(structure => {

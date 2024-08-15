@@ -34,7 +34,6 @@
                 :components="section.components"
                 :useFullDeviceWidth="section.useFullDeviceWidth"
                 :contentOrientation="section.contentOrientation"
-
             />
             <!-- end content sections -->
         </template>
@@ -47,7 +46,7 @@ import BaseI18nComponent from "./mixins/BaseI18nComponent"
 
 import {mapActions, mapState} from "pinia"
 import {usePiniaStore} from "../stores/pinia"
-import {useCmsStore} from "../stores/cms"
+import {useCmsStore} from "../stores/website"
 import {createUuid} from "comand-component-library";
 
 export default {
