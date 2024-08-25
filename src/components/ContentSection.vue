@@ -1,5 +1,11 @@
 <template>
-    <CmdWidthLimitationWrapper :innerClass="htmlClasses" :id="numberOfPages > 1 ? id : 'anchor' + id">
+    <CmdWidthLimitationWrapper
+        :innerClass="htmlClasses"
+        :id="numberOfPages > 1 ? id : 'anchor-' + id"
+        :cmdHeadline="cmdHeadline"
+        :contentType="contentType"
+        :contentOrientation="contentOrientation"
+    >
         <component
             v-for="(component, componentIndex) in components"
             :key="componentIndex"
@@ -8,13 +14,15 @@
             v-bind="component.props"
             :i18n="currentLanguageData"
         >
-            <component
-                v-for="(childComponent, childComponentIndex) in component.components || []"
-                :is="childComponent.name"
-                :key="childComponentIndex"
-                v-bind="childComponent.props"
-                :i18n="currentLanguageData"
-            />
+            <template v-slot:[slotName] v-for="(childComponents, slotName) in groupComponentBySlotName(component.components)">
+                <component
+                    v-for="(childComponent, childComponentIndex) in childComponents"
+                    :is="childComponent.name"
+                    :key="childComponentIndex"
+                    v-bind="childComponent.props"
+                    :i18n="currentLanguageData"
+                />
+            </template>
         </component>
     </CmdWidthLimitationWrapper>
 </template>
@@ -39,23 +47,16 @@ export default {
             type: String,
             required: false
         },
-        headlineText: {
-            type: String,
+        cmdHeadline: {
+            type: Object,
             required: false
-        },
-        headlineLevel: {
-            type: [String, Number],
-            default() {
-                return 2
-            }
         },
         useFullDeviceWidth: {
             type: Boolean,
             default: false
         },
         contentOrientation: {
-            type: String,
-            default: "horizontal"
+            type: String
         },
         components: {
             type: Array,
@@ -67,6 +68,9 @@ export default {
         },
         allowAddComponent: {
             type: Boolean
+        },
+        contentType: {
+            type: String
         }
     },
     computed: {
@@ -78,18 +82,12 @@ export default {
         }),
         htmlClasses() {
             const classes = []
-            if(this.innerClass) {
+            if (this.innerClass) {
                 classes.push(this.innerClass)
             }
 
-            if(this.useFullDeviceWidth) {
+            if (this.useFullDeviceWidth) {
                 classes.push("full-width")
-            }
-
-            if(this.contentOrientation === "horizontal") {
-                classes.push("flex-container")
-            } else if(this.contentOrientation === "vertical") {
-                classes.push("flex-container vertical")
             }
 
             return classes.join(" ")
@@ -114,12 +112,35 @@ export default {
         }
     },
     methods: {
+        getSlotName(component) {
+            return component.slotName || 'default'
+        },
         componentPath(sectionId) {
             return [
                 "main",
                 "sections",
                 {id: sectionId}
             ]
+        },
+        groupComponentBySlotName(components) {
+            const slots = {}
+
+            if(!components) {
+                return slots
+            }
+
+            for(let i = 0; i < components.length; i++) {
+                const slotName = this.getSlotName(components[i])
+
+                // check if slotname already exists
+                if(!slots[slotName]) {
+                    slots[slotName] = []
+                }
+                // push component to slotname to group all components with same slotname
+                slots[slotName].push(components[i])
+            }
+
+            return slots
         }
     }
 }

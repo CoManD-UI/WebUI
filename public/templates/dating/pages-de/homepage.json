@@ -10,18 +10,62 @@
     "sections": [
       {
         "id": "welcome",
-        "numberOfColumns": 2,
         "useInnerClass": true,
-        "innerClass": "no-padding",
         "order": 1,
-        "headlineText": "Test",
+        "useFullDeviceWidth": false,
+        "cmdHeadline": null,
         "components": [
           {
-            "name": "CmdContainer",
+            "name": "CmdTabs",
             "id": "top-container",
+            "props": {
+              "stretchTabs": true,
+              "useSlot": true,
+              "useDefaultPadding": false,
+              "tabs": [
+                {
+                  "name": "Jetzt suchen",
+                  "headlineText": "Tab 1 Headline",
+                  "headlineLevel": 4,
+                  "iconClass": "icon-search"
+                },
+                {
+                  "name": "Anmelden",
+                  "headlineText": "Tab 2 Headline",
+                  "headlineLevel": 4,
+                  "iconClass": "icon-logon"
+                }
+              ]
+            },
             "components": [
               {
-                "name": "CmdBasicForm"
+                "name": "RegisterForm",
+                "slotName": "tab-content-0",
+                "props": {
+                  "cmdForm": {
+                    "class": "register-form",
+                    "legend": {
+                      "show": false,
+                      "text": "Register"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "CmdLoginForm",
+                "slotName": "tab-content-1",
+                "props": {
+                  "cmdHeadlineLoginForm": {
+                    "headlineText": "Jetzt registrieren und Partner finden!",
+                    "headlineLevel": 3
+                  },
+                  "legendLoginForm": {
+                    "show": false,
+                    "text": "Login form"
+                  },
+                  "orientation": "vertical",
+                  "options": {}
+                }
               }
             ]
           }
@@ -30,216 +74,498 @@
     ]
   },
   "mainContent": {
-    "useFullWidth": false,
     "sections": [
       {
-        "id": "section4",
+        "id": "new-members",
         "showLinkInMainNavigation": false,
         "iconClass": "icon-user-profile",
         "allowAddComponent": true,
-        "headlineText": "Neue Profile",
+        "contentType": "flex",
+        "contentOrientation": "horizontal",
+        "innerClass": "some-class",
         "order": 6,
         "components": [
           {
-            "name": "CmdThumbnailScroller",
+            "name": "CmdBox",
             "props": {
+              "id": "box-dating-tipps",
+              "stretchVertically": true,
               "cmdHeadline": {
-                "headlineText": "Neue Mitglieder",
-                "headlineLevel": 3
+                "headlineLevel": 4,
+                "headlineText": "10 Top-Dating-Tipps"
               },
-              "thumbnailScrollerItems": [
-                {
-                  "image": {
-                    "id": 1,
-                    "src": "/media/images/user-images/fake-user-1.jpg",
-                    "alt": "Max Powers"
-                  },
-                  "figcaption": {
-                    "show": true,
-                    "position": "bottom",
-                    "text": "Max Powers 1<br />Alter 43",
-                    "textAlign": "center"
-                  }
-                },
-                {
-                  "image": {
-                    "id": 2,
-                    "src": "/media/images/user-images/fake-user-1.jpg",
-                    "alt": "Max Powers"
-                  },
-                  "figcaption": {
-                    "show": true,
-                    "position": "bottom",
-                    "text": "Max Powers 2",
-                    "textAlign": "center"
-                  }
-                },
-                {
-                  "image": {
-                    "id": 3,
-                    "src": "/media/images/user-images/fake-user-1.jpg",
-                    "alt": "Max Powers"
-                  },
-                  "figcaption": {
-                    "show": true,
-                    "position": "bottom",
-                    "text": "Max Powers 3",
-                    "textAlign": "center"
-                  }
-                },
-                {
-                  "image": {
-                    "id": 4,
-                    "src": "/media/images/user-images/fake-user-1.jpg",
-                    "alt": "Max Powers"
-                  },
-                  "figcaption": {
-                    "show": true,
-                    "position": "bottom",
-                    "text": "Max Powers 4",
-                    "textAlign": "center"
-                  }
-                },
-                {
-                  "image": {
-                    "id": 5,
-                    "src": "/media/images/user-images/fake-user-1.jpg",
-                    "alt": "Max Powers"
-                  },
-                  "figcaption": {
-                    "show": true,
-                    "position": "bottom",
-                    "text": "Max Powers 5",
-                    "textAlign": "center"
-                  }
-                },
-                {
-                  "image": {
-                    "id": 6,
-                    "src": "/media/images/user-images/fake-user-1.jpg",
-                    "alt": "Max Powers"
-                  },
-                  "figcaption": {
-                    "show": true,
-                    "position": "bottom",
-                    "text": "Max Powers 6",
-                    "textAlign": "center"
-                  }
-                },
-                {
-                  "image": {
-                    "id": 7,
-                    "src": "/media/images/user-images/fake-user-1.jpg",
-                    "alt": "Max Powers"
-                  },
-                  "figcaption": {
-                    "show": true,
-                    "position": "bottom",
-                    "text": "Max Powers 7",
-                    "textAlign": "center"
-                  }
-                },
-                {
-                  "image": {
-                    "id": 8,
-                    "src": "/media/images/user-images/fake-user-1.jpg",
-                    "alt": "Max Powers"
-                  },
-                  "figcaption": {
-                    "show": true,
-                    "position": "bottom",
-                    "text": "Max Powers 8",
-                    "textAlign": "center"
-                  }
-                },
-                {
-                  "image": {
-                    "id": 8,
-                    "src": "/media/images/user-images/fake-user-1.jpg",
-                    "alt": "Max Powers"
-                  },
-                  "figcaption": {
-                    "show": true,
-                    "position": "bottom",
-                    "text": "Max Powers 9",
-                    "textAlign": "center"
-                  }
-                },
-                {
-                  "image": {
-                    "id": 8,
-                    "src": "/media/images/user-images/fake-user-1.jpg",
-                    "alt": "Max Powers"
-                  },
-                  "figcaption": {
-                    "show": true,
-                    "position": "bottom",
-                    "text": "Max Powers 10",
-                    "textAlign": "center"
-                  }
-                },
-                {
-                  "image": {
-                    "id": 8,
-                    "src": "/media/images/user-images/fake-user-1.jpg",
-                    "alt": "Max Powers"
-                  },
-                  "figcaption": {
-                    "show": true,
-                    "position": "bottom",
-                    "text": "Max Powers 11",
-                    "textAlign": "center"
-                  }
+              "textBody": "Erhöhen Sie die Chancen auf einen erfolgreichen Flirt mit diesen 10 Dating-Tipps.",
+              "cmdImage": {
+                "image": {
+                  "src": "/media/images/content-images/couple2.jpg",
+                  "alt": "Alternative Text"
                 }
-              ]
+              },
+              "cmdLink": {
+                "linkType": "href",
+                "path": "#",
+                "icon": {
+                  "iconClass": "icon-chevron-two-stripes-right",
+                  "position": "right"
+                },
+                "text": "Read more"
+              }
             }
-          }
-        ]
-      },
-      {
-        "id": "section5",
-        "showLinkInMainNavigation": false,
-        "iconClass": "icon-user-profile",
-        "allowAddComponent": true,
-        "headlineText": "Neue Profile",
-        "order": 6,
-        "components": [
+          },
           {
             "name": "CmdContainer",
-            "allowAddComponent": true,
             "props": {
-              "class": "flex-container vertical"
+              "containerType": "flex",
+              "contentOrientation": "vertical"
             },
             "components": [
               {
-                "name": "CmdBox",
+                "name": "CmdThumbnailScroller",
                 "props": {
-                  "stretchVertically": false,
                   "cmdHeadline": {
-                    "headlineLevel": 4,
-                    "headlineText": "Box mit Bild"
+                    "headlineText": "New male members",
+                    "headlineLevel": 3,
+                    "textAlign": "center"
                   },
-                  "image": {
-                    "src": "/media/images/content-images/couple2.jpg",
-                    "altText": "Alternative Text"
+                  "thumbnailScrollerItems": [
+                    {
+                      "image": {
+                        "id": 1,
+                        "src": "/media/images/user-images/fake-user-1.jpg",
+                        "alt": "James",
+                        "tooltip": "Login to view image and full profile"
+                      },
+                      "figcaption": {
+                        "show": true,
+                        "position": "bottom",
+                        "text": "James<br />Alter 43",
+                        "textAlign": "center"
+                      }
+                    },
+                    {
+                      "image": {
+                        "id": 2,
+                        "src": "/media/images/user-images/fake-user-2.jpg",
+                        "alt": "William",
+                        "tooltip": "Login to view image and full profile"
+                      },
+                      "figcaption": {
+                        "show": true,
+                        "position": "bottom",
+                        "text": "William<br />Alter 38",
+                        "textAlign": "center"
+                      }
+                    },
+                    {
+                      "image": {
+                        "id": 3,
+                        "src": "/media/images/user-images/fake-user-3.jpg",
+                        "alt": "David"
+                      },
+                      "figcaption": {
+                        "show": true,
+                        "position": "bottom",
+                        "text": "David<br />Alter 29",
+                        "textAlign": "center"
+                      }
+                    },
+                    {
+                      "image": {
+                        "id": 4,
+                        "src": "/media/images/user-images/fake-user-4.jpg",
+                        "alt": "Emma",
+                        "tooltip": "Login to view image and full profile"
+                      },
+                      "figcaption": {
+                        "show": true,
+                        "position": "bottom",
+                        "text": "Emma<br />Alter 32",
+                        "textAlign": "center"
+                      }
+                    },
+                    {
+                      "image": {
+                        "id": 5,
+                        "src": "/media/images/user-images/fake-user-5.jpg",
+                        "alt": "Olivia",
+                        "tooltip": "Login to view image and full profile"
+                      },
+                      "figcaption": {
+                        "show": true,
+                        "position": "bottom",
+                        "text": "Olivia<br />Alter 24",
+                        "textAlign": "center"
+                      }
+                    },
+                    {
+                      "image": {
+                        "id": 6,
+                        "src": "/media/images/user-images/fake-user-1.jpg",
+                        "alt": "Michael",
+                        "tooltip": "Login to view image and full profile"
+                      },
+                      "figcaption": {
+                        "show": true,
+                        "position": "bottom",
+                        "text": "Michael<br />Alter 43",
+                        "textAlign": "center"
+                      }
+                    },
+                    {
+                      "image": {
+                        "id": 7,
+                        "src": "/media/images/user-images/fake-user-2.jpg",
+                        "alt": "John",
+                        "tooltip": "Login to view image and full profile"
+                      },
+                      "figcaption": {
+                        "show": true,
+                        "position": "bottom",
+                        "text": "John<br />Alter 38",
+                        "textAlign": "center"
+                      }
+                    },
+                    {
+                      "image": {
+                        "id": 8,
+                        "src": "/media/images/user-images/fake-user-3.jpg",
+                        "alt": "Robert",
+                        "tooltip": "Login to view image and full profile"
+                      },
+                      "figcaption": {
+                        "show": true,
+                        "position": "bottom",
+                        "text": "Robert<br />Alter 29",
+                        "textAlign": "center"
+                      }
+                    },
+                    {
+                      "image": {
+                        "id": 8,
+                        "src": "/media/images/user-images/fake-user-4.jpg",
+                        "alt": "Sophia",
+                        "tooltip": "Login to view image and full profile"
+                      },
+                      "figcaption": {
+                        "show": true,
+                        "position": "bottom",
+                        "text": "Sophia<br />Alter 32",
+                        "textAlign": "center"
+                      }
+                    },
+                    {
+                      "image": {
+                        "id": 8,
+                        "src": "/media/images/user-images/fake-user-5.jpg",
+                        "alt": "Emily",
+                        "tooltip": "Login to view image and full profile"
+                      },
+                      "figcaption": {
+                        "show": true,
+                        "position": "bottom",
+                        "text": "Emily<br />Alter 24",
+                        "textAlign": "center"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "CmdThumbnailScroller",
+                "props": {
+                  "cmdHeadline": {
+                    "headlineText": "New female members",
+                    "headlineLevel": 3,
+                    "textAlign": "center"
                   },
-                  "textBody": "Erhöhen Sie die Chancen auf einen erfolgreichen Flirt mit diesen 10 Dating-Tipps.",
-                  "cmdLink": {
-                    "linkType": "href",
-                    "text": "Weiterlesen",
-                    "path": "#",
-                    "styleAsButton": true
-                  }
+                  "thumbnailScrollerItems": [
+                    {
+                      "image": {
+                        "id": 1,
+                        "src": "/media/images/user-images/fake-user-1.jpg",
+                        "alt": "James",
+                        "tooltip": "Login to view image and full profile"
+                      },
+                      "figcaption": {
+                        "show": true,
+                        "position": "bottom",
+                        "text": "James<br />Alter 43",
+                        "textAlign": "center"
+                      }
+                    },
+                    {
+                      "image": {
+                        "id": 2,
+                        "src": "/media/images/user-images/fake-user-2.jpg",
+                        "alt": "William",
+                        "tooltip": "Login to view image and full profile"
+                      },
+                      "figcaption": {
+                        "show": true,
+                        "position": "bottom",
+                        "text": "William<br />Alter 38",
+                        "textAlign": "center"
+                      }
+                    },
+                    {
+                      "image": {
+                        "id": 3,
+                        "src": "/media/images/user-images/fake-user-3.jpg",
+                        "alt": "David"
+                      },
+                      "figcaption": {
+                        "show": true,
+                        "position": "bottom",
+                        "text": "David<br />Alter 29",
+                        "textAlign": "center"
+                      }
+                    },
+                    {
+                      "image": {
+                        "id": 4,
+                        "src": "/media/images/user-images/fake-user-4.jpg",
+                        "alt": "Emma",
+                        "tooltip": "Login to view image and full profile"
+                      },
+                      "figcaption": {
+                        "show": true,
+                        "position": "bottom",
+                        "text": "Emma<br />Alter 32",
+                        "textAlign": "center"
+                      }
+                    },
+                    {
+                      "image": {
+                        "id": 5,
+                        "src": "/media/images/user-images/fake-user-5.jpg",
+                        "alt": "Olivia",
+                        "tooltip": "Login to view image and full profile"
+                      },
+                      "figcaption": {
+                        "show": true,
+                        "position": "bottom",
+                        "text": "Olivia<br />Alter 24",
+                        "textAlign": "center"
+                      }
+                    },
+                    {
+                      "image": {
+                        "id": 6,
+                        "src": "/media/images/user-images/fake-user-1.jpg",
+                        "alt": "Michael",
+                        "tooltip": "Login to view image and full profile"
+                      },
+                      "figcaption": {
+                        "show": true,
+                        "position": "bottom",
+                        "text": "Michael<br />Alter 43",
+                        "textAlign": "center"
+                      }
+                    },
+                    {
+                      "image": {
+                        "id": 7,
+                        "src": "/media/images/user-images/fake-user-2.jpg",
+                        "alt": "John",
+                        "tooltip": "Login to view image and full profile"
+                      },
+                      "figcaption": {
+                        "show": true,
+                        "position": "bottom",
+                        "text": "John<br />Alter 38",
+                        "textAlign": "center"
+                      }
+                    },
+                    {
+                      "image": {
+                        "id": 8,
+                        "src": "/media/images/user-images/fake-user-3.jpg",
+                        "alt": "Robert",
+                        "tooltip": "Login to view image and full profile"
+                      },
+                      "figcaption": {
+                        "show": true,
+                        "position": "bottom",
+                        "text": "Robert<br />Alter 29",
+                        "textAlign": "center"
+                      }
+                    },
+                    {
+                      "image": {
+                        "id": 8,
+                        "src": "/media/images/user-images/fake-user-4.jpg",
+                        "alt": "Sophia",
+                        "tooltip": "Login to view image and full profile"
+                      },
+                      "figcaption": {
+                        "show": true,
+                        "position": "bottom",
+                        "text": "Sophia<br />Alter 32",
+                        "textAlign": "center"
+                      }
+                    },
+                    {
+                      "image": {
+                        "id": 8,
+                        "src": "/media/images/user-images/fake-user-5.jpg",
+                        "alt": "Emily",
+                        "tooltip": "Login to view image and full profile"
+                      },
+                      "figcaption": {
+                        "show": true,
+                        "position": "bottom",
+                        "text": "Emily<br />Alter 24",
+                        "textAlign": "center"
+                      }
+                    }
+                  ]
                 }
               }
             ]
           },
           {
-            "name": "CmdContainer",
-            "allowAddComponent": true,
+            "name": "CmdBox",
             "props": {
-              "class": "flex-container vertical"
-            }
+              "cmdHeadline": {
+                "headlineText": "Most viewed profiles",
+                "headlineLevel": 4
+              },
+              "useSlots": [
+                "body"
+              ],
+              "useDefaultPadding": false,
+              "stretchVertically": true
+            },
+            "components": [
+              {
+                "name": "ListWithImages",
+                "slotName": "body",
+                "props": {
+                  "items": [
+                    {
+                      "image": {
+                        "src": "/media/images/user-images/fake-user-4.jpg",
+                        "alt": "alt text",
+                        "tooltip": "Login to view image and full profile"
+                      },
+                      "text": "<span>Emma, 32</span><span>380 views</span>",
+                      "cmdLink": {
+                          "type": "href",
+                          "path": "#"
+                      }
+                    },
+                    {
+                      "image": {
+                        "src": "/media/images/user-images/fake-user-5.jpg",
+                        "alt": "alt text",
+                        "tooltip": "Login to view image and full profile"
+                      },
+                      "text": "<span>Olivia, 32</span><span>297 views</span>"
+                    },
+                    {
+                      "image": {
+                        "src": "/media/images/user-images/fake-user-1.jpg",
+                        "alt": "alt text",
+                        "tooltip": "Login to view image and full profile"
+                      },
+                      "text": "<span>James, 43</span><span>256 views</span>"
+                    },
+                    {
+                      "image": {
+                        "src": "/media/images/user-images/fake-user-3.jpg",
+                        "alt": "alt text",
+                        "tooltip": "Login to view image and full profile"
+                      },
+                      "text": "<span>David, 29</span><span>153 views</span>"
+                    },
+                    {
+                      "image": {
+                        "src": "/media/images/user-images/fake-user-2.jpg",
+                        "alt": "alt text",
+                        "tooltip": "Login to view image and full profile"
+                      },
+                      "text": "<span>William, 38</span><span>69 views</span>"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "services",
+        "showLinkInMainNavigation": false,
+        "iconClass": "icon-user-profile",
+        "allowAddComponent": true,
+        "contentType": "flex",
+        "contentOrientation": "horizontal",
+        "cmdHeadline": {
+          "headlineText": "Unser Service für Sie",
+          "headlineLevel": 2,
+          "textAlign": "center"
+        },
+        "order": 6,
+        "components": [
+          {
+            "name": "CmdBoxWrapper",
+            "props": {
+              "allowAddComponent": true,
+              "allowUserToToggleOrientation": false,
+              "boxesPerRow": 3,
+              "useFlexbox": true,
+              "useGap": true
+            },
+            "components": [
+              {
+                "name": "CmdBox",
+                "props": {
+                  "stretchVertically": true,
+                  "cmdHeadline": {
+                    "headlineLevel": 3,
+                    "headlineText": "Verifizierte Profile",
+                    "textAlign": "center"
+                  },
+                  "headlinePosition": "body",
+                  "cmdIcon": {
+                    "iconClass": "icon-check"
+                  },
+                  "textBody": "Wir stellen technisch und durch geschulte Mitarbeiter sicher, dass alle Profile auf unserer Plattform echt und sind"
+                }
+              },
+              {
+                "name": "CmdBox",
+                "props": {
+                  "stretchVertically": true,
+                  "cmdHeadline": {
+                    "headlineLevel": 3,
+                    "headlineText": "Finde Deinen Partner weltweit",
+                    "textAlign": "center"
+                  },
+                  "headlinePosition": "body",
+                  "cmdIcon": {
+                    "iconClass": "icon-globe"
+                  },
+                  "textBody": "Wir bieten weltweite Partnersuche in über 100 Ländern."
+                }
+              },
+              {
+                "name": "CmdBox",
+                "props": {
+                  "stretchVertically": true,
+                  "cmdHeadline": {
+                    "headlineLevel": 3,
+                    "headlineText": "Sicherheits wird groß geschrieben",
+                    "textAlign": "center"
+                  },
+                  "headlinePosition": "body",
+                  "cmdIcon": {
+                    "iconClass": "icon-security-settings"
+                  },
+                  "textBody": "Ihre Profildaten sind nur für angemeldet Mitglieder sichtbar und Ihre Privatsphäre wird von uns geschützt."
+                }
+              }
+            ]
           }
         ]
       }

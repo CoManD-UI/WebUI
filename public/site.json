@@ -64,6 +64,9 @@
     }
   ],
   "pageFooter": {
+    "buttonPrintView": {
+      "show": false
+    },
     "cmdSocialNetworks": [
       {
         "id": "social-network-facebook",

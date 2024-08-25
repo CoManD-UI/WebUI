@@ -6,6 +6,8 @@ import * as components from "comand-component-library"
 
 // import local components
 import LoginArea from "./components/LoginArea.vue"
+import ListWithImages from "./components/ListWithImages.vue"
+import RegisterForm from "./components/RegisterForm.vue"
 
 // import settings-components
 import CmdToggleDarkModeSettings from "./components/editmode/component-settings/CmdToggleDarkModeSettings.vue"
@@ -95,6 +97,8 @@ function processPage(page, store, path) {
 function bootstrap(app) {
     Object.entries({
         LoginArea,
+        ListWithImages,
+        RegisterForm,
         CmdToggleDarkModeSettings,
         CmdImageGallerySettings,
         CmdImageSettings,

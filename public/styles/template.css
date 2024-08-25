@@ -4,15 +4,191 @@
     src: url('monda.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 html {
-    --default-font-family: "mondaregular" !important;
-    border: 5px solid red;
+    --default-font-family: "mondaregular", sans-serif !important;
+    --box-header-background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(240,240,240,1) 100%);
+    --box-header-text-color: var(--primary-color);
+    --section-padding-top: calc(var(--default-padding) * 4) !important;
+    --section-padding-bottom: calc(var(--default-padding) * 4) !important;
+    --background-blur: blur(.7rem);
+    --background-low-transparency: rgba(255, 255, 255, .75);
+    --background-high-transparency: rgba(255, 255, 255, .2);
+}
+
+.cmd-company-logo {
+    img {
+        max-height: 8rem;
+    }
+}
+
+button, .button {
+    transition: all linear .5s;
+}
+
+.site-header header .main-navigation-wrapper {
+    nav {
+        --nav-border-radius: 2rem;
+        background: var(--secondary-color);
+        border-radius: var(--nav-border-radius);
+
+        > ul {
+            background: none;
+            > li {
+                &:first-child a {
+                    border-top-left-radius: var(--nav-border-radius);
+                    border-bottom-left-radius: var(--nav-border-radius);
+                }
+
+                &:last-child a {
+                    border-top-right-radius: var(--nav-border-radius);
+                    border-bottom-right-radius: var(--nav-border-radius);
+                }
+
+                > a {
+                    padding-top: .5rem;
+                    padding-bottom: .5rem;
+
+                    span {
+                        color: var(--pure-white);
+                    }
+                }
+            }
+        }
+    }
 }
 
 #welcome {
     background: url("/public/media/images/content-images/couple.jpg") no-repeat;
     background-size: cover;
+    height: 95dvh;
+
+    .cmd-tabs > ul > li > a {
+        padding: .5rem;
+    }
+
+    section {
+        padding: var(--default-padding);
+        display: flex;
+
+        #top-container {
+            width: 38%;
+            display: inline-flex;
+            justify-content: flex-end;
+            flex-direction: column;
+            margin-left: auto;
+
+            fieldset {
+                margin: 0;
+            }
+        }
+    }
+
+    .cmd-login-form, .register-form fieldset, .cmd-tabs > div {
+        backdrop-filter: var(--background-blur);
+        background: var(--background-high-transparency);
+    }
+
+    #age-wrapper > label {
+        flex: 1 !important;
+    }
+}
+
+#new-members {
+    > section > .flex-container {
+        gap: 4rem;
+    }
+
+    #box-dating-tipps {
+        figure {
+            overflow: hidden;
+        }
+
+        img:hover {
+            transform: scale(110%);
+            transition: all 3s linear;
+        }
+    }
+
+    .cmd-thumbnail-scroller > .inner-thumbnail-wrapper {
+        backdrop-filter: var(--background-blur);
+        background: var(--background-high-transparency);
+        padding-bottom: var(--default-padding);
+    }
+
+    .cmd-thumbnail-scroller > .inner-thumbnail-wrapper > ul {
+        gap: calc(var(--default-gap) * 2);
+
+        li a {
+            img {
+                border-width: .2rem;
+                transition: var(--default-transition);
+            }
+
+            &:hover, &:active, &:focus {
+                img {
+                    box-shadow: 0 0 1rem #999;
+                    transition: var(--default-transition);
+                }
+            }
+        }
+    }
+
+    img[src*="fake-user"] {
+        filter: blur(.4rem);
+    }
+
+    .inner-box-body-wrapper:has(.list-with-images) {
+        display: flex;
+        flex-grow: 1;
+
+        .list-with-images {
+            display: flex;
+            justify-content: stretch;
+            width: 100%;
+
+            li {
+                width: 100%;
+                border: var(--default-border);
+                height: 100%;
+                padding: 0 var(--default-padding);
+
+                img {
+                    border-radius: var(--full-circle);
+                }
+
+                span {
+                    display: block;
+
+                    &:first-child {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#services {
+    .cmd-box {
+        border: 0;
+
+        span[class*="icon"] {
+            color: var(--primary-color);
+        }
+    }
+}
+
+.site-footer {
+    backdrop-filter: var(--background-blur);
+    background: var(--background-high-transparency);
+
+    .cmd-list-of-links {
+        margin-bottom: var(--default-margin);
+    }
+}
+
+.cmd-copyright-information {
+    background: var(--primary-color);
 }

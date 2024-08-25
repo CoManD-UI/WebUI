@@ -15,7 +15,7 @@
                         :id="section.id"
                         :htmlClass="section.class"
                         :allowAddComponent="section.allowAddComponent"
-                        :headlineText="section.headlineText"
+                        :cmdHeadline="section.cmdHeadline"
                     />
                 </template>
                 <!-- end content sections -->
@@ -30,10 +30,11 @@
                 v-for="(section, index) in activeSections"
                 :key="index"
                 :id="section.id"
-                :headlineText="section.headlineText"
                 :components="section.components"
                 :useFullDeviceWidth="section.useFullDeviceWidth"
+                :contentType="section.contentType"
                 :contentOrientation="section.contentOrientation"
+                :cmdHeadline="section.cmdHeadline"
             />
             <!-- end content sections -->
         </template>
@@ -97,7 +98,7 @@ export default {
         activeSections: {
             handler() {
                 this.$nextTick(() => {
-                    const sectionProvider = () => document.querySelectorAll("#content > .cmd-width-limitation-wrapper > section section")
+                    const sectionProvider = () => document.querySelectorAll("#content > .cmd-width-limitation-wrapper > section")
                     if (this.$_intersectionObserver) {
                         this.$_intersectionObserver.disconnect()
                         this.$_intersectionObserver = null
@@ -121,12 +122,35 @@ export default {
 
 <style>
 #content {
-    .cmd-width-limitation-wrapper > section section {
+    .cmd-width-limitation-wrapper > section {
         opacity: 0;
 
         &.visible {
             opacity: 1;
             transition: .5s ease-in all;
+        }
+    }
+
+    #services section {
+        .cmd-box {
+            opacity: 0;
+        }
+
+        &.visible .cmd-box {
+            opacity: 1;
+            transition: .5s ease-in all;
+
+            &:nth-child(1) {
+                transition-delay: .5s;
+            }
+
+            &:nth-child(2) {
+                transition-delay: 1s;
+            }
+
+            &:nth-child(3) {
+                transition-delay: 1.5s;
+            }
         }
     }
 }

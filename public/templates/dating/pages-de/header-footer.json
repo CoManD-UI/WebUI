@@ -1,11 +1,11 @@
 {
   "siteHeader": {
-    "navigationInline": false,
-    "propsLogo": {
-      "pathDefaultLogo": "/media/images/logos/logo-dating.svg",
-      "altText": "Company Logo"
-    },
+    "navigationInline": true,
     "props": {
+      "cmdCompanyLogo": {
+        "pathDefaultLogo": "/media/images/logos/logo-dating.svg",
+        "altText": "Company Logo"
+      },
       "cmdMainNavigation": {
         "closeOffcanvas": {
           "iconClass": "icon-cancel",

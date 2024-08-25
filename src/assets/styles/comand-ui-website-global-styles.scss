@@ -19,6 +19,8 @@
 /* begin page-structure --------------------------------------------------------------------------------------------------------------------------------------------------- */
 html {
     --headline-font-size-h1: 5rem;
+    --section-padding-top: calc(var(--default-padding) * 6);
+    --section-padding-bottom: calc(var(--default-padding) * 6);
 }
 
 body {
@@ -71,15 +73,13 @@ main {
     }
 
     .cmd-width-limitation-wrapper {
-        &:not(#main-headline) {
-            section {
-                padding-top: calc(var(--default-padding) * 6);
-                padding-bottom: calc(var(--default-padding) * 6);
-            }
+        section {
+            padding-top: var(--section-padding-top);
+            padding-bottom: var(--section-padding-top);
+        }
 
-            &:nth-child(even) {
-                background: var(--default-background);
-            }
+        &:nth-child(even) {
+            background: var(--default-background);
         }
     }
 
@@ -112,11 +112,9 @@ main {
 /* begin styles for medium screens --------------------------------------------------------------------------------------------------------------------------------------------------- */
 @media only screen and (max-width: $medium-max-width) {
     .cmd-width-limitation-wrapper {
-        &:not(#main-headline) {
-            section {
-                padding-top: calc(var(--default-padding) * 4);
-                padding-bottom: calc(var(--default-padding) * 4);
-            }
+        section {
+            --section-padding-top: calc(var(--default-padding) * 4);
+            --section-padding-bottom: calc(var(--default-padding) * 4);
         }
     }
 }
@@ -126,15 +124,13 @@ main {
 /* begin styles for small screens --------------------------------------------------------------------------------------------------------------------------------------------------- */
 @media only screen and (max-width: $small-max-width) {
     .cmd-width-limitation-wrapper {
-        &:not(#main-headline) {
-            section {
-                padding-top: calc(var(--default-padding) * 2);
-                padding-bottom: calc(var(--default-padding) * 2);
-            }
+        section {
+            --section-padding-top: calc(var(--default-padding) * 2);
+            --section-padding-bottom: calc(var(--default-padding) * 2);
+        }
 
-            &:nth-child(even) {
-                background: var(--default-background);
-            }
+        &:nth-child(even) {
+            background: var(--default-background);
         }
     }
 

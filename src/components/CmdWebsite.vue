@@ -1,38 +1,24 @@
 <template>
-    <PageWrapper :aside="aside"
-                 :cmdSiteHeader="cmdSiteHeader"
-                 :cmdSiteFooter="siteFooter"
-                 :cmdPageHeader="pageHeader"
-                 :cmdPageFooter="pageFooter"
-                 :pageHeadlineText="pageHeadlineText"
-                 :useFullWidth="mainContentUseFullWidth"
+    <PageWrapper
+        :aside="aside"
+         :cmdSiteHeader="cmdSiteHeader"
+         :cmdSiteFooter="siteFooter"
+         :cmdPageHeader="pageHeader"
+         :cmdPageFooter="pageFooter"
+         :pageHeadlineText="pageHeadlineText"
     >
         <template v-slot:top-content>
             <ContentSection
                 v-for="(section, index) in topContentActiveSections"
                 :key="index"
                 :id="section.id"
-                :headlineText="section.headlineText"
+                :cmdHeadline="section.cmdHeadline"
                 :components="section.components"
                 :innerClass="section.innerClass"
+                :contentType="section.contentType"
                 :contentOrientation="section.contentOrientation"
                 :useFullDeviceWidth="section.useFullDeviceWidth"
             >
-            <component
-                v-for="(component, componentIndex) in topContent"
-                :key="componentIndex"
-                :is="component.name"
-                v-bind="component.props"
-                :i18n="currentLanguageData"
-            >
-                <component
-                    v-for="(childComponent, childComponentIndex) in component.components || []"
-                    :is="childComponent.name"
-                    :key="childComponentIndex"
-                    v-bind="childComponent.props"
-                    :i18n="currentLanguageData"
-                />
-            </component>
             </ContentSection>
         </template>
         <template v-slot:left-column>
@@ -180,17 +166,12 @@ export default {
             "asideRightColumnShow",
             "asideRightColumnContent",
             "topContentActiveSections",
-            "mainContentUseFullWidth",
             "pageHeadlineText"
         ]),
         cmdSiteHeader() {
             return {
-                navigationInline: true,
-                cmdCompanyLogo: {
-                    pathDefaultLogo: "/media/images/logos/logo.svg",
-                    pathDarkmodeLogo: "/media/images/logos/logo-darkmode.svg",
-                    altText: "Company Logo"
-                },
+                navigationInline: !!this.siteHeader?.navigationInline,
+                cmdCompanyLogo: this.companyLogo,
                 mainNavigationEntries: this.mainNavigationEntries
             }
         },

@@ -41,9 +41,6 @@ export const useCmsStore = defineStore("cms", {
         pageHeadlineText() {
             return this.currentPageContent?.mainContent?.pageHeadlineText
         },
-        mainContentUseFullWidth() {
-            return this.currentPageContent?.mainContent?.useFullWidth
-        },
         asideLeftColumnShow() {
             return this.currentPageContent?.mainContent?.aside?.leftColumn?.show
         },
@@ -132,7 +129,7 @@ export const useCmsStore = defineStore("cms", {
             return state.siteStructure.includes("siteFooter")
         },
         companyLogo(state) {
-            return state.siteHeader.propsLogo || {}
+            return state.siteHeader?.props?.cmdCompanyLogo || {}
         },
         metaData(state) {
             return {
