@@ -13,6 +13,11 @@ export default defineConfig({
         }
       }
     }]})],
+    resolve: {
+        alias: {
+            vue: "vue/dist/vue.esm-bundler.js"
+        }
+    },
     build: {
         lib: {
             entry: resolve(__dirname, "src/index.js"),

@@ -108,7 +108,7 @@
                   "iconClass": "icon-chevron-two-stripes-right",
                   "position": "right"
                 },
-                "text": "Read more"
+                "text": "Mehr erfahren"
               }
             }
           },
@@ -123,7 +123,7 @@
                 "name": "CmdThumbnailScroller",
                 "props": {
                   "cmdHeadline": {
-                    "headlineText": "New male members",
+                    "headlineText": "Neu angemeldete Männer",
                     "headlineLevel": 3,
                     "textAlign": "center"
                   },
@@ -133,7 +133,7 @@
                         "id": 1,
                         "src": "/media/images/user-images/fake-user-1.jpg",
                         "alt": "James",
-                        "tooltip": "Login to view image and full profile"
+                        "tooltip": "Melden Sie sich an, um alle Bilder und Profile anzusehen"
                       },
                       "figcaption": {
                         "show": true,
@@ -147,7 +147,7 @@
                         "id": 2,
                         "src": "/media/images/user-images/fake-user-2.jpg",
                         "alt": "William",
-                        "tooltip": "Login to view image and full profile"
+                        "tooltip": "Melden Sie sich an, um alle Bilder und Profile anzusehen"
                       },
                       "figcaption": {
                         "show": true,
@@ -160,7 +160,8 @@
                       "image": {
                         "id": 3,
                         "src": "/media/images/user-images/fake-user-3.jpg",
-                        "alt": "David"
+                        "alt": "David",
+                        "tooltip": "Melden Sie sich an, um alle Bilder und Profile anzusehen"
                       },
                       "figcaption": {
                         "show": true,
@@ -174,7 +175,7 @@
                         "id": 4,
                         "src": "/media/images/user-images/fake-user-4.jpg",
                         "alt": "Emma",
-                        "tooltip": "Login to view image and full profile"
+                        "tooltip": "Melden Sie sich an, um alle Bilder und Profile anzusehen"
                       },
                       "figcaption": {
                         "show": true,
@@ -188,7 +189,7 @@
                         "id": 5,
                         "src": "/media/images/user-images/fake-user-5.jpg",
                         "alt": "Olivia",
-                        "tooltip": "Login to view image and full profile"
+                        "tooltip": "Melden Sie sich an, um alle Bilder und Profile anzusehen"
                       },
                       "figcaption": {
                         "show": true,
@@ -202,7 +203,7 @@
                         "id": 6,
                         "src": "/media/images/user-images/fake-user-1.jpg",
                         "alt": "Michael",
-                        "tooltip": "Login to view image and full profile"
+                        "tooltip": "Melden Sie sich an, um alle Bilder und Profile anzusehen"
                       },
                       "figcaption": {
                         "show": true,
@@ -216,7 +217,7 @@
                         "id": 7,
                         "src": "/media/images/user-images/fake-user-2.jpg",
                         "alt": "John",
-                        "tooltip": "Login to view image and full profile"
+                        "tooltip": "Melden Sie sich an, um alle Bilder und Profile anzusehen"
                       },
                       "figcaption": {
                         "show": true,
@@ -230,7 +231,7 @@
                         "id": 8,
                         "src": "/media/images/user-images/fake-user-3.jpg",
                         "alt": "Robert",
-                        "tooltip": "Login to view image and full profile"
+                        "tooltip": "Melden Sie sich an, um alle Bilder und Profile anzusehen"
                       },
                       "figcaption": {
                         "show": true,
@@ -241,10 +242,10 @@
                     },
                     {
                       "image": {
-                        "id": 8,
+                        "id": 9,
                         "src": "/media/images/user-images/fake-user-4.jpg",
                         "alt": "Sophia",
-                        "tooltip": "Login to view image and full profile"
+                        "tooltip": "Melden Sie sich an, um alle Bilder und Profile anzusehen"
                       },
                       "figcaption": {
                         "show": true,
@@ -255,10 +256,10 @@
                     },
                     {
                       "image": {
-                        "id": 8,
+                        "id": 10,
                         "src": "/media/images/user-images/fake-user-5.jpg",
                         "alt": "Emily",
-                        "tooltip": "Login to view image and full profile"
+                        "tooltip": "Melden Sie sich an, um alle Bilder und Profile anzusehen"
                       },
                       "figcaption": {
                         "show": true,
@@ -274,49 +275,21 @@
                 "name": "CmdThumbnailScroller",
                 "props": {
                   "cmdHeadline": {
-                    "headlineText": "New female members",
+                    "headlineText": "Neu angemeldete Frauen",
                     "headlineLevel": 3,
                     "textAlign": "center"
                   },
                   "thumbnailScrollerItems": [
                     {
                       "image": {
-                        "id": 1,
-                        "src": "/media/images/user-images/fake-user-1.jpg",
-                        "alt": "James",
-                        "tooltip": "Login to view image and full profile"
-                      },
-                      "figcaption": {
-                        "show": true,
-                        "position": "bottom",
-                        "text": "James<br />Alter 43",
-                        "textAlign": "center"
-                      }
-                    },
-                    {
-                      "image": {
-                        "id": 2,
-                        "src": "/media/images/user-images/fake-user-2.jpg",
-                        "alt": "William",
-                        "tooltip": "Login to view image and full profile"
-                      },
-                      "figcaption": {
-                        "show": true,
-                        "position": "bottom",
-                        "text": "William<br />Alter 38",
-                        "textAlign": "center"
-                      }
-                    },
-                    {
-                      "image": {
                         "id": 3,
-                        "src": "/media/images/user-images/fake-user-3.jpg",
-                        "alt": "David"
+                        "src": "/media/images/user-images/fake-user-5.jpg",
+                        "alt": "Veronica"
                       },
                       "figcaption": {
                         "show": true,
                         "position": "bottom",
-                        "text": "David<br />Alter 29",
+                        "text": "Veronica<br />Alter 23",
                         "textAlign": "center"
                       }
                     },
@@ -325,7 +298,7 @@
                         "id": 4,
                         "src": "/media/images/user-images/fake-user-4.jpg",
                         "alt": "Emma",
-                        "tooltip": "Login to view image and full profile"
+                        "tooltip": "Melden Sie sich an, um alle Bilder und Profile anzusehen"
                       },
                       "figcaption": {
                         "show": true,
@@ -339,7 +312,7 @@
                         "id": 5,
                         "src": "/media/images/user-images/fake-user-5.jpg",
                         "alt": "Olivia",
-                        "tooltip": "Login to view image and full profile"
+                        "tooltip": "Melden Sie sich an, um alle Bilder und Profile anzusehen"
                       },
                       "figcaption": {
                         "show": true,
@@ -353,7 +326,7 @@
                         "id": 6,
                         "src": "/media/images/user-images/fake-user-1.jpg",
                         "alt": "Michael",
-                        "tooltip": "Login to view image and full profile"
+                        "tooltip": "Melden Sie sich an, um alle Bilder und Profile anzusehen"
                       },
                       "figcaption": {
                         "show": true,
@@ -367,7 +340,7 @@
                         "id": 7,
                         "src": "/media/images/user-images/fake-user-2.jpg",
                         "alt": "John",
-                        "tooltip": "Login to view image and full profile"
+                        "tooltip": "Melden Sie sich an, um alle Bilder und Profile anzusehen"
                       },
                       "figcaption": {
                         "show": true,
@@ -381,7 +354,7 @@
                         "id": 8,
                         "src": "/media/images/user-images/fake-user-3.jpg",
                         "alt": "Robert",
-                        "tooltip": "Login to view image and full profile"
+                        "tooltip": "Melden Sie sich an, um alle Bilder und Profile anzusehen"
                       },
                       "figcaption": {
                         "show": true,
@@ -395,7 +368,7 @@
                         "id": 8,
                         "src": "/media/images/user-images/fake-user-4.jpg",
                         "alt": "Sophia",
-                        "tooltip": "Login to view image and full profile"
+                        "tooltip": "Melden Sie sich an, um alle Bilder und Profile anzusehen"
                       },
                       "figcaption": {
                         "show": true,
@@ -409,7 +382,7 @@
                         "id": 8,
                         "src": "/media/images/user-images/fake-user-5.jpg",
                         "alt": "Emily",
-                        "tooltip": "Login to view image and full profile"
+                        "tooltip": "Melden Sie sich an, um alle Bilder und Profile anzusehen"
                       },
                       "figcaption": {
                         "show": true,
@@ -427,7 +400,7 @@
             "name": "CmdBox",
             "props": {
               "cmdHeadline": {
-                "headlineText": "Most viewed profiles",
+                "headlineText": "Meistaufgerufene Profile",
                 "headlineLevel": 4
               },
               "useSlots": [
@@ -446,9 +419,9 @@
                       "image": {
                         "src": "/media/images/user-images/fake-user-4.jpg",
                         "alt": "alt text",
-                        "tooltip": "Login to view image and full profile"
+                        "tooltip": "Melden Sie sich an, um alle Bilder und Profile anzusehen"
                       },
-                      "text": "<span>Emma, 32</span><span>380 views</span>",
+                      "text": "<span>Emma, 32</span><span>380 Aufrufe</span>",
                       "cmdLink": {
                           "type": "href",
                           "path": "#"
@@ -458,33 +431,49 @@
                       "image": {
                         "src": "/media/images/user-images/fake-user-5.jpg",
                         "alt": "alt text",
-                        "tooltip": "Login to view image and full profile"
+                        "tooltip": "Melden Sie sich an, um alle Bilder und Profile anzusehen"
                       },
-                      "text": "<span>Olivia, 32</span><span>297 views</span>"
+                      "text": "<span>Olivia, 32</span><span>297 Aufrufe</span>",
+                      "cmdLink": {
+                        "type": "href",
+                        "path": "#"
+                      }
                     },
                     {
                       "image": {
                         "src": "/media/images/user-images/fake-user-1.jpg",
                         "alt": "alt text",
-                        "tooltip": "Login to view image and full profile"
+                        "tooltip": "Melden Sie sich an, um alle Bilder und Profile anzusehen"
                       },
-                      "text": "<span>James, 43</span><span>256 views</span>"
+                      "text": "<span>James, 43</span><span>256 Aufrufe</span>",
+                      "cmdLink": {
+                        "type": "href",
+                        "path": "#"
+                      }
                     },
                     {
                       "image": {
                         "src": "/media/images/user-images/fake-user-3.jpg",
                         "alt": "alt text",
-                        "tooltip": "Login to view image and full profile"
+                        "tooltip": "Melden Sie sich an, um alle Bilder und Profile anzusehen"
                       },
-                      "text": "<span>David, 29</span><span>153 views</span>"
+                      "text": "<span>David, 29</span><span>153 Aufrufe</span>",
+                      "cmdLink": {
+                        "type": "href",
+                        "path": "#"
+                      }
                     },
                     {
                       "image": {
                         "src": "/media/images/user-images/fake-user-2.jpg",
                         "alt": "alt text",
-                        "tooltip": "Login to view image and full profile"
+                        "tooltip": "Melden Sie sich an, um alle Bilder und Profile anzusehen"
                       },
-                      "text": "<span>William, 38</span><span>69 views</span>"
+                      "text": "<span>William, 38</span><span>69 Aufrufe</span>",
+                      "cmdLink": {
+                        "type": "href",
+                        "path": "#"
+                      }
                     }
                   ]
                 }
@@ -555,7 +544,7 @@
                   "stretchVertically": true,
                   "cmdHeadline": {
                     "headlineLevel": 3,
-                    "headlineText": "Sicherheits wird groß geschrieben",
+                    "headlineText": "Sicherheit wird groß geschrieben",
                     "textAlign": "center"
                   },
                   "headlinePosition": "body",

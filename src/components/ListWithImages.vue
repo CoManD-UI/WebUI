@@ -38,14 +38,33 @@ export default {
     margin: 0;
 
     li {
+        --local-transition: all linear .3s;
         list-style-type: none;
         display: flex;
         gap: var(--default-gap);
         margin: inherit;
         align-items: center;
+        transition: var(--local-transition);
 
-        img {
-            max-width: 7rem;
+        .cmd-link {
+            width: 100%;
+            display: flex;
+            gap: var(--default-gap);
+            align-items: center;
+            text-decoration: none;
+            padding: 0 var(--default-padding);
+            justify-content: flex-start;
+            transition: var(--local-transition);
+
+            img {
+                max-width: 7rem;
+                margin: 0;
+            }
+        }
+
+        &:hover, &:active, &:focus {
+            background: hsla(var(--primary-color-hue), var(--primary-color-saturation), var(--primary-color-lightness), .2);
+            transition: all linear 2s;
         }
     }
 }

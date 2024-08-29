@@ -43,25 +43,25 @@
                 },
                 {
                   "type": "href",
-                  "text": "Data privacy",
+                  "text": "Datenschutz",
                   "path": "/content/data-privacy-de.html",
-                  "tooltip": "Lokae Datei FancyBox öffnen",
+                  "tooltip": "Datenschutzerklärung FancyBox öffnen",
                   "fancybox": true
-                },
-                {
-                  "iconClass": "icon-export",
-                  "type": "href",
-                  "text": "External link",
-                  "path": "http://www.comand-cms.com",
-                  "target": "_blank",
-                  "tooltip": "CoManD-Website in neuem Tab öffnen"
                 },
                 {
                   "iconClass": "icon-security-settings",
                   "type": "href",
-                  "text": "Login",
+                  "text": "Anmelden",
                   "path": "#",
                   "sectionId": "section-login"
+                },
+                {
+                  "iconClass": "icon-export",
+                  "type": "href",
+                  "text": "CoManD CMS",
+                  "path": "http://www.comand-cms.com",
+                  "target": "_blank",
+                  "tooltip": "CoManD-Website in neuem Tab öffnen"
                 }
               ]
             }
