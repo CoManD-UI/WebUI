@@ -4,7 +4,7 @@
         <div class="flex-container">
             <CmdFormElement
                 element="select"
-                labelText="I am a"
+                :labelText="getMessage('register_form.labeltext.i_am_a')"
                 :displayLabelInline="true"
                 :selectOptions="selectOptionsGender"
                 v-model="genderA"
@@ -12,51 +12,54 @@
             />
             <CmdFormElement
                 element="select"
-                labelText="searching for a"
+                :labelText="getMessage('register_form.labeltext.searching_for_a')"
                 :displayLabelInline="true"
                 :selectOptions="selectOptionsGender"
                 v-model="genderB"
                 :required="true"
             />
         </div>
-        <div class="flex-container space-between" id="age-wrapper">
+        <div class="flex-container" id="age-wrapper">
             <CmdFormElement
                 element="input"
                 type="number"
-                labelText="from age"
+                :labelText="getMessage('register_form.labeltext.age_from')"
                 :displayLabelInline="true"
                 v-model="ageFrom"
                 maxlength="2"
                 :required="true"
-                placeholder="min. 18"
+                :placeholder="getMessage('register_form.placeholder.min_age')"
                 @blur="setDefaultAges('from')"
             />
             <CmdFormElement
                 element="input"
                 type="number"
-                labelText="to age"
+                :labelText="getMessage('register_form.labeltext.age_to')"
                 :displayLabelInline="true"
                 v-model="ageTo"
                 maxlength="2"
                 :required="true"
-                placeholder="max. 99"
+                :placeholder="getMessage('register_form.placeholder.max_age')"
                 @blur="setDefaultAges('to')"
             />
         </div>
         <CmdFormElement
             element="input"
             type="text"
-            labelText="in the region of"
+            :labelText="getMessage('register_form.labeltext.in_the_region_of')"
             :displayLabelInline="true"
             :stretchField="true"
-            placeholder="Enter region"
+            :placeholder="getMessage('register_form.placeholder.enter_region')"
         />
     </CmdForm>
 </template>
 
 <script>
+import { I18n } from "comand-component-library"
+import DefaultMessageProperties from "./mixins/RegisterForm/DefaultMessageProperties"
 export default {
     name: "RegisterForm",
+    mixins: [I18n, DefaultMessageProperties],
     data() {
         return {
             ageFrom: 25,

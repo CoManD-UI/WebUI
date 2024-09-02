@@ -70,12 +70,15 @@ function processSite(site, store) {
         redirect: "/"
     })
     store.setDefaultMetaData(site.defaultMetadata)
+
+    store.setTemplate(site.template)
+
     if (site.siteStructure?.length > 0) {
         store.loadSiteStructure(site.siteStructure)
     }
 
     // assign pageFooter to store
-    store.pageFooter = site.pageFooter
+    store.pageFooterContent = site.pageFooter
     store.siteConfiguration = site.siteConfiguration || {}
 }
 

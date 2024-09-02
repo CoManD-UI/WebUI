@@ -28,8 +28,6 @@ import 'comand-component-library/dist/style.css'
 /* import css for your custom styles */
 import 'comand-component-library/src/assets/styles/template.css'
 
-/* import css for your custom styles */
-import '/public/styles/template.css'
 /* end imports from comand-component-library ---------------------------------------------------------------------------------------- */
 
 /* end imports from comand-ui-website ---------------------------------------------------------------------------------------- */

@@ -1,12 +1,11 @@
 {
   "siteHeader": {
     "navigationInline": true,
-    "propsLogo": {
-      "pathDefaultLogo": "/media/images/logos/logo-dating.svg",
-      "pathDarkmodeLogo": "/media/images/logos/logo-darkmode.svg",
-      "altText": "Company Logo"
-    },
     "props": {
+      "cmdCompanyLogo": {
+        "pathDefaultLogo": "/media/images/logos/logo.svg",
+        "altText": "Company Logo"
+      },
       "cmdMainNavigation": {
         "closeOffcanvas": {
           "iconClass": "icon-cancel",
@@ -36,23 +35,16 @@
               "textAlign": "right",
               "links": [
                 {
-                  "iconClass": "icon-user-profile",
                   "type": "href",
-                  "text": "",
-                  "path": "#",
-                  "tooltip": "Link ohne text (nur Tooltip)"
-                },
-                {
-                  "type": "href",
-                  "text": "Data privacy",
+                  "text": "Datenschutzerklärung",
                   "path": "/content/data-privacy-de.html",
-                  "tooltip": "Lokae Datei FancyBox öffnen",
+                  "tooltip": "Lokale Datei in FancyBox öffnen",
                   "fancybox": true
                 },
                 {
                   "iconClass": "icon-export",
                   "type": "href",
-                  "text": "External link",
+                  "text": "CoManD-Website",
                   "path": "http://www.comand-cms.com",
                   "target": "_blank",
                   "tooltip": "CoManD-Website in neuem Tab öffnen"

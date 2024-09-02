@@ -1,11 +1,11 @@
 {
   "siteHeader": {
-    "navigationInline": false,
-    "propsLogo": {
-      "pathDefaultLogo": "/media/images/logos/logo-dating.svg",
-      "altText": "Company Logo"
-    },
+    "navigationInline": true,
     "props": {
+      "cmdCompanyLogo": {
+        "pathDefaultLogo": "/media/images/logos/logo-dating.svg",
+        "altText": "Company Logo"
+      },
       "cmdMainNavigation": {
         "closeOffcanvas": {
           "iconClass": "icon-cancel",
@@ -35,33 +35,33 @@
               "textAlign": "right",
               "links": [
                 {
-                  "iconClass": "icon-user-profile",
-                  "type": "href",
-                  "text": "",
-                  "path": "#",
-                  "tooltip": "Link without text, but tooltip"
-                },
-                {
+                  "icon": {
+                    "iconClass": "icon-security-settings"
+                  },
                   "type": "href",
                   "text": "Data privacy",
                   "path": "/content/data-privacy-de.html",
-                  "tooltip": "Open local file in fancybox",
+                  "tooltip": "Open data privacy in FancyBox",
                   "fancybox": true
                 },
                 {
-                  "iconClass": "icon-export",
-                  "type": "href",
-                  "text": "External link",
-                  "path": "http://www.comand-cms.com",
-                  "target": "_blank",
-                  "tooltip": "Open CoManD-Website in new tab"
-                },
-                {
-                  "iconClass": "icon-security-settings",
+                  "icon": {
+                    "iconClass": "icon-logon"
+                  },
                   "type": "href",
                   "text": "Login",
                   "path": "#",
                   "sectionId": "section-login"
+                },
+                {
+                  "icon": {
+                    "iconClass": "icon-export"
+                  },
+                  "type": "href",
+                  "text": "CoManD-Website",
+                  "path": "http://www.comand-cms.com",
+                  "target": "_blank",
+                  "tooltip": "Open CoManD-website in a new tab"
                 }
               ]
             }
@@ -70,171 +70,33 @@
             "name": "CmdToggleDarkMode",
             "props": {
               "showLabel": true,
-              "labelTextDarkMode": "Dark Mode aktiviert",
-              "labelTextLightMode": "Light Mode aktiviert"
+              "labelTextDarkMode": "Dark Mode activated",
+              "labelTextLightMode": "Light Mode activated"
             }
           }
         ]
       },
       {
-        "name": "CmdOpeningHours",
+        "name": "CmdSwitchLanguage",
         "props": {
-          "cmdHeadline": {
-          },
-          "textHolidays": "",
-          "textMiscInfo": "",
-          "openingHours": [
+          "languages": [
             {
-              "day": "Mondays",
-              "am": {
-                "fromTime": "08:00",
-                "tillTime": "12:00",
-                "displayText": "open"
+              "iso2": "de",
+              "name": "Deutsch",
+              "tooltip": "Sprache zu deutsch wechseln",
+              "link": {
+                "type": "router"
               },
-              "pm": {
-                "fromTime": "13:00",
-                "tillTime": "18:00",
-                "displayText": "closed"
-              }
+              "path": "/de"
             },
             {
-              "day": "Tu",
-              "am": {
-                "fromTime": "08:00",
-                "tillTime": "12:01"
+              "iso2": "en",
+              "name": "English",
+              "tooltip": "Switch language to English",
+              "link": {
+                "type": "router"
               },
-              "pm": {
-                "fromTime": "13:00",
-                "tillTime": "18:00"
-              }
-            },
-            {
-              "day": "We",
-              "am": {
-                "fromTime": "08:00",
-                "tillTime": "12:00"
-              },
-              "pm": {
-                "fromTime": "13:00",
-                "tillTime": "18:00"
-              }
-            },
-            {
-              "day": "Th",
-              "am": {
-                "fromTime": "08:00",
-                "tillTime": "12:00"
-              },
-              "pm": {
-                "fromTime": "13:00",
-                "tillTime": "18:00"
-              }
-            },
-            {
-              "day": "Fr",
-              "am": {
-                "fromTime": "08:00",
-                "tillTime": "12:00"
-              },
-              "pm": {
-                "fromTime": "13:00",
-                "tillTime": "18:00"
-              }
-            },
-            {
-              "day": "Sa",
-              "am": {
-                "fromTime": "08:00",
-                "tillTime": "12:00"
-              },
-              "pm": {
-                "fromTime": "13:00",
-                "tillTime": "18:00"
-              }
-            },
-            {
-              "day": "So",
-              "am": {
-                "fromTime": "08:00",
-                "tillTime": "12:00"
-              },
-              "pm": {
-                "fromTime": "13:00",
-                "tillTime": "18:00"
-              }
-            }
-          ]
-        }
-      },
-      {
-        "name": "CmdAddressData",
-        "props": {
-          "cmdHeadline": {
-          },
-          "addressData": [
-            {
-              "name": "company",
-              "iconClass": "icon-company",
-              "data": "Your company name",
-              "labelText": "Company"
-            },
-            {
-              "name": "address",
-              "iconClass": "icon-home",
-              "labelText": "Address",
-              "zip": "Your zip",
-              "city": "Your city",
-              "streetNo": "Your Street/No",
-              "miscInfo": "Misc. info",
-              "country": "Your country",
-              "longitude": "0.0",
-              "latitude": "0.0,",
-              "location": "",
-              "linkGoogleMaps": false
-            },
-            {
-              "name": "phone",
-              "iconClass": "icon-device-smartphone",
-              "data": "Your mobile phone number",
-              "labelText": "Mobile phone",
-              "tooltip": "Call number",
-              "href": "0123456789"
-            },
-            {
-              "name": "phone",
-              "iconClass": "icon-phone",
-              "data": "Your phone number",
-              "labelText": "Telephone",
-              "tooltip": "Call number",
-              "href": "0123456789"
-            },
-            {
-              "name": "fax",
-              "iconClass": "icon-fax",
-              "data": "Your fax number",
-              "labelText": "Fax"
-            },
-            {
-              "name": "email",
-              "iconClass": "icon-mail",
-              "data": "Your email address",
-              "labelText": "Email",
-              "tooltip": "Send mail",
-              "href": "mail@provider.de"
-            },
-            {
-              "name": "url",
-              "iconClass": "icon-globe",
-              "data": "Your web site",
-              "labelText": "Web site",
-              "tooltip": "Open web site in new tab",
-              "href": "https://www.domain.toplevel"
-            },
-            {
-              "name": "custom",
-              "iconClass": "icon-questionmark-circle",
-              "data": "Custom data",
-              "labelText": "Custom"
+              "path": "/en"
             }
           ]
         }

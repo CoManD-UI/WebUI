@@ -21,6 +21,7 @@ function findPageById(pages, id, parents) {
 
 export const useCmsStore = defineStore("cms", {
     state: () => ({
+        template: "blank",
         languages: [],
         languageData: {},
         defaultMetaData: {},
@@ -31,7 +32,7 @@ export const useCmsStore = defineStore("cms", {
         siteHeader: {},
         siteFooter: {},
         siteStructure: [],
-        pageFooter: {},
+        pageFooterContent: {},
         siteConfiguration: {}
     }),
     getters: {
@@ -84,6 +85,20 @@ export const useCmsStore = defineStore("cms", {
                 }
             }
         },
+        pageFooter() {
+            // create deep-copy of pageFooterContent from state
+            const pageFooterContent = JSON.parse(JSON.stringify(this.pageFooterContent))
+            console.log("this.currentLanguageData", this.currentLanguageData)
+            pageFooterContent.cmdSocialNetworks.cmdFormElement.labelText = this.currentLanguageData["cmd_social_networks.labeltext.accept_privacy"]
+
+            pageFooterContent.cmdSocialNetworks.networks.forEach((item) => {
+                    // assign values of specific keys from currentLanguageData to keys for each social network
+                    item.tooltip = this.currentLanguageData[item.tooltip] ?? item.tooltip
+                    item.linkText = this.currentLanguageData[item.linkText] ?? item.linkText
+            })
+
+            return pageFooterContent
+        },
         breadcrumbs() {
             const parents = []
             const currentPage = findPageById(this.pages, this.currentPageName, parents)
@@ -118,9 +133,6 @@ export const useCmsStore = defineStore("cms", {
                     }
                 ]
             }
-        },
-        socialNetworkTooltips() {
-            return {}
         },
         showSiteHeader(state) {
             return state.siteStructure.includes("siteHeader")
@@ -196,6 +208,9 @@ export const useCmsStore = defineStore("cms", {
         }
     },
     actions: {
+        setTemplate(template) {
+            this.template = template
+        },
         setLanguages(languages) {
             this.languages = languages || []
             if (!this.languages.includes(this.currentLanguage)) {
@@ -210,32 +225,42 @@ export const useCmsStore = defineStore("cms", {
         },
         setCurrentLanguage(language) {
             this.currentLanguage = language
+            if (this.pageContent[this.currentLanguage]?.["header-footer"]) {
+                return
+            }
+            if (!this.pageContent[this.currentLanguage]) {
+                this.pageContent[this.currentLanguage] = {}
+            }
+            const url = new URL(`/templates/${this.template}/pages-${this.currentLanguage}/header-footer.json`, location.href)
+            axios(url.href)
+                .then(response => response.data)
+                .then(structure => {
+                    this.siteHeader = structure.siteHeader || {}
+                    this.siteFooter = structure.siteFooter || {}
+                    this.pageContent[this.currentLanguage]["header-footer"] = true
+                })
         },
         addPage(page) {
             this.pages.push(page)
         },
         setCurrentPageName(name) {
             this.currentPageName = name
+            document.body.setAttribute("id", name)
         },
         loadPageContent(name) {
             if (this.pageContent[this.currentLanguage]?.[name]) {
                 return
             }
-            this.pageContent[this.currentLanguage] = {}
-            const url = new URL(`/templates/dating/pages-${this.currentLanguage}/${name}.json`, location.href);
+            if (!this.pageContent[this.currentLanguage]) {
+                this.pageContent[this.currentLanguage] = {}
+            }
+            const url = new URL(`/templates/${this.template}/pages-${this.currentLanguage}/${name}.json`, location.href)
             axios(url.href)
                 .then(response => response.data)
                 .then(pageContent => this.pageContent[this.currentLanguage][name] = pageContent)
         },
         loadSiteStructure(siteStructure) {
             this.siteStructure = siteStructure || []
-            const url = new URL(`/templates/dating/pages-${this.currentLanguage}/header-footer.json`, location.href);
-            axios(url.href)
-                .then(response => response.data)
-                .then(structure => {
-                    this.siteHeader = structure.siteHeader || {}
-                    this.siteFooter = structure.siteFooter || {}
-                })
         },
         updateMetaData(metaData) {
             // update meta data for current page

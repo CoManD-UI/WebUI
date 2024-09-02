@@ -1,11 +1,18 @@
 {
-  "languages": ["de", "en"],
+  "template": "dating",
+  "languages": [
+    "de",
+    "en"
+  ],
   "defaultMetadata": {
     "rating": "",
     "robots": "index/follow",
     "author": ""
   },
-  "siteStructure": ["siteHeader", "siteFooter"],
+  "siteStructure": [
+    "siteHeader",
+    "siteFooter"
+  ],
   "siteConfiguration": {
     "breadcrumbs": {
       "showHomeLinkFirst": true,
@@ -18,7 +25,9 @@
       "id": "homepage",
       "iconClass": "icon-home",
       "navEntry": "main_navigation.menuentry.homepage",
-      "navigation": ["main"]
+      "navigation": [
+        "main"
+      ]
     },
     {
       "id": "content",
@@ -28,13 +37,17 @@
           "id": "subpage1",
           "iconClass": "icon-globe",
           "navEntry": "subpage 1",
-          "navigation": ["main"]
+          "navigation": [
+            "main"
+          ]
         },
         {
           "id": "subpage2",
           "iconClass": "icon-user-profile",
           "navEntry": "subpage 2",
-          "navigation": ["main"]
+          "navigation": [
+            "main"
+          ]
         },
         {
           "id": "external",
@@ -42,60 +55,77 @@
           "navEntry": "External Link",
           "externalLink": true,
           "path": "https://www.comand-cms.com",
-          "navigation": ["main"]
+          "navigation": [
+            "main"
+          ]
         }
       ],
-      "navigation": ["main"]
+      "navigation": [
+        "main"
+      ]
     },
     {
       "id": "gallery",
       "navEntry": "main_navigation.menuentry.gallery",
-      "navigation": ["main"]
+      "navigation": [
+        "main"
+      ]
     },
     {
       "id": "faq",
       "navEntry": "main_navigation.menuentry.faq",
-      "navigation": ["main"]
+      "navigation": [
+        "main"
+      ]
     },
     {
       "id": "team",
       "navEntry": "main_navigation.menuentry.team",
-      "navigation": ["main"]
+      "navigation": [
+        "main"
+      ]
     }
   ],
   "pageFooter": {
     "buttonPrintView": {
       "show": false
     },
-    "cmdSocialNetworks": [
-      {
-        "id": "social-network-facebook",
-        "path": "https://www.facebook.com/sharer/sharer.php?u=",
-        "tooltip": "Share this page on facebook",
-        "iconClass": "icon-facebook",
-        "linkText": "Share"
+    "cmdSocialNetworks": {
+      "cmdFormElement": {
+        "toggleSwitch": true,
+        "labelText": "cmd_social_networks.labeltext.accept_privacy",
+        "required": true
       },
-      {
-        "id": "social-network-x",
-        "path": "https://twitter.com/home?status=",
-        "tooltip": "Share this page on X",
-        "iconClass": "icon-x",
-        "linkText": "Share"
-      },
-      {
-        "id": "social-network-xing",
-        "path": "https://www.xing.com/spi/shares/new?sc_p=b7910_cb&amp;url=",
-        "tooltip": "Share this page on xing",
-        "iconClass": "icon-xing",
-        "linkText": "Share"
-      },
-      {
-        "id": "social-network-linkedin",
-        "path": "https://www.linkedin.com/cws/share?url=",
-        "tooltip": "Share this page on linkedin",
-        "iconClass": "icon-linkedin",
-        "linkText": "Share"
-      }
-    ]
+      "networks": [
+        {
+          "id": "social-network-facebook",
+          "path": "https://www.facebook.com/sharer/sharer.php?u=",
+          "tooltip": "cmd_social_networks.tooltip.share_this_page_on_facebook",
+          "iconClass": "icon-facebook",
+          "linkText": "cmd_social_networks.link_text.share_facebook"
+        },
+        {
+          "id": "social-network-x",
+          "path": "https://twitter.com/home?status=",
+          "tooltip": "cmd_social_networks.tooltip.share_this_page_on_x",
+          "iconClass": "icon-x",
+          "linkText": "cmd_social_networks.link_text.share_x"
+        },
+        {
+          "id": "social-network-xing",
+          "path": "https://www.xing.com/spi/shares/new?sc_p=b7910_cb&amp;url=",
+          "tooltip": "cmd_social_networks.tooltip.share_this_page_on_xing",
+          "iconClass": "icon-xing",
+          "linkText": "cmd_social_networks.link_text.share_xing"
+        },
+        {
+          "id": "social-network-linkedin",
+          "path": "https://www.linkedin.com/cws/share?url=",
+          "tooltip": "cmd_social_networks.tooltip.share_this_page_on_linkedin",
+          "iconClass": "icon-linkedin",
+          "linkText": "cmd_social_networks.link_text.share_linkedin"
+        }
+      ]
+    }
   }
 }

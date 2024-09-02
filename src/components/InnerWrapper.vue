@@ -98,14 +98,14 @@ export default {
         activeSections: {
             handler() {
                 this.$nextTick(() => {
-                    const sectionProvider = () => document.querySelectorAll("#content > .cmd-width-limitation-wrapper > section")
+                    const sectionProvider = () => document.querySelectorAll("#content .cmd-width-limitation-wrapper > section")
                     if (this.$_intersectionObserver) {
                         this.$_intersectionObserver.disconnect()
                         this.$_intersectionObserver = null
                     }
                     const options = {
                         root: document.getElementById("page-wrapper"),
-                        threshold: 0.25
+                        threshold: 0.1
                     }
                     this.$_intersectionObserver = new IntersectionObserver(entries => {
                         entries.filter(entry => entry.isIntersecting).forEach(entry => entry.target.classList.add("visible") )
@@ -122,7 +122,7 @@ export default {
 
 <style>
 #content {
-    .cmd-width-limitation-wrapper > section {
+    .cmd-width-limitation-wrapper > section:has(:not(.cmd-width-limitation-wrapper)) {
         opacity: 0;
 
         &.visible {

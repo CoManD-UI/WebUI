@@ -35,13 +35,9 @@
               "textAlign": "right",
               "links": [
                 {
-                  "iconClass": "icon-user-profile",
-                  "type": "href",
-                  "text": "",
-                  "path": "#",
-                  "tooltip": "Link ohne text (nur Tooltip)"
-                },
-                {
+                  "icon": {
+                    "iconClass": "icon-security-settings"
+                  },
                   "type": "href",
                   "text": "Datenschutz",
                   "path": "/content/data-privacy-de.html",
@@ -49,16 +45,20 @@
                   "fancybox": true
                 },
                 {
-                  "iconClass": "icon-security-settings",
+                  "icon": {
+                    "iconClass": "icon-logon"
+                  },
                   "type": "href",
                   "text": "Anmelden",
                   "path": "#",
                   "sectionId": "section-login"
                 },
                 {
-                  "iconClass": "icon-export",
+                  "icon": {
+                    "iconClass": "icon-export"
+                  },
                   "type": "href",
-                  "text": "CoManD CMS",
+                  "text": "CoManD-Website",
                   "path": "http://www.comand-cms.com",
                   "target": "_blank",
                   "tooltip": "CoManD-Website in neuem Tab öffnen"
