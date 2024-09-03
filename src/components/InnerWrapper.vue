@@ -32,6 +32,7 @@
                 :id="section.id"
                 :components="section.components"
                 :useFullDeviceWidth="section.useFullDeviceWidth"
+                :useInnerSection="section.useInnerSection"
                 :contentType="section.contentType"
                 :contentOrientation="section.contentOrientation"
                 :cmdHeadline="section.cmdHeadline"

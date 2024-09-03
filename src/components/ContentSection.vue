@@ -1,9 +1,11 @@
 <template>
     <CmdWidthLimitationWrapper
-        :innerClass="htmlClasses"
+        :class="htmlClasses"
         :id="numberOfPages > 1 ? id : 'anchor-' + id"
         :cmdHeadline="cmdHeadline"
         :contentType="contentType"
+        :useInnerSection="useInnerSection"
+        :useFullDeviceWidth="useFullDeviceWidth"
         :contentOrientation="contentOrientation"
     >
         <component
@@ -51,6 +53,10 @@ export default {
             type: Object,
             required: false
         },
+        useInnerSection: {
+            type: Boolean,
+            default: true
+        },
         useFullDeviceWidth: {
             type: Boolean,
             default: false
@@ -84,10 +90,6 @@ export default {
             const classes = []
             if (this.innerClass) {
                 classes.push(this.innerClass)
-            }
-
-            if (this.useFullDeviceWidth) {
-                classes.push("full-width")
             }
 
             return classes.join(" ")
