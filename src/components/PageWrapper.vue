@@ -67,7 +67,7 @@
                     <!-- end slot center/main column -->
 
                     <!-- begin CmdPageFooter -->
-                    <CmdWidthLimitationWrapper v-if="cmdPageFooter">
+                    <CmdWidthLimitationWrapper v-if="cmdPageFooter" contentOrientation="horizontal">
                         <CmdPageFooter v-bind="cmdPageFooter"/>
                     </CmdWidthLimitationWrapper>
                     <!-- end CmdPageFooter -->

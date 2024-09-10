@@ -497,7 +497,7 @@
         "iconClass": "icon-user-profile",
         "allowAddComponent": true,
         "contentType": "flex",
-        "contentOrientation": "horizontal",
+        "contentOrientation": "vertical",
         "cmdHeadline": {
           "headlineText": "Unser Service für Sie",
           "headlineLevel": 2,
