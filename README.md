@@ -1,4 +1,4 @@
-# CoManD-UI-Website
+# CoManD WebUI
 
 ## Project description
 ```
