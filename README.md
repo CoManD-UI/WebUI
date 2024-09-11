@@ -2,7 +2,7 @@
 
 ## Project description
 ```
-This dependency contains the structure for a website-frontend based on other CoManD-depencies.
+This dependency contains the structure for a website-frontend based on the dependencies 'Frontend-Framework', 'Iconfonts' and 'Component Library' by CoManD. 
 ```
 ## Project setup
 ```
