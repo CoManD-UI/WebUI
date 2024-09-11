@@ -19,7 +19,7 @@ function findPageById(pages, id, parents) {
     return null
 }
 
-export const useCmsStore = defineStore("cms", {
+export const useWebStore = defineStore("cms", {
     state: () => ({
         template: "blank",
         languages: [],

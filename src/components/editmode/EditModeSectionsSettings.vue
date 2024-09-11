@@ -109,7 +109,7 @@
 
 <script>
 import {mapState, mapActions} from "pinia"
-import {useCmsStore} from "../../stores/website.js"
+import {useWebStore} from "../../stores/website.js"
 import {highlightSection} from "../../utils/editmode.js"
 import {createUuid} from "comand-component-library";
 
@@ -136,7 +136,7 @@ export default {
         });
     },
     computed: {
-        ...mapState(useCmsStore, ["sections"]),
+        ...mapState(useWebStore, ["sections"]),
 
         contentSections() {
             return this.sections.map((section, index) => {
@@ -156,7 +156,7 @@ export default {
         }
     },
     methods: {
-        ...mapActions(useCmsStore, ["deleteContent", "updateContent", "updateSettings", "updateSectionsSettings"]),
+        ...mapActions(useWebStore, ["deleteContent", "updateContent", "updateSettings", "updateSectionsSettings"]),
 
         toggleNavEntryTooltip(section) {
             let tooltip = ""

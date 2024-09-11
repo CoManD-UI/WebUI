@@ -1,5 +1,5 @@
 import {createRouter, createWebHistory} from "vue-router"
-import {useCmsStore} from "../stores/website"
+import {useWebStore} from "../stores/website"
 
 const routes = []
 
@@ -9,7 +9,7 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from) => {
-    const store = useCmsStore()
+    const store = useWebStore()
     store.setCurrentPageName(to.name)
     if (to.params.lang) {
         store.setCurrentLanguage(to.params.lang)

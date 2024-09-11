@@ -1,6 +1,6 @@
 import {createPinia} from "pinia"
 import {usePiniaStore} from "./stores/pinia.js"
-import {useCmsStore} from "./stores/website.js"
+import {useWebStore} from "./stores/website.js"
 import router from "./router"
 import * as components from "comand-component-library"
 
@@ -129,7 +129,7 @@ function bootstrap(app) {
         .directive('telephone', directiveTelephone)
         .directive('focus', directiveFocus)
 
-    const store = useCmsStore()
+    const store = useWebStore()
 
     // return axios(new URL("/site.json", location.href).href).then(response => processSite(response.data, store))
     return loadLanguages()

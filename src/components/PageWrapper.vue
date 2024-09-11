@@ -176,7 +176,7 @@
 //import {openFancyBox} from "@/components/CmdFancyBox.vue"
 
 // import store
-import {useCmsStore} from "../stores/website"
+import {useWebStore} from "../stores/website"
 
 // import mixins
 import BaseI18nComponent from "../components/mixins/BaseI18nComponent"
@@ -254,7 +254,7 @@ export default {
                 tooltip: this.label("back_to_top_button.tooltip")
             }
         },
-        ...mapState(useCmsStore, ["currentLanguageData"
+        ...mapState(useWebStore, ["currentLanguageData"
         ]),
     },
     methods: {

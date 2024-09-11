@@ -167,7 +167,7 @@ import {createUuid, openFancyBox} from 'comand-component-library'
 // import functions
 import {mapActions, mapState} from "pinia"
 import {usePiniaStore} from "../stores/pinia"
-import {useCmsStore} from "../stores/website"
+import {useWebStore} from "../stores/website"
 
 // import mixins
 import BaseI18nComponent from "../components/mixins/BaseI18nComponent"
@@ -243,7 +243,7 @@ export default {
             return "template-" + (this.selectedTemplate || "blank")
         },
         ...mapState(usePiniaStore, ["currentLanguage", "site", "editMode", "showEditModeComponentSettings", "sections"]),
-        ...mapState(useCmsStore, ["mainNavigationEntries", "showSiteHeader", "showSiteFooter", "siteHeader", "siteFooter", "companyLogo", "metaData"]),
+        ...mapState(useWebStore, ["mainNavigationEntries", "showSiteHeader", "showSiteFooter", "siteHeader", "siteFooter", "companyLogo", "metaData"]),
 
         mainNavigation() {
             const navigationEntries = []

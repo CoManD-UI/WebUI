@@ -34,7 +34,7 @@
 import BaseI18nComponent from "./mixins/BaseI18nComponent"
 import {mapState} from "pinia"
 import {usePiniaStore} from "../stores/pinia.js"
-import {useCmsStore} from "../stores/website.js"
+import {useWebStore} from "../stores/website.js"
 
 export default {
     mixins: [
@@ -80,7 +80,7 @@ export default {
         }
     },
     computed: {
-        ...mapState(useCmsStore, ["currentLanguageData", "numberOfPages"]),
+        ...mapState(useWebStore, ["currentLanguageData", "numberOfPages"]),
 
         // provide states from store as computed-properties inside this component
         ...mapState(usePiniaStore, {
