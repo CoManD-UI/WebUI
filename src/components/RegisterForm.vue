@@ -1,6 +1,6 @@
 <template>
     <CmdForm v-bind="cmdForm">
-        <CmdHeadline headlineText="Find my soul-mate" headlineLevel="3" />
+        <CmdHeadline :headlineText="getMessage('register_form.headline.find_a_soul_mate')" headlineLevel="3" />
         <div class="flex-container">
             <CmdFormElement
                 element="select"

@@ -30,7 +30,8 @@ import CmdContainerSettings from "./components/editmode/component-settings/CmdCo
 // import directives from comand-component-library
 import directiveTelephone from "comand-component-library/src/directives/telephone"
 import directiveFocus from "comand-component-library/src/directives/focus"
-import axios from "axios";
+import directiveFancybox from "comand-component-library/src/directives/fancybox"
+import axios from "axios"
 
 export {default as CmdWebsite} from './components/CmdWebsite.vue'
 
@@ -128,6 +129,7 @@ function bootstrap(app) {
         .use(createPinia())
         .directive('telephone', directiveTelephone)
         .directive('focus', directiveFocus)
+        .directive('fancybox', directiveFancybox)
 
     const store = useWebStore()
 

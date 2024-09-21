@@ -2,6 +2,7 @@ export default {
   data() {
     return {
       defaultMessageProperties: {
+        "register_form.headline.find_a_soul_mate": "Find a Soul-Mate",
         "register_form.labeltext.i_am_a": "I am a",
         "basic_form.labeltext.salutation_male": "Mr.",
         "basic_form.labeltext.salutation_female": "Mrs.",

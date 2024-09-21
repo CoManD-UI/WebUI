@@ -88,10 +88,12 @@ export const useWebStore = defineStore("cms", {
         pageFooter() {
             // create deep-copy of pageFooterContent from state
             const pageFooterContent = JSON.parse(JSON.stringify(this.pageFooterContent))
-            console.log("this.currentLanguageData", this.currentLanguageData)
-            pageFooterContent.cmdSocialNetworks.cmdFormElement.labelText = this.currentLanguageData["cmd_social_networks.labeltext.accept_privacy"]
 
-            pageFooterContent.cmdSocialNetworks.networks.forEach((item) => {
+            if(pageFooterContent.cmdSocialNetworks.cmdFormElement) {
+                pageFooterContent.cmdSocialNetworks.cmdFormElement.labelText = this.currentLanguageData["cmd_social_networks.labeltext.accept_privacy"]
+            }
+
+            pageFooterContent.cmdSocialNetworks.networks?.forEach((item) => {
                     // assign values of specific keys from currentLanguageData to keys for each social network
                     item.tooltip = this.currentLanguageData[item.tooltip] ?? item.tooltip
                     item.linkText = this.currentLanguageData[item.linkText] ?? item.linkText
@@ -225,9 +227,9 @@ export const useWebStore = defineStore("cms", {
         },
         setCurrentLanguage(language) {
             this.currentLanguage = language
-            if (this.pageContent[this.currentLanguage]?.["header-footer"]) {
-                return
-            }
+            // if (this.pageContent[this.currentLanguage]?.["header-footer"]) {
+            //     return
+            // }
             if (!this.pageContent[this.currentLanguage]) {
                 this.pageContent[this.currentLanguage] = {}
             }
@@ -237,7 +239,7 @@ export const useWebStore = defineStore("cms", {
                 .then(structure => {
                     this.siteHeader = structure.siteHeader || {}
                     this.siteFooter = structure.siteFooter || {}
-                    this.pageContent[this.currentLanguage]["header-footer"] = true
+                    // this.pageContent[this.currentLanguage]["header-footer"] = true
                 })
         },
         addPage(page) {

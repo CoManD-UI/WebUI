@@ -2,7 +2,9 @@
     <a id="anchor-back-to-top"></a>
     <div :class="['page-wrapper', {'overflow-hidden': offCanvasOpen}]"
          id="template-dating"
-         :style="{'scroll-padding-top': heightSiteHeader + 'px'}">
+         :style="{'scroll-padding-top': heightSiteHeader + 'px'}"
+         v-fancybox
+    >
 
         <!-- begin slot site-header -->
         <slot name="site-header"></slot>
@@ -96,7 +98,7 @@
                 <!-- end slot center/main column -->
 
                 <!-- begin CmdPageFooter -->
-                <CmdWidthLimitationWrapper v-if="cmdPageFooter">
+                <CmdWidthLimitationWrapper v-if="cmdPageFooter" contentOrientation="horizontal">
                     <CmdPageFooter v-bind="cmdPageFooter"/>
                 </CmdWidthLimitationWrapper>
                 <!-- end CmdPageFooter -->

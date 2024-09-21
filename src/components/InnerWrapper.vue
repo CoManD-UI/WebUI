@@ -28,7 +28,7 @@
             <!-- begin content sections -->
             <ContentSection
                 v-for="(section, index) in activeSections"
-                :key="index"
+                :key="createUuid()"
                 :id="section.id"
                 :components="section.components"
                 :useFullDeviceWidth="section.useFullDeviceWidth"
@@ -93,13 +93,15 @@ export default {
                     }
                 }
             })
-        }
+        },
+        createUuid
     },
     watch: {
         activeSections: {
             handler() {
+                console.log("activeSections watcher")
                 this.$nextTick(() => {
-                    const sectionProvider = () => document.querySelectorAll("#content .cmd-width-limitation-wrapper > section")
+                    const sectionProvider = () => document.querySelectorAll("#content .cmd-width-limitation-wrapper > section:not(:has(.cmd-page-header))")
                     if (this.$_intersectionObserver) {
                         this.$_intersectionObserver.disconnect()
                         this.$_intersectionObserver = null
@@ -109,8 +111,11 @@ export default {
                         threshold: 0.1
                     }
                     this.$_intersectionObserver = new IntersectionObserver(entries => {
-                        entries.filter(entry => entry.isIntersecting).forEach(entry => entry.target.classList.add("visible") )
-                        console.log("IntersectionObserver", entries.filter(entry => entry.isIntersecting))
+                        entries.filter(entry => entry.isIntersecting).forEach(entry => {
+                            console.log("entry", entry, entry.target.classList)
+                            entry.target.classList.add("visible")
+                        } )
+                        //console.log("IntersectionObserver", entries.filter(entry => entry.isIntersecting))
                     }, options)
                     setTimeout(() => sectionProvider().forEach(element => this.$_intersectionObserver.observe(element)), 500)
                 })
@@ -130,6 +135,10 @@ export default {
             opacity: 1;
             transition: .5s ease-in all;
         }
+    }
+
+    .cmd-width-limitation-wrapper > section:has(.cmd-page-header) {
+        opacity: 1;
     }
 
     #services section {

@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "axios": "^1.6.8",
-    "comand-component-library": "^4.0.55",
+    "comand-component-library": "^4.0.68",
     "comand-frontend-framework": "^4.0.72",
     "comand-ui-iconfonts": "^1.0.7",
     "pinia": "^2.1.7",

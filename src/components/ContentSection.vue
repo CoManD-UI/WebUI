@@ -8,24 +8,7 @@
         :useFullDeviceWidth="useFullDeviceWidth"
         :contentOrientation="contentOrientation"
     >
-        <component
-            v-for="(component, componentIndex) in components"
-            :key="componentIndex"
-            :is="component.name"
-            :id="component.id"
-            v-bind="component.props"
-            :i18n="currentLanguageData"
-        >
-            <template v-slot:[slotName] v-for="(childComponents, slotName) in groupComponentBySlotName(component.components)">
-                <component
-                    v-for="(childComponent, childComponentIndex) in childComponents"
-                    :is="childComponent.name"
-                    :key="childComponentIndex"
-                    v-bind="childComponent.props"
-                    :i18n="currentLanguageData"
-                />
-            </template>
-        </component>
+        <RenderComponents :components="components" />
     </CmdWidthLimitationWrapper>
 </template>
 
@@ -114,35 +97,12 @@ export default {
         }
     },
     methods: {
-        getSlotName(component) {
-            return component.slotName || 'default'
-        },
         componentPath(sectionId) {
             return [
                 "main",
                 "sections",
                 {id: sectionId}
             ]
-        },
-        groupComponentBySlotName(components) {
-            const slots = {}
-
-            if(!components) {
-                return slots
-            }
-
-            for(let i = 0; i < components.length; i++) {
-                const slotName = this.getSlotName(components[i])
-
-                // check if slotname already exists
-                if(!slots[slotName]) {
-                    slots[slotName] = []
-                }
-                // push component to slotname to group all components with same slotname
-                slots[slotName].push(components[i])
-            }
-
-            return slots
         }
     }
 }

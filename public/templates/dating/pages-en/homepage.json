@@ -491,7 +491,6 @@
         "iconClass": "icon-user-profile",
         "allowAddComponent": true,
         "contentType": "flex",
-        "contentOrientation": "horizontal",
         "cmdHeadline": {
           "headlineText": "Our service for you",
           "headlineLevel": 2,
@@ -502,7 +501,7 @@
           {
             "name": "CmdBoxWrapper",
             "props": {
-              "allowAddComponent": true,
+              "allowAddComponent": false,
               "allowUserToToggleOrientation": false,
               "boxesPerRow": 3,
               "useFlexbox": true,
