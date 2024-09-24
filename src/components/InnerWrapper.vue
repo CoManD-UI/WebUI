@@ -99,7 +99,6 @@ export default {
     watch: {
         activeSections: {
             handler() {
-                console.log("activeSections watcher")
                 this.$nextTick(() => {
                     const sectionProvider = () => document.querySelectorAll("#content .cmd-width-limitation-wrapper > section:not(:has(.cmd-page-header))")
                     if (this.$_intersectionObserver) {
@@ -112,10 +111,8 @@ export default {
                     }
                     this.$_intersectionObserver = new IntersectionObserver(entries => {
                         entries.filter(entry => entry.isIntersecting).forEach(entry => {
-                            console.log("entry", entry, entry.target.classList)
                             entry.target.classList.add("visible")
                         } )
-                        //console.log("IntersectionObserver", entries.filter(entry => entry.isIntersecting))
                     }, options)
                     setTimeout(() => sectionProvider().forEach(element => this.$_intersectionObserver.observe(element)), 500)
                 })

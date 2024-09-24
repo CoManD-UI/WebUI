@@ -59,7 +59,7 @@
                 <!-- begin center/main column -->
                 <div class="main-content-wrapper">
                     <!-- begin CmdPageHeader -->
-                    <CmdWidthLimitationWrapper v-if="cmdPageHeader">
+                    <CmdWidthLimitationWrapper v-if="cmdPageHeader" class="page-header-section">
                         <CmdPageHeader v-bind="cmdPageHeader"/>
                     </CmdWidthLimitationWrapper>
                     <!-- end CmdPageHeader -->
@@ -69,7 +69,7 @@
                     <!-- end slot center/main column -->
 
                     <!-- begin CmdPageFooter -->
-                    <CmdWidthLimitationWrapper v-if="cmdPageFooter" contentOrientation="horizontal">
+                    <CmdWidthLimitationWrapper v-if="cmdPageFooter" contentOrientation="horizontal" class="page-footer-section">
                         <CmdPageFooter v-bind="cmdPageFooter"/>
                     </CmdWidthLimitationWrapper>
                     <!-- end CmdPageFooter -->

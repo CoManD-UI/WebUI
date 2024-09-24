@@ -140,7 +140,6 @@ export default {
         },
         showActionButtons() {
             this.$refs[this.sectionId].classList.add("active")
-            console.log("this.$refs", this.$refs[this.sectionId])
             this.editModeContext.system.setActiveSection(this.sectionPath)
         }
     }

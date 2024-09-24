@@ -1,7 +1,9 @@
 {
-  "name": "comand-ui-website",
+  "name": "comand-web-ui",
   "private": false,
-  "version": "1.0.6",
+  "version": "1.0.7",
+  "license": "GPL-3.0-only",
+  "author": "CoManD UI",
   "main": "./dist/comand-ui-website.umd.cjs",
   "module": "./dist/comand-ui-website.js",
   "scripts": {

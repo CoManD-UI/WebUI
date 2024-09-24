@@ -100,9 +100,6 @@ export default {
     },
     methods: {
         setDefaultAges(type) {
-            console.log("type", type)
-            console.log("this.ageFrom", this.ageFrom)
-            console.log("this.ageTo", this.ageTo)
             // set legal age
             if(type === 'from' && Number(this.ageFrom) < 18) {
                 this.ageFrom = "18"
