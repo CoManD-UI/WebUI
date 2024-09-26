@@ -1,6 +1,6 @@
 import {createPinia} from "pinia"
 import {usePiniaStore} from "./stores/pinia.js"
-import {useWebStore} from "./stores/website.js"
+import {useWebUIStore} from "./stores/web-ui.js"
 import router from "./router"
 import * as components from "comand-component-library"
 
@@ -131,7 +131,7 @@ function bootstrap(app) {
         .directive('focus', directiveFocus)
         .directive('fancybox', directiveFancybox)
 
-    const store = useWebStore()
+    const store = useWebUIStore()
 
     // return axios(new URL("/site.json", location.href).href).then(response => processSite(response.data, store))
     return loadLanguages()

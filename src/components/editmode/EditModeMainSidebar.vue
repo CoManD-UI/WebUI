@@ -73,7 +73,7 @@
 
 <script>
 import {mapActions, mapState} from "pinia"
-import {useWebStore} from "../../stores/website.js"
+import {useWebUIStore} from "../../stores/web-ui.js"
 import packageJson from '../../../package.json'
 
 export default {
@@ -102,7 +102,7 @@ export default {
         }
     },
     methods: {
-        ...mapActions(useWebStore, ["updateMetaData"]),
+        ...mapActions(useWebUIStore, ["updateMetaData"]),
 
         setOpenStatus(event) {
             this.openSidebarStatus = event
@@ -144,7 +144,7 @@ export default {
         }
     },
     computed: {
-        ...mapState(useWebStore, {storeMetaData: "metaData"})
+        ...mapState(useWebUIStore, {storeMetaData: "metaData"})
     },
     watch: {
         storeMetaData: {

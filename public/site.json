@@ -1,5 +1,5 @@
 {
-  "template": "dating",
+  "template": "blank",
   "languages": [
     "de",
     "en"
@@ -30,8 +30,8 @@
       ]
     },
     {
-      "id": "content",
-      "navEntry": "main_navigation.menuentry.content",
+      "id": "about-us",
+      "navEntry": "About us",
       "subEntries": [
         {
           "id": "subpage1",
@@ -65,8 +65,8 @@
       ]
     },
     {
-      "id": "gallery",
-      "navEntry": "main_navigation.menuentry.gallery",
+      "id": "stories",
+      "navEntry": "Stories",
       "navigation": [
         "main"
       ]
@@ -79,8 +79,8 @@
       ]
     },
     {
-      "id": "team",
-      "navEntry": "main_navigation.menuentry.team",
+      "id": "profile",
+      "navEntry": "Login",
       "navigation": [
         "main"
       ]

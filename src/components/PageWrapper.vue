@@ -1,11 +1,10 @@
 <template>
     <a id="anchor-back-to-top"></a>
     <div :class="['page-wrapper', {'overflow-hidden': offCanvasOpen}]"
-         id="template-dating"
+         :id="templateName"
          :style="{'scroll-padding-top': heightSiteHeader + 'px'}"
          v-fancybox
     >
-
         <!-- begin slot site-header -->
         <slot name="site-header"></slot>
         <!-- end slot site-header -->
@@ -178,11 +177,12 @@
 //import {openFancyBox} from "@/components/CmdFancyBox.vue"
 
 // import store
-import {useWebStore} from "../stores/website"
+import {useWebUIStore} from "../stores/web-ui"
 
 // import mixins
 import BaseI18nComponent from "../components/mixins/BaseI18nComponent"
 import {mapState} from "pinia";
+import {usePiniaStore} from "../stores/pinia";
 
 export default {
     name: "PageWrapper",
@@ -250,14 +250,16 @@ export default {
         }
     },
     computed: {
+        ...mapState(useWebUIStore, ["template", "currentLanguageData"]),
+        templateName() {
+            return "template-" + this.template
+        },
         iconBackToTop() {
             return {
                 iconClass: "icon-chevron-one-stripe-up",
                 tooltip: this.label("back_to_top_button.tooltip")
             }
-        },
-        ...mapState(useWebStore, ["currentLanguageData"
-        ]),
+        }
     },
     methods: {
         label(labelText) {

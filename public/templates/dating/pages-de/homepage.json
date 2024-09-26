@@ -16,15 +16,6 @@
         "cmdHeadline": null,
         "components": [
           {
-            "name": "CmdLink",
-            "props": {
-              "linkType": "href",
-              "path": "#",
-              "fancybox": true,
-              "text": "Link Fancybox"
-            }
-          },
-          {
             "name": "CmdTabs",
             "id": "top-container",
             "props": {

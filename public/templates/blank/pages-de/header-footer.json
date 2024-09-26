@@ -36,18 +36,29 @@
               "links": [
                 {
                   "type": "href",
+                  "text": "",
+                  "path": "#",
+                  "icon": {
+                    "iconClass": "icon-user-profile",
+                    "tooltip": "Link ohne Text, aber mit Tooltip"
+                  }
+                },
+                {
+                  "type": "href",
                   "text": "Datenschutzerklärung",
                   "path": "/content/data-privacy-de.html",
                   "tooltip": "Lokale Datei in FancyBox öffnen",
                   "fancybox": true
                 },
                 {
-                  "iconClass": "icon-export",
                   "type": "href",
                   "text": "CoManD-Website",
                   "path": "http://www.comand-cms.com",
                   "target": "_blank",
-                  "tooltip": "CoManD-Website in neuem Tab öffnen"
+                  "icon": {
+                    "iconClass": "icon-export",
+                    "tooltip": "CoManD-Website in neuem Tab öffnen"
+                  }
                 },
                 {
                   "iconClass": "icon-security-settings",

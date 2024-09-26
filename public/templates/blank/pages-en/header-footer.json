@@ -36,11 +36,13 @@
               "textAlign": "right",
               "links": [
                 {
-                  "iconClass": "icon-user-profile",
                   "type": "href",
                   "text": "",
                   "path": "#",
-                  "tooltip": "Link without text, but tooltip"
+                  "icon": {
+                    "iconClass": "icon-user-profile",
+                    "tooltip": "Link without text, but tooltip"
+                  }
                 },
                 {
                   "type": "href",
@@ -50,12 +52,14 @@
                   "fancybox": true
                 },
                 {
-                  "iconClass": "icon-export",
                   "type": "href",
                   "text": "External link",
                   "path": "http://www.comand-cms.com",
                   "target": "_blank",
-                  "tooltip": "Open CoManD-Website in new tab"
+                  "icon": {
+                    "iconClass": "icon-export",
+                    "tooltip": "Open CoManD-Website in new tab"
+                  }
                 },
                 {
                   "iconClass": "icon-security-settings",

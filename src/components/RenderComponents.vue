@@ -15,7 +15,7 @@
 
 <script>
 import {mapState} from "pinia";
-import {useWebStore} from "../stores/website"
+import {useWebUIStore} from "../stores/web-ui"
 
 export default {
     name: "RenderComponents",
@@ -26,7 +26,7 @@ export default {
         }
     },
     computed: {
-        ...mapState(useWebStore, ["currentLanguageData", "numberOfPages"])
+        ...mapState(useWebUIStore, ["currentLanguageData", "numberOfPages"])
     },
     methods: {
         getSlotName(component) {
