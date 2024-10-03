@@ -76,24 +76,6 @@ export default {
             }
 
             return classes.join(" ")
-        },
-        cmdSlideButtons() {
-            return {
-                next: {
-                    next: {
-                        type: "next",
-                        iconClass: "icon-single-arrow-right",
-                        tooltip: this.label("slidebutton_next.tooltip")
-                    }
-                },
-                prev: {
-                    prev: {
-                        type: "prev",
-                        iconClass: "icon-single-arrow-left",
-                        tooltip: this.label("slidebutton_previous.tooltip")
-                    }
-                }
-            }
         }
     },
     methods: {

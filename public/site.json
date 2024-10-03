@@ -1,5 +1,5 @@
 {
-  "template": "blank",
+  "template": "dating",
   "languages": [
     "de",
     "en"
@@ -39,6 +39,16 @@
           "navEntry": "subpage 1",
           "navigation": [
             "main"
+          ],
+          "subEntries": [
+            {
+              "id": "sub-subpage",
+              "iconClass": "icon-globe",
+              "navEntry": "sub-subpage",
+              "navigation": [
+                "main"
+              ]
+            }
           ]
         },
         {

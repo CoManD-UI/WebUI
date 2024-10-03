@@ -10,11 +10,20 @@ const router = createRouter({
 
 router.beforeEach((to, from) => {
     const store = useWebUIStore()
-    store.setCurrentPageName(to.name)
+    store.setRouteMetaData({
+        title: to.meta?.title
+    })
+    if (to.meta?.cmdCustomRoute) {
+        store.setCurrentPageName("")
+    } else {
+        store.setCurrentPageName(to.name)
+    }
     if (to.params.lang) {
         store.setCurrentLanguage(to.params.lang)
     }
-    store.loadPageContent(to.name)
+    if (!to.meta?.cmdCustomRoute) {
+        store.loadPageContent(to.name)
+    }
     return true
 })
 

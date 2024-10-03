@@ -30,8 +30,6 @@
             "name": "CmdListOfLinks",
             "handlers": "toggleSection",
             "props": {
-              "cmdHeadline": {
-              },
               "orientation": "vertical",
               "textAlign": "right",
               "links": [
@@ -84,8 +82,6 @@
       {
         "name": "CmdOpeningHours",
         "props": {
-          "cmdHeadline": {
-          },
           "textHolidays": "",
           "textMiscInfo": "",
           "openingHours": [
@@ -174,8 +170,6 @@
       {
         "name": "CmdAddressData",
         "props": {
-          "cmdHeadline": {
-          },
           "addressData": [
             {
               "name": "company",

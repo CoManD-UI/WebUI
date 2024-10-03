@@ -10,7 +10,7 @@ function findPageById(pages, id, parents) {
             const page = findPageById(pages[i].subEntries, id, parents)
             if (page) {
                 if (parents) {
-                    parents.push(pages[i])
+                    parents.unshift(pages[i])
                 }
                 return page
             }
@@ -33,7 +33,8 @@ export const useWebUIStore = defineStore("cms", {
         siteFooter: {},
         siteStructure: [],
         pageFooterContent: {},
-        siteConfiguration: {}
+        siteConfiguration: {},
+        routeMetaData: {}
     }),
     getters: {
         topContentActiveSections() {
@@ -73,7 +74,7 @@ export const useWebUIStore = defineStore("cms", {
             return this.currentPageContent?.mainContent?.sections?.toSorted((section1, section2) => section1.order - section2.order) || []
         },
         pageHeader() {
-            if (this.currentPageName === 'homepage' && !this.pageHeadlineText) {
+            if (this.currentPageName === '' || (this.currentPageName === 'homepage' && !this.pageHeadlineText)) {
                 return null
             }
 
@@ -147,7 +148,7 @@ export const useWebUIStore = defineStore("cms", {
         },
         metaData(state) {
             return {
-                title: findPageById(state.pages, state.currentPageName)?.navEntry,
+                title: state.routeMetaData?.title || findPageById(state.pages, state.currentPageName)?.navEntry,
                 ...state.defaultMetaData,
                 ...(this.currentPageContent?.metadata || {})
             }
@@ -190,7 +191,7 @@ export const useWebUIStore = defineStore("cms", {
                                 lang: state.currentLanguage
                             }
                         },
-                        type: "router",
+                        type: page.subEntries?.length ? "href" : "router",
                     }
                 }
                 return {
@@ -241,6 +242,9 @@ export const useWebUIStore = defineStore("cms", {
                     this.siteFooter = structure.siteFooter || {}
                     // this.pageContent[this.currentLanguage]["header-footer"] = true
                 })
+        },
+        setRouteMetaData(metaData) {
+            this.routeMetaData = metaData
         },
         addPage(page) {
             this.pages.push(page)

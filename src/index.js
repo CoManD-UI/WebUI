@@ -26,6 +26,7 @@ import CmdHeadlineSettings from "./components/editmode/component-settings/CmdHea
 import CmdTextImageBlockSettings from "./components/editmode/component-settings/CmdTextImageBlockSettings.vue"
 import SectionSettings from "./components/editmode/component-settings/SectionSettings.vue"
 import CmdContainerSettings from "./components/editmode/component-settings/CmdContainerSettings.vue"
+import InnerWrapper from "./components/InnerWrapper.vue"
 
 // import directives from comand-component-library
 import directiveTelephone from "comand-component-library/src/directives/telephone"
@@ -34,6 +35,14 @@ import directiveFancybox from "comand-component-library/src/directives/fancybox"
 import axios from "axios"
 
 export {default as CmdWebsite} from './components/CmdWebsite.vue'
+
+function addRoute(route) {
+    if (!route.meta) {
+        route.meta = {}
+    }
+    route.meta.cmdCustomRoute = true
+    router.addRoute(route)
+}
 
 function loadLanguages() {
     return axios(new URL("/templates/pages/data/languages.json", location.href).href)
@@ -47,7 +56,7 @@ function loadSite() {
     return axios(new URL("/site.json", location.href).href)
 }
 
-function processSite(site, store) {
+function processSite(site, store, routerConfigurer) {
     store.setLanguages(site.languages || ["de"])
     const pages = site.pages || [{id: "homepage"}]
     router.addRoute({
@@ -65,7 +74,7 @@ function processSite(site, store) {
             name: store.currentPage?.id || pages[0].id
         })
     })
-    pages.forEach(page => processPage(page, store, []))
+    pages.forEach(page => processPage(page, store, routerConfigurer, []))
     router.addRoute({
         path: "/:pathMatch(.*)*",
         redirect: "/"
@@ -81,16 +90,24 @@ function processSite(site, store) {
     // assign pageFooter to store
     store.pageFooterContent = site.pageFooter
     store.siteConfiguration = site.siteConfiguration || {}
+
+    if (typeof routerConfigurer === "object" && typeof routerConfigurer.onRoutesAdded === "function") {
+        routerConfigurer.onRoutesAdded(addRoute)
+    }
 }
 
-function processPage(page, store, path) {
-    router.addRoute({
+function processPage(page, store, routerConfigurer, path) {
+    const route = {
         name: page.id,
         path: "/:lang([a-z]{2})" + (path.length > 0 ? "/" : "") + path.join("/") + "/" + page.id,
-        component: {}
-    })
+        component: InnerWrapper
+    }
+    if (typeof routerConfigurer === "object" && typeof routerConfigurer.onBeforeRouteAdd === "function") {
+        routerConfigurer.onBeforeRouteAdd(route)
+    }
+    router.addRoute(route)
     if (page.subEntries?.length > 0) {
-        page.subEntries.forEach(subPage => processPage(subPage, store, [page.id]))
+        page.subEntries.forEach(subPage => processPage(subPage, store, routerConfigurer, [page.id]))
     }
 
     if (path.length === 0) {
@@ -98,7 +115,7 @@ function processPage(page, store, path) {
     }
 }
 
-function bootstrap(app) {
+function bootstrap(app, routerConfigurer) {
     Object.entries({
         LoginArea,
         ListWithImages,
@@ -137,9 +154,9 @@ function bootstrap(app) {
     return loadLanguages()
         .then(response => processLanguages(response.data, store))
         .then(loadSite)
-        .then(response => processSite(response.data, store))
+        .then(response => processSite(response.data, store, routerConfigurer))
 }
 
-export function bootstrapAndMount(app) {
-    bootstrap(app).then(() => app.use(router).mount("#app"))
+export function bootstrapAndMount(app, routerConfigurer) {
+    bootstrap(app, routerConfigurer).then(() => app.use(router).mount("#app"))
 }

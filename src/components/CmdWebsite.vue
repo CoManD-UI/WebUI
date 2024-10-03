@@ -38,7 +38,7 @@
                 />
             </component>
         </template>
-        <InnerWrapper />
+        <router-view></router-view>
         <template v-slot:right-column>
             <component
                 v-for="(component, componentIndex) in asideRightColumnContent"
@@ -102,15 +102,6 @@ export default {
         }
     },
     created() {
-        // append template.css as last css-file
-        if(!document.querySelector("#custom-template")) {
-            const linkTag = document.createElement("link")
-            linkTag.setAttribute("rel", "stylesheet")
-            linkTag.setAttribute("href", "/styles/templates.css")
-            linkTag.setAttribute("id", "custom-template")
-            document.head.append(linkTag)
-        }
-
         // register event-listener to check if location.hash has changed, so 'active'-class for navigation can be set correctly
         addEventListener("hashchange", this.onLocationHashChanged)
 
@@ -188,38 +179,6 @@ export default {
         context() {
             return this.editMode ? useEditModeContext() : null
         },
-        templateId() {
-            return "template-" + (this.selectedTemplate || "blank")
-        },
-        mainNavigation() {
-            const navigationEntries = []
-
-            for (let i = 0; i < this.sections.length; i++) {
-                if (this.sections[i].showLinkInMainNavigation) {
-                    const path = "#anchor-" + this.sections[i].id
-                    const entry = {
-                        iconClass: this.sections[i].iconClass,
-                        text: this.sections[i].navEntry,
-                        path: path,
-                        type: "href",
-                        active: this.currentUrlHash === path // compare url from hash with path from store to set 'active'-class
-                    }
-                    navigationEntries.push(entry)
-                }
-            }
-            return navigationEntries
-        },
-        iconBackToTop() {
-            return {
-                iconClass: "icon-chevron-one-stripe-up",
-                tooltip: this.label("back_to_top_button.tooltip")
-            }
-        },
-        // addressData() {
-        //    const addressDataTranslated = JSON.parse(JSON.stringify(this.addressDataData))
-        //    addressDataTranslated.address.country = this.label(addressDataTranslated.address.country, addressDataTranslated.address.country)
-        //     return addressDataTranslated
-        // },
         openingHours() {
             const openingHoursTranslated = []
 
@@ -238,9 +197,6 @@ export default {
         }
     },
     methods: {
-        changeTemplate(event) {
-            this.selectedTemplate = event
-        },
         componentPath(componentIndex) {
             return [
                 "siteFooter",

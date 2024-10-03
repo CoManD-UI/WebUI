@@ -1,7 +1,7 @@
 <template>
     <a id="anchor-back-to-top"></a>
     <div :class="['page-wrapper', {'overflow-hidden': offCanvasOpen}]"
-         :id="templateName"
+         :id="templateId"
          :style="{'scroll-padding-top': heightSiteHeader + 'px'}"
          v-fancybox
     >
@@ -87,7 +87,7 @@
             <!-- begin center/main column -->
             <template v-else>
                 <!-- begin CmdPageHeader -->
-                <CmdWidthLimitationWrapper v-if="cmdPageHeader">
+                <CmdWidthLimitationWrapper v-if="cmdPageHeader" class="page-header-section">
                     <CmdPageHeader v-bind="cmdPageHeader"/>
                 </CmdWidthLimitationWrapper>
                 <!-- end CmdPageHeader -->
@@ -97,7 +97,7 @@
                 <!-- end slot center/main column -->
 
                 <!-- begin CmdPageFooter -->
-                <CmdWidthLimitationWrapper v-if="cmdPageFooter" contentOrientation="horizontal">
+                <CmdWidthLimitationWrapper v-if="cmdPageFooter" contentOrientation="horizontal" class="page-footer-section">
                     <CmdPageFooter v-bind="cmdPageFooter"/>
                 </CmdWidthLimitationWrapper>
                 <!-- end CmdPageFooter -->
@@ -251,7 +251,7 @@ export default {
     },
     computed: {
         ...mapState(useWebUIStore, ["template", "currentLanguageData"]),
-        templateName() {
+        templateId() {
             return "template-" + this.template
         },
         iconBackToTop() {
@@ -290,6 +290,10 @@ export default {
 
 <style lang="scss">
 @import "comand-component-library/src/assets/styles/variables.scss";
+main#content {
+    display: flex;
+    flex-direction: column;
+}
 
 .inner-content-wrapper {
     display: flex;
