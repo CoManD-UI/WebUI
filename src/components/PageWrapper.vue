@@ -250,7 +250,7 @@ export default {
         }
     },
     computed: {
-        ...mapState(useWebUIStore, ["template", "currentLanguageData"]),
+        ...mapState(useWebUIStore, ["template", "currentLanguageData", "activeSections"]),
         templateId() {
             return "template-" + this.template
         },
@@ -283,6 +283,30 @@ export default {
         closeCookieDisclaimer() {
             this.fancyBoxCookieDisclaimer = false
             localStorage.setItem("onepagerPrivacySettingsAccepted", "true")
+        }
+    },
+    watch: {
+        activeSections: {
+            handler() {
+                this.$nextTick(() => {
+                    const sectionProvider = () => document.querySelectorAll("#content .cmd-width-limitation-wrapper > section:not(:has(.cmd-page-header))")
+                    if (this.$_intersectionObserver) {
+                        this.$_intersectionObserver.disconnect()
+                        this.$_intersectionObserver = null
+                    }
+                    const options = {
+                        root: document.getElementById("page-wrapper"),
+                        threshold: 0.1
+                    }
+                    this.$_intersectionObserver = new IntersectionObserver(entries => {
+                        entries.filter(entry => entry.isIntersecting).forEach(entry => {
+                            entry.target.classList.add("visible")
+                        } )
+                    }, options)
+                    setTimeout(() => sectionProvider().forEach(element => this.$_intersectionObserver.observe(element)), 500)
+                })
+            },
+            immediate: true
         }
     }
 }

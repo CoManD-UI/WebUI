@@ -114,8 +114,8 @@ export const useWebUIStore = defineStore("cms", {
                 breadcrumbLabel: this.siteConfiguration.breadcrumbs?.showBreadcrumbLabel !== false ? this.currentLanguageData["cmdbreadcrumbs.labeltext.you_are_here"] : "",
                 breadcrumbSeparator: this.siteConfiguration.breadcrumbs?.breadcrumbSeparator || undefined,
                 breadcrumbLinks: [
-                    ...(parents.map(page => ({
-                        "type": "router",
+                    ...(parents.map((page,index) => ({
+                        "type": index === 0 ? "router" : "", // homepage should be router, all other parents should not be a link/router
                         "text": this.currentLanguageData[page.navEntry] ?? page.navEntry, // check for language-string to translate else show given string
                         "route": {
                             "name": page.id,
@@ -125,7 +125,7 @@ export const useWebUIStore = defineStore("cms", {
                         }
                     }))),
                     {
-                        "type": "router",
+                        "type": "",
                         "text": this.currentLanguageData[currentPage?.navEntry] ?? currentPage?.navEntry,
                         "route": {
                             "name": this.currentPageName,
