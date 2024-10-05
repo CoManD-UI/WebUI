@@ -13,18 +13,19 @@ export default defineConfig({
         }
       }
     }]})],
-    resolve: {
-        alias: {
-            vue: "vue/dist/vue.esm-bundler.js"
+    css: {
+        preprocessorOptions: {
+            scss: {
+                api: "modern-compiler"
+            }
         }
     },
     build: {
         lib: {
             entry: resolve(__dirname, "src/index.js"),
-            name: "comand-ui-website",
-            fileName: "comand-ui-website",
-            formats: ["es", "umd"]
+            formats: ["es"]
         },
+        copyPublicDir: false,
         rollupOptions: {
             external: ["vue"],
             output: {

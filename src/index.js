@@ -1,40 +1,14 @@
+import { createApp, defineAsyncComponent } from "vue"
 import {createPinia} from "pinia"
-import {usePiniaStore} from "./stores/pinia.js"
 import {useWebUIStore} from "./stores/web-ui.js"
 import router from "./router"
-import * as components from "comand-component-library"
+import * as componentLibraryComponents from "comand-component-library"
+import * as webUiComponents from "./components"
+import * as directives from "./directives"
 
-// import local components
-import LoginArea from "./components/LoginArea.vue"
-import ListWithImages from "./components/ListWithImages.vue"
-import RegisterForm from "./components/RegisterForm.vue"
+export * from "./components"
 
-// import settings-components
-import CmdToggleDarkModeSettings from "./components/editmode/component-settings/CmdToggleDarkModeSettings.vue"
-import CmdSocialNetworksSettings from "./components/editmode/component-settings/CmdSocialNetworksSettings.vue"
-import CmdThumbnailScrollerSettings from "./components/editmode/component-settings/CmdThumbnailScrollerSettings.vue"
-import ContactFormSettings from "./components/editmode/component-settings/ContactFormSettings.vue"
-import CmdSlideshowSettings from "./components/editmode/component-settings/CmdSlideshowSettings.vue"
-import CmdListOfLinksSettings from "./components/editmode/component-settings/CmdListOfLinksSettings.vue"
-import CmdLinkItemSettings from "./components/editmode/component-settings/CmdLinkItemSettings.vue"
-import CmdOpeningHoursSettings from "./components/editmode/component-settings/CmdOpeningHoursSettings.vue"
-import CmdAddressDataSettings from "./components/editmode/component-settings/CmdAddressDataSettings.vue"
-import CmdAddressDataItemSettings from "./components/editmode/component-settings/CmdAddressDataItemSettings.vue"
-import CmdImageGallerySettings from "./components/editmode/component-settings/CmdImageGallerySettings.vue"
-import CmdImageSettings from "./components/editmode/component-settings/CmdImageSettings.vue"
-import CmdHeadlineSettings from "./components/editmode/component-settings/CmdHeadlineSettings.vue"
-import CmdTextImageBlockSettings from "./components/editmode/component-settings/CmdTextImageBlockSettings.vue"
-import SectionSettings from "./components/editmode/component-settings/SectionSettings.vue"
-import CmdContainerSettings from "./components/editmode/component-settings/CmdContainerSettings.vue"
-import InnerWrapper from "./components/InnerWrapper.vue"
-
-// import directives from comand-component-library
-import directiveTelephone from "comand-component-library/src/directives/telephone"
-import directiveFocus from "comand-component-library/src/directives/focus"
-import directiveFancybox from "comand-component-library/src/directives/fancybox"
 import axios from "axios"
-
-export {default as CmdWebsite} from './components/CmdWebsite.vue'
 
 function addRoute(route) {
     if (!route.meta) {
@@ -100,7 +74,7 @@ function processPage(page, store, routerConfigurer, path) {
     const route = {
         name: page.id,
         path: "/:lang([a-z]{2})" + (path.length > 0 ? "/" : "") + path.join("/") + "/" + page.id,
-        component: InnerWrapper
+        component: webUiComponents.InnerWrapper
     }
     if (typeof routerConfigurer === "object" && typeof routerConfigurer.onBeforeRouteAdd === "function") {
         routerConfigurer.onBeforeRouteAdd(route)
@@ -116,37 +90,17 @@ function processPage(page, store, routerConfigurer, path) {
 }
 
 function bootstrap(app, routerConfigurer) {
-    Object.entries({
-        LoginArea,
-        ListWithImages,
-        RegisterForm,
-        CmdToggleDarkModeSettings,
-        CmdImageGallerySettings,
-        CmdImageSettings,
-        CmdThumbnailScrollerSettings,
-        CmdListOfLinksSettings,
-        CmdLinkItemSettings,
-        CmdAddressDataSettings,
-        CmdAddressDataItemSettings,
-        CmdOpeningHoursSettings,
-        CmdHeadlineSettings,
-        CmdTextImageBlockSettings,
-        SectionSettings,
-        CmdSocialNetworksSettings,
-        CmdSlideshowSettings,
-        ContactFormSettings,
-        CmdContainerSettings
-    }).forEach(([name, component]) => app.component(name, component))
-
-    Object.entries(components).forEach(([name, component]) => {
+    Object.entries(webUiComponents).forEach(([name, component]) => {
         app.component(name, component)
     })
+    Object.entries(componentLibraryComponents).forEach(([name, component]) => {
+        app.component(name, component)
+    })
+    Object.entries(directives).forEach(([name, directive]) => {
+        app.directive(name, directive)
+    })
 
-    app
-        .use(createPinia())
-        .directive('telephone', directiveTelephone)
-        .directive('focus', directiveFocus)
-        .directive('fancybox', directiveFancybox)
+    app.use(createPinia())
 
     const store = useWebUIStore()
 
@@ -157,6 +111,22 @@ function bootstrap(app, routerConfigurer) {
         .then(response => processSite(response.data, store, routerConfigurer))
 }
 
-export function bootstrapAndMount(app, routerConfigurer) {
-    bootstrap(app, routerConfigurer).then(() => app.use(router).mount("#app"))
+export function bootstrapAndMount(options) {
+    let app = options?.app
+    if (!app) {
+        let component = () => Promise.resolve(webUiComponents.CmdWebsite)
+        if (options?.rootComponent) {
+            component = () => Promise.resolve(options.rootComponent)
+        } else if (options?.rootComponentImportPath) {
+            component = () => import(options?.rootComponentImportPath)
+        }
+        app = createApp(defineAsyncComponent(component))
+    }
+    bootstrap(app, options?.routerConfigurer)
+        .then(() => {
+            if (typeof options?.appConfigurer === "function") {
+                options.appConfigurer(app)
+            }
+            app.use(router).mount("#app")
+        })
 }
