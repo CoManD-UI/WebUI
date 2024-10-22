@@ -1,9 +1,9 @@
 {
   "name": "comand-web-ui",
   "private": false,
-  "version": "1.0.20",
+  "version": "1.0.22",
   "license": "GPL-3.0-only",
-  "author": "CoManD UI",
+  "author": "CoManD-UI",
   "type": "module",
   "scripts": {
     "dev": "vite",
