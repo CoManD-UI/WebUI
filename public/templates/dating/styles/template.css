@@ -5,7 +5,6 @@
     font-weight: normal;
     font-style: normal;
 }
-
 html {
     --default-font-family: "mondaregular", sans-serif !important;
     --box-header-background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(240,240,240,1) 100%);
@@ -46,6 +45,7 @@ button, .button {
 
         > ul {
             background: none;
+
             > li {
                 &:first-child a {
                     border-top-left-radius: var(--nav-border-radius);
@@ -92,7 +92,7 @@ button, .button {
         display: flex;
 
         #top-container {
-            width: 38%;
+            width: 40%;
             display: inline-flex;
             justify-content: flex-end;
             flex-direction: column;
@@ -109,15 +109,23 @@ button, .button {
         background: rgba(255, 255, 255, .2);
     }
 
-    #age-wrapper > label:last-of-type {
-        margin-left: auto;
-        flex: none;
+    #age-wrapper {
+        > label {
+            width: 40%;
+
+            &:last-of-type {
+                margin-left: auto;
+                flex: none;
+            }
+        }
     }
 }
 
 #new-members {
-    > section > .flex-container {
-        gap: 4rem;
+    > section {
+        & > * {
+            min-width: 30rem;
+        }
     }
 
     #box-dating-tipps {
@@ -219,7 +227,67 @@ html.dark-mode {
     --background-login-form: var(--fieldset-background) ;
 }
 
+@media only screen and (max-width: 1023px) {
+    .site-header header .main-navigation-wrapper {
+        nav {
+            --nav-border-radius: 0rem;
+
+            > ul {
+                background: none;
+
+                > li {
+                    > a {
+                        padding-top: 1rem;
+                        padding-bottom: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    #welcome {
+        & section {
+            & #top-container {
+                width: 60%;
+                margin: 0 auto;
+            }
+        }
+
+        .cmd-login-form, .register-form fieldset, .cmd-tabs > div {
+            backdrop-filter: var(--background-blur);
+            background: rgba(255, 255, 255, .5);
+        }
+    }
+}
+
 /* begin css for dark-mode only ------------------------------------------------------------------------------------------ */
+@media only screen and (max-width: 600px) {
+    #welcome {
+        & section {
+            & #top-container {
+                width: 100%;
+            }
+        }
+
+        #age-wrapper {
+            flex-direction: row;
+            justify-content: space-between;
+
+            label {
+                width: 50%;
+
+                span {
+                    width: 100%;
+                }
+            }
+        }
+
+        .cmd-form .button:last-child {
+            margin: 0 auto;
+        }
+    }
+}
+
 @media (prefers-color-scheme: dark) {
     --background-login-form: var(--fieldset-background);
 }

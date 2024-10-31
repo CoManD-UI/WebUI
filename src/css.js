@@ -29,7 +29,7 @@ import 'comand-component-library/src/assets/styles/template.css'
 
 /* end imports from comand-ui-website ---------------------------------------------------------------------------------------- */
 /* import global css */
-import './assets/styles/comand-ui-website-global-styles.scss'
+import './assets/styles/comand-web-ui-global-styles.scss'
 
 /* import css for editmode */
 import './assets/styles/editmode.css'

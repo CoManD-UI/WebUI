@@ -74,11 +74,18 @@ main {
     .cmd-width-limitation-wrapper {
         section {
             padding-top: var(--section-padding-top);
-            padding-bottom: var(--section-padding-top);
+            padding-bottom: var(--section-padding-bottom);
         }
 
         &:nth-child(even) {
             background: var(--default-background);
+        }
+
+        &.page-header-section, &.page-footer-section {
+            section {
+                padding-top: var(--default-padding);
+                padding-bottom: var(--default-padding);
+            }
         }
     }
 
