@@ -56,6 +56,12 @@
                 />
             </component>
         </template>
+
+        <!-- begin CmdFancyBox with CmdCookieDisclaimer -->
+        <CmdFancyBox v-if="cookieDisclaimer.useCookieDisclaimer" :show="showCookieDisclaimer()" :allowEscapeKey="false" :fancyboxOptions="{}" ariaLabelText="Cookie Disclaimer">
+            <CmdCookieDisclaimer :cookieOptions="cookieDisclaimer.cookieOptions" @close-cookie-disclaimer="setCookies" />
+        </CmdFancyBox>
+        <!-- end CmdFancyBox with CmdCookieDisclaimer -->
     </PageWrapper>
 </template>
 
@@ -67,6 +73,7 @@ import {createUuid, openFancyBox} from 'comand-component-library'
 import {mapActions, mapState} from "pinia"
 import {usePiniaStore} from "../stores/pinia"
 import {useWebUIStore} from "../stores/web-ui"
+import {setCookieDisclaimerCookie, getCookieDisclaimerCookie} from "comand-component-library"
 
 // import mixins
 import BaseI18nComponent from "../components/mixins/BaseI18nComponent"
@@ -98,7 +105,8 @@ export default {
             currentUrlHash: location.hash,
             heightSiteHeader: 150,
             offCanvasOpen: false,
-            selectedTemplate: "blank"
+            selectedTemplate: "blank",
+            showCookieDisclaimerFancybox: true
         }
     },
     created() {
@@ -157,7 +165,8 @@ export default {
             "asideRightColumnShow",
             "asideRightColumnContent",
             "topContentActiveSections",
-            "pageHeadlineText"
+            "pageHeadlineText",
+            "cookieDisclaimer",
         ]),
         cmdSiteHeader() {
             return {
@@ -197,6 +206,15 @@ export default {
         }
     },
     methods: {
+        setCookies(event) {
+            setCookieDisclaimerCookie(event)
+            this.showCookieDisclaimerFancybox = false
+            location.reload() // reload page to update components that use cookies
+        },
+        showCookieDisclaimer() {
+            // check if cookeDisclaimerCookie is empty (and option to show CookieDisclaimerFancybox is enabled)
+            return getCookieDisclaimerCookie().length === 0 && this.showCookieDisclaimerFancybox !== false
+        },
         componentPath(componentIndex) {
             return [
                 "siteFooter",

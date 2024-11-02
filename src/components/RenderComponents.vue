@@ -3,8 +3,7 @@
         v-for="(component, componentIndex) in components || []"
         :key="componentIndex"
         :is="component.name"
-        :id="component.id"
-        v-bind="component.props"
+        v-bind="propsToBind(component)"
         :i18n="currentLanguageData"
     >
         <template v-slot:[slotName] v-for="(childComponents, slotName) in groupComponentBySlotName(component.components)">
@@ -29,6 +28,13 @@ export default {
         ...mapState(useWebUIStore, ["currentLanguageData", "numberOfPages"])
     },
     methods: {
+        propsToBind(component) {
+            const componentProps = {...component.props}
+            if(component.id) {
+                componentProps.id = component.id
+            }
+            return componentProps
+        },
         getSlotName(component) {
             return component.slotName || 'default'
         },

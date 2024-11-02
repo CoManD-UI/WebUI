@@ -149,7 +149,7 @@ main {
 
 /* begin styles for print only --------------------------------------------------------------------------------------------------------------------------------------------------- */
 @media only print {
-    .cmd-site-header, .cmd-main-navigation, .cmd-slideshow, .button, .cmd-back-to-top-button, .cmd-site-footer, .cmd-copyright-information {
+    .cmd-site-header, .cmd-main-navigation, .cmd-slideshow, .button, .cmd-back-to-top-button, .cmd-page-footer, .cmd-site-footer, .cmd-copyright-information {
         display: none !important;
     }
 

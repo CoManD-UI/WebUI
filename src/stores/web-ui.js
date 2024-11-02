@@ -102,6 +102,15 @@ export const useWebUIStore = defineStore("cms", {
 
             return pageFooterContent
         },
+        cookieDisclaimer() {
+            return {
+                useCookieDisclaimer: this.siteConfiguration.cookieDisclaimer?.useCookieDisclaimer,
+                cookieOptions: {
+                    required: this.siteConfiguration.cookieDisclaimer?.required,
+                    optional: this.siteConfiguration.cookieDisclaimer?.optional
+                }
+            }
+        },
         breadcrumbs() {
             const parents = []
             const currentPage = findPageById(this.pages, this.currentPageName, parents)
