@@ -38,7 +38,7 @@
                   "icon": {
                     "iconClass": "icon-security-settings"
                   },
-                  "type": "href",
+                  "linkType": "href",
                   "text": "Datenschutz",
                   "path": "/content/data-privacy-de.html",
                   "tooltip": "Datenschutzerklärung FancyBox öffnen",
@@ -48,18 +48,26 @@
                   "icon": {
                     "iconClass": "icon-logon"
                   },
-                  "type": "href",
+                  "linkType": "href",
                   "text": "Anmelden",
                   "path": "#",
                   "sectionId": "section-login"
                 },
                 {
+                  "linkType": "router",
+                  "text": "Schwerpunkte",
+                  "path": {
+                    "name": "schwerpunkte",
+                    "hash": "#anchor-schwerpunkte-strafrecht"
+                  }
+                },
+                {
                   "icon": {
                     "iconClass": "icon-export"
                   },
-                  "type": "href",
+                  "linkType": "href",
                   "text": "CoManD-Website",
-                  "path": "http://www.comand-ui.com",
+                  "path": "https://www.comand-ui.com",
                   "target": "_blank",
                   "tooltip": "CoManD-Website in neuem Tab öffnen"
                 }

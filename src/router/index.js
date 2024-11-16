@@ -5,7 +5,9 @@ const routes = []
 
 const router = createRouter({
     history: createWebHistory(),
-    routes
+    routes,
+    scrollBehavior() {
+    }
 })
 
 router.beforeEach((to, from) => {

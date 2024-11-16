@@ -381,10 +381,6 @@ main#content {
     .inner-content-wrapper {
         flex-direction: column;
 
-        .main-content-wrapper {
-            border: 1px solid red;
-        }
-
         &:has(> aside) {
             aside {
                 max-width: none;

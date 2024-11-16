@@ -5,6 +5,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 html {
     --default-font-family: "mondaregular", sans-serif !important;
     --box-header-background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(240,240,240,1) 100%);
@@ -15,6 +16,8 @@ html {
     --background-low-transparency: rgba(255, 255, 255, .75);
     --background-high-transparency: rgba(255, 255, 255, .2);
     --fieldset-background: var(--background-high-transparency);
+    --site-footer-hyperlink-color: var(--default-text-color);
+    --site-footer-hyperlink-color-highlighted: var(--primary-color);
 }
 
 .cmd-company-logo {

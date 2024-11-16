@@ -1,5 +1,6 @@
 import {defineStore} from "pinia"
 import axios from "axios"
+import {nextTick} from "vue"
 
 function findPageById(pages, id, parents) {
     for (let i = 0; i < pages.length; i++) {
@@ -78,8 +79,14 @@ export const useWebUIStore = defineStore("cms", {
                 return null
             }
 
+            // check if breadcrumbs exist and should be shown
+            let breadcrumbs = null
+            if(this.siteConfiguration.breadcrumbs?.showBreadcrumbs && this.currentPageName !== 'homepage') {
+                breadcrumbs = this.breadcrumbs
+            }
+
             return {
-                cmdBreadcrumbs: this.currentPageName === 'homepage' ? null : this.breadcrumbs,
+                cmdBreadcrumbs: breadcrumbs,
                 cmdHeadline: {
                     headlineText: this.pageHeadlineText,
                     headlineLevel: 1
@@ -91,7 +98,8 @@ export const useWebUIStore = defineStore("cms", {
             const pageFooterContent = JSON.parse(JSON.stringify(this.pageFooterContent))
 
             if(pageFooterContent.cmdSocialNetworks.cmdFormElement) {
-                pageFooterContent.cmdSocialNetworks.cmdFormElement.labelText = this.currentLanguageData["cmd_social_networks.labeltext.accept_privacy"]
+                // assign key from site.json to translate label-text
+                pageFooterContent.cmdSocialNetworks.cmdFormElement.labelText = this.currentLanguageData[pageFooterContent.cmdSocialNetworks.cmdFormElement.labelText]
             }
 
             pageFooterContent.cmdSocialNetworks.networks?.forEach((item) => {
@@ -220,6 +228,17 @@ export const useWebUIStore = defineStore("cms", {
         }
     },
     actions: {
+        scrollToAnchor() {
+            if(location.hash) {
+                nextTick(() => {
+                    console.log("document.querySelector(location.hash)", document.querySelector(location.hash))
+                    console.log("location.hash", location.hash)
+                    document.querySelector(location.hash)?.scrollIntoView({
+                        behavior: "smooth",
+                    })
+                })
+            }
+        },
         setTemplate(template) {
             this.template = template
         },
@@ -264,6 +283,7 @@ export const useWebUIStore = defineStore("cms", {
         },
         loadPageContent(name) {
             if (this.pageContent[this.currentLanguage]?.[name]) {
+                this.scrollToAnchor()
                 return
             }
             if (!this.pageContent[this.currentLanguage]) {
@@ -272,7 +292,10 @@ export const useWebUIStore = defineStore("cms", {
             const url = new URL(`/templates/${this.template}/pages-${this.currentLanguage}/${name}.json`, location.href)
             axios(url.href)
                 .then(response => response.data)
-                .then(pageContent => this.pageContent[this.currentLanguage][name] = pageContent)
+                .then(pageContent => {
+                    this.pageContent[this.currentLanguage][name] = pageContent
+                    this.scrollToAnchor()
+                })
         },
         loadSiteStructure(siteStructure) {
             this.siteStructure = siteStructure || []

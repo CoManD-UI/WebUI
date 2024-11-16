@@ -73,15 +73,15 @@
     "register_form.placeholder.min_age": "min. 18",
     "register_form.placeholder.max_age": "max. 99",
     "register_form.placeholder.enter_region": "Enter region",
-    "cmd_social_networks.labeltext.accept_privacy": "I accept that anonymous data will be send to the platform I share this page on!",
-    "cmd_social_networks.tooltip.share_this_page_on_facebook": "Share this page on facebook",
-    "cmd_social_networks.tooltip.share_this_page_on_x": "Share this page on X",
-    "cmd_social_networks.tooltip.share_this_page_on_xing": "Share this page on xing",
-    "cmd_social_networks.tooltip.share_this_page_on_linkedin": "Share this page on linkedin",
-    "cmd_social_networks.link_text.share_facebook": "Share",
-    "cmd_social_networks.link_text.share_x": "Share",
-    "cmd_social_networks.link_text.share_xing": "Share",
-    "cmd_social_networks.link_text.share_linkedin": "Share"
+    "social_networks.labeltext.accept_privacy": "I accept that anonymous data will be send to the platform I share this page on!",
+    "social_networks.tooltip.share_this_page_on_facebook": "Share this page on facebook",
+    "social_networks.tooltip.share_this_page_on_x": "Share this page on X",
+    "social_networks.tooltip.share_this_page_on_xing": "Share this page on xing",
+    "social_networks.tooltip.share_this_page_on_linkedin": "Share this page on linkedin",
+    "social_networks.link_text.share_facebook": "Share",
+    "social_networks.link_text.share_x": "Share",
+    "social_networks.link_text.share_xing": "Share",
+    "social_networks.link_text.share_linkedin": "Share"
   },
   "de": {
     "main_navigation.close_navigation": "Navigation schließen",
@@ -157,14 +157,14 @@
     "register_form.placeholder.min_age": "min. 18",
     "register_form.placeholder.max_age": "max. 99",
     "register_form.placeholder.enter_region": "Region eingeben",
-    "cmd_social_networks.labeltext.accept_privacy": "Ich bestätige die Nutzung und Verarbeitung meiner Daten gemäß <a href='/content/data-privacy-en.html' class='fancybox'>Datenschutzerklärung</a>.",
-    "cmd_social_networks.tooltip.share_this_page_on_facebook": "Diese Seite auf facebook teilen",
-    "cmd_social_networks.tooltip.share_this_page_on_x": "Diese Seite auf X teilen",
-    "cmd_social_networks.tooltip.share_this_page_on_xing": "Diese Seite auf facebook teilen",
-    "cmd_social_networks.tooltip.share_this_page_on_linkedin": "Diese Seite auf facebook teilen",
-    "cmd_social_networks.link_text.share_facebook": "Teilen",
-    "cmd_social_networks.link_text.share_x": "Teilen",
-    "cmd_social_networks.link_text.share_xing": "Teilen",
-    "cmd_social_networks.link_text.share_linkedin": "Teilen"
+    "social_networks.labeltext.accept_privacy": "Ich bestätige die Nutzung und Verarbeitung meiner Daten gemäß <a href='/content/data-privacy-en.html' class='fancybox'>Datenschutzerklärung</a>.",
+    "social_networks.tooltip.share_this_page_on_facebook": "Diese Seite auf facebook teilen",
+    "social_networks.tooltip.share_this_page_on_x": "Diese Seite auf X teilen",
+    "social_networks.tooltip.share_this_page_on_xing": "Diese Seite auf facebook teilen",
+    "social_networks.tooltip.share_this_page_on_linkedin": "Diese Seite auf facebook teilen",
+    "social_networks.link_text.share_facebook": "Teilen",
+    "social_networks.link_text.share_x": "Teilen",
+    "social_networks.link_text.share_xing": "Teilen",
+    "social_networks.link_text.share_linkedin": "Teilen"
   }
 }

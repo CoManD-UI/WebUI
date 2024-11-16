@@ -35,7 +35,7 @@
               "textAlign": "right",
               "links": [
                 {
-                  "type": "href",
+                  "linkType": "href",
                   "text": "",
                   "path": "#",
                   "icon": {
@@ -44,16 +44,24 @@
                   }
                 },
                 {
-                  "type": "href",
+                  "linkType": "href",
                   "text": "Datenschutzerklärung",
                   "path": "/content/data-privacy-de.html",
                   "tooltip": "Lokale Datei in FancyBox öffnen",
                   "fancybox": true
                 },
                 {
-                  "type": "href",
+                  "linkType": "router",
+                  "text": "FAQ",
+                  "path": {
+                    "name": "faq",
+                    "hash": "#section3"
+                  }
+                },
+                {
+                  "linkType": "href",
                   "text": "CoManD-Website",
-                  "path": "http://www.comand-ui.com",
+                  "path": "https://www.comand-ui.com",
                   "target": "_blank",
                   "icon": {
                     "iconClass": "icon-export",
@@ -62,7 +70,7 @@
                 },
                 {
                   "iconClass": "icon-security-settings",
-                  "type": "href",
+                  "linkType": "href",
                   "text": "Login",
                   "path": "#",
                   "sectionId": "section-login"

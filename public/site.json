@@ -15,6 +15,7 @@
   ],
   "siteConfiguration": {
     "breadcrumbs": {
+      "showBreadcrumbs": true,
       "showHomeLinkFirst": true,
       "showBreadcrumbLabel": false,
       "breadcrumbSeparator": "|"
@@ -157,6 +158,9 @@
       "navigation": [
         "main"
       ]
+    },
+    {
+      "id": "schwerpunkte"
     }
   ],
   "pageFooter": {
@@ -166,37 +170,37 @@
     "cmdSocialNetworks": {
       "cmdFormElement": {
         "toggleSwitch": true,
-        "labelText": "cmd_social_networks.labeltext.accept_privacy",
+        "labelText": "social_networks.labeltext.accept_privacy",
         "required": true
       },
       "networks": [
         {
           "id": "social-network-facebook",
           "path": "https://www.facebook.com/sharer/sharer.php?u=",
-          "tooltip": "cmd_social_networks.tooltip.share_this_page_on_facebook",
+          "tooltip": "social_networks.tooltip.share_this_page_on_facebook",
           "iconClass": "icon-facebook",
-          "linkText": "cmd_social_networks.link_text.share_facebook"
+          "linkText": "social_networks.link_text.share_facebook"
         },
         {
           "id": "social-network-x",
           "path": "https://twitter.com/home?status=",
-          "tooltip": "cmd_social_networks.tooltip.share_this_page_on_x",
+          "tooltip": "social_networks.tooltip.share_this_page_on_x",
           "iconClass": "icon-x",
-          "linkText": "cmd_social_networks.link_text.share_x"
+          "linkText": "social_networks.link_text.share_x"
         },
         {
           "id": "social-network-xing",
           "path": "https://www.xing.com/spi/shares/new?sc_p=b7910_cb&amp;url=",
-          "tooltip": "cmd_social_networks.tooltip.share_this_page_on_xing",
+          "tooltip": "social_networks.tooltip.share_this_page_on_xing",
           "iconClass": "icon-xing",
-          "linkText": "cmd_social_networks.link_text.share_xing"
+          "linkText": "social_networks.link_text.share_xing"
         },
         {
           "id": "social-network-linkedin",
           "path": "https://www.linkedin.com/cws/share?url=",
-          "tooltip": "cmd_social_networks.tooltip.share_this_page_on_linkedin",
+          "tooltip": "social_networks.tooltip.share_this_page_on_linkedin",
           "iconClass": "icon-linkedin",
-          "linkText": "cmd_social_networks.link_text.share_linkedin"
+          "linkText": "social_networks.link_text.share_linkedin"
         }
       ]
     }
