@@ -1,4 +1,4 @@
-import {getFileExtension} from "comand-component-library/src/utils/getFileExtension.js";
+import {getFileExtension} from "comand-component-library"
 
 function checkAndUploadFile(file, allowedFileExtensions, minImageWidth, maxFileUploadSize, imagePreview) {
     const errorMessages = []

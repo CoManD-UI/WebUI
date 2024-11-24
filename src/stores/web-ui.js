@@ -81,7 +81,7 @@ export const useWebUIStore = defineStore("cms", {
 
             // check if breadcrumbs exist and should be shown
             let breadcrumbs = null
-            if(this.siteConfiguration.breadcrumbs?.showBreadcrumbs && this.currentPageName !== 'homepage') {
+            if (this.siteConfiguration.breadcrumbs?.showBreadcrumbs && this.currentPageName !== 'homepage') {
                 breadcrumbs = this.breadcrumbs
             }
 
@@ -97,15 +97,15 @@ export const useWebUIStore = defineStore("cms", {
             // create deep-copy of pageFooterContent from state
             const pageFooterContent = JSON.parse(JSON.stringify(this.pageFooterContent))
 
-            if(pageFooterContent.cmdSocialNetworks.cmdFormElement) {
+            if (pageFooterContent.cmdSocialNetworks.cmdFormElement) {
                 // assign key from site.json to translate label-text
                 pageFooterContent.cmdSocialNetworks.cmdFormElement.labelText = this.currentLanguageData[pageFooterContent.cmdSocialNetworks.cmdFormElement.labelText]
             }
 
             pageFooterContent.cmdSocialNetworks.networks?.forEach((item) => {
-                    // assign values of specific keys from currentLanguageData to keys for each social network
-                    item.tooltip = this.currentLanguageData[item.tooltip] ?? item.tooltip
-                    item.linkText = this.currentLanguageData[item.linkText] ?? item.linkText
+                // assign values of specific keys from currentLanguageData to keys for each social network
+                item.tooltip = this.currentLanguageData[item.tooltip] ?? item.tooltip
+                item.linkText = this.currentLanguageData[item.linkText] ?? item.linkText
             })
 
             return pageFooterContent
@@ -128,10 +128,10 @@ export const useWebUIStore = defineStore("cms", {
             }
 
             return {
-                breadcrumbLabel: this.siteConfiguration.breadcrumbs?.showBreadcrumbLabel !== false ? this.currentLanguageData["cmdbreadcrumbs.labeltext.you_are_here"] : "",
+                breadcrumbLabel: this.siteConfiguration.breadcrumbs?.showBreadcrumbLabel !== false ? this.currentLanguageData["breadcrumbs.labeltext.you_are_here"] : "",
                 breadcrumbSeparator: this.siteConfiguration.breadcrumbs?.breadcrumbSeparator || undefined,
                 breadcrumbLinks: [
-                    ...(parents.map((page,index) => ({
+                    ...(parents.map((page, index) => ({
                         "type": index === 0 ? "router" : "", // homepage should be router, all other parents should not be a link/router
                         "text": this.currentLanguageData[page.navEntry] ?? page.navEntry, // check for language-string to translate else show given string
                         "route": {
@@ -228,15 +228,17 @@ export const useWebUIStore = defineStore("cms", {
         }
     },
     actions: {
-        scrollToAnchor() {
-            if(location.hash) {
+        scrollToAnchor(hash) {
+            if (hash) {
                 nextTick(() => {
-                    console.log("document.querySelector(location.hash)", document.querySelector(location.hash))
-                    console.log("location.hash", location.hash)
-                    document.querySelector(location.hash)?.scrollIntoView({
+                    document.querySelector(hash)?.scrollIntoView({
                         behavior: "smooth",
                     })
                 })
+            } else {
+
+                // go to top if no has is provided (to reset scroll-position)
+                document.querySelector(".page-wrapper").scrollTo({top: 0, behavior: "instant"})
             }
         },
         setTemplate(template) {
@@ -281,9 +283,9 @@ export const useWebUIStore = defineStore("cms", {
             this.currentPageName = name
             document.body.setAttribute("id", name)
         },
-        loadPageContent(name) {
+        loadPageContent(name, hash) {
             if (this.pageContent[this.currentLanguage]?.[name]) {
-                this.scrollToAnchor()
+                this.scrollToAnchor(hash)
                 return
             }
             if (!this.pageContent[this.currentLanguage]) {
@@ -294,7 +296,7 @@ export const useWebUIStore = defineStore("cms", {
                 .then(response => response.data)
                 .then(pageContent => {
                     this.pageContent[this.currentLanguage][name] = pageContent
-                    this.scrollToAnchor()
+                    this.scrollToAnchor(hash)
                 })
         },
         loadSiteStructure(siteStructure) {

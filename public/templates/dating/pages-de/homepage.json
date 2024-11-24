@@ -42,6 +42,7 @@
                 "name": "RegisterForm",
                 "slotName": "tab-content-0",
                 "props": {
+                  "i18n": "$active",
                   "cmdForm": {
                     "class": "register-form",
                     "legend": {
@@ -58,6 +59,7 @@
                 "name": "CmdLoginForm",
                 "slotName": "tab-content-1",
                 "props": {
+                  "i18n": "$active",
                   "cmdHeadlineLoginForm": {
                     "headlineText": "Jetzt registrieren und Partner finden!",
                     "headlineLevel": 3
@@ -125,6 +127,7 @@
               {
                 "name": "CmdThumbnailScroller",
                 "props": {
+                  "i18n": "$active",
                   "cmdHeadline": {
                     "headlineText": "Neu angemeldete Männer",
                     "headlineLevel": 3,
@@ -283,6 +286,7 @@
               {
                 "name": "CmdThumbnailScroller",
                 "props": {
+                  "i18n": "$active",
                   "cmdHeadline": {
                     "headlineText": "Neu angemeldete Frauen",
                     "headlineLevel": 3,
@@ -415,7 +419,7 @@
               "useSlots": [
                 "body"
               ],
-              "useDefaultPadding": false,
+              "useBoxBodyPadding": false,
               "stretchVertically": true
             },
             "components": [

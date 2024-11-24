@@ -1,4 +1,4 @@
-@import "comand-component-library/src/assets/styles/variables.scss";
+@import "comand-component-library/variables.scss";
 
 /* begin table of contents --------------------------------------------------------------------------------------------------------------------------------------------------- */
 /*
@@ -124,7 +124,7 @@ main {
 
 /* ---------------------------------------------- BEGIN MEDIA QUERIES -------------------------------------------------- */
 /* begin styles for medium screens --------------------------------------------------------------------------------------------------------------------------------------------------- */
-@media only screen and (max-width: $medium-max-width) {
+@media only screen and (width <= $medium-max-width) {
     .cmd-width-limitation-wrapper {
         section {
             --section-padding-top: calc(var(--default-padding) * 4);
@@ -136,7 +136,7 @@ main {
 /* end styles for medium screens --------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* begin styles for small screens --------------------------------------------------------------------------------------------------------------------------------------------------- */
-@media only screen and (max-width: $small-max-width) {
+@media only screen and (width <= $small-max-width) {
     .cmd-width-limitation-wrapper {
         section {
             --section-padding-top: calc(var(--default-padding) * 2);
@@ -146,10 +146,6 @@ main {
         &:nth-child(even) {
             background: var(--default-background);
         }
-    }
-
-    a[href^="tel"] {
-        text-decoration: underline;
     }
 }
 

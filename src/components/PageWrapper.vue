@@ -113,14 +113,12 @@
                 v-for="(component, index) in cmdSiteFooter.components || []" :key="index"
                 :is="component.name"
                 v-bind="component.props"
-                v-on="handlers(component)"
             >
                 <!-- begin child-component -->
                 <component
                     v-for="(childComponent, childComponentIndex) in component.components || []"
                     :key="childComponentIndex" :is="childComponent.name"
                     v-bind="childComponent.props"
-                    v-on="handlers(childComponent)"
                     :editContent="childComponent.editContent"
                 />
                 <!-- end child-component -->
@@ -269,14 +267,6 @@ export default {
         offcanvasToggled(event) {
             this.offCanvasOpen = event.open
         },
-        handlers(component) {
-            if (component.handlers === "toggleSection") {
-                return {
-                    "click": this.toggleSection
-                }
-            }
-            return {}
-        },
         openFancybox(event) {
             openFancyBox({url: event.target.href})
         },
@@ -313,7 +303,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import "comand-component-library/src/assets/styles/variables.scss";
+@import "comand-component-library/variables.scss";
+
 main#content {
     display: flex;
     flex-direction: column;

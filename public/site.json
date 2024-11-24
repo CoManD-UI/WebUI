@@ -17,7 +17,7 @@
     "breadcrumbs": {
       "showBreadcrumbs": true,
       "showHomeLinkFirst": true,
-      "showBreadcrumbLabel": false,
+      "showBreadcrumbLabel": true,
       "breadcrumbSeparator": "|"
     },
     "cookieDisclaimer": {
@@ -165,7 +165,8 @@
   ],
   "pageFooter": {
     "buttonPrintView": {
-      "show": true
+      "show": true,
+      "text": "Druckvorschau"
     },
     "cmdSocialNetworks": {
       "cmdFormElement": {

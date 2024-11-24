@@ -4,7 +4,6 @@
         :key="componentIndex"
         :is="component.name"
         v-bind="propsToBind(component)"
-        :i18n="currentLanguageData"
     >
         <template v-slot:[slotName] v-for="(childComponents, slotName) in groupComponentBySlotName(component.components)">
             <RenderComponents :components="childComponents" />
@@ -33,6 +32,12 @@ export default {
             if(component.id) {
                 componentProps.id = component.id
             }
+
+            // check for special value in i18n-property to use local translations from languages.json
+            if(componentProps.i18n === "$active") {
+                componentProps.i18n = this.currentLanguageData
+            }
+
             return componentProps
         },
         getSlotName(component) {

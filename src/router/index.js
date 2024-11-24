@@ -5,9 +5,7 @@ const routes = []
 
 const router = createRouter({
     history: createWebHistory(),
-    routes,
-    scrollBehavior() {
-    }
+    routes
 })
 
 router.beforeEach((to, from) => {
@@ -24,7 +22,7 @@ router.beforeEach((to, from) => {
         store.setCurrentLanguage(to.params.lang)
     }
     if (!to.meta?.cmdCustomRoute) {
-        store.loadPageContent(to.name)
+        store.loadPageContent(to.name, to.hash)
     }
     return true
 })

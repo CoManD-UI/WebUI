@@ -29,6 +29,7 @@
                   "boxesPerRow": 4,
                   "useRowViewAsDefault": true,
                   "useGap": true,
+                  "allowUserToToggleOrientation": false,
                   "cmdHeadline": {
                     "headlineText": "Frequently Asked Questions",
                     "headlineLevel": 4
@@ -36,6 +37,8 @@
                   "boxes": [
                     {
                       "boxType": "content",
+                      "openCollapsedBox": true,
+                      "collapsible": true,
                       "cmdHeadline": {
                         "headlineText": "Question 1",
                         "headlineLevel": 5
@@ -44,6 +47,7 @@
                     },
                     {
                       "boxType": "content",
+                      "collapsible": true,
                       "cmdHeadline": {
                         "headlineText": "Question 2",
                         "headlineLevel": 5
@@ -52,6 +56,7 @@
                     },
                     {
                       "boxType": "content",
+                      "collapsible": true,
                       "cmdHeadline": {
                         "headlineText": "Question 3",
                         "headlineLevel": 5
@@ -60,6 +65,7 @@
                     },
                     {
                       "boxType": "content",
+                      "collapsible": true,
                       "cmdHeadline": {
                         "headlineText": "Question 4",
                         "headlineLevel": 5
@@ -93,6 +99,7 @@
                   "boxesPerRow": 4,
                   "useRowViewAsDefault": true,
                   "useGap": true,
+                  "allowUserToToggleOrientation": false,
                   "cmdHeadline": {
                     "headlineText": "Frequently Asked Questions",
                     "headlineLevel": 4
@@ -100,6 +107,7 @@
                   "boxes": [
                     {
                       "boxType": "content",
+                      "collapsible": true,
                       "cmdHeadline": {
                         "headlineText": "Question 1",
                         "headlineLevel": 5
@@ -108,6 +116,7 @@
                     },
                     {
                       "boxType": "content",
+                      "collapsible": true,
                       "cmdHeadline": {
                         "headlineText": "Question 2",
                         "headlineLevel": 5
@@ -116,6 +125,7 @@
                     },
                     {
                       "boxType": "content",
+                      "collapsible": true,
                       "cmdHeadline": {
                         "headlineText": "Question 3",
                         "headlineLevel": 5
@@ -124,6 +134,7 @@
                     },
                     {
                       "boxType": "content",
+                      "collapsible": true,
                       "cmdHeadline": {
                         "headlineText": "Question 4",
                         "headlineLevel": 5
@@ -157,6 +168,8 @@
                   "boxesPerRow": 4,
                   "useRowViewAsDefault": true,
                   "useGap": true,
+                  "allowUserToToggleOrientation": false,
+                  "openBoxesByDefault": false,
                   "cmdHeadline": {
                     "headlineText": "Frequently Asked Questions",
                     "headlineLevel": 4
@@ -164,6 +177,7 @@
                   "boxes": [
                     {
                       "boxType": "content",
+                      "collapsible": true,
                       "cmdHeadline": {
                         "headlineText": "Question 1",
                         "headlineLevel": 5
@@ -172,6 +186,7 @@
                     },
                     {
                       "boxType": "content",
+                      "collapsible": true,
                       "cmdHeadline": {
                         "headlineText": "Question 2",
                         "headlineLevel": 5
@@ -180,6 +195,7 @@
                     },
                     {
                       "boxType": "content",
+                      "collapsible": true,
                       "cmdHeadline": {
                         "headlineText": "Question 3",
                         "headlineLevel": 5
@@ -188,6 +204,7 @@
                     },
                     {
                       "boxType": "content",
+                      "collapsible": true,
                       "cmdHeadline": {
                         "headlineText": "Question 4",
                         "headlineLevel": 5

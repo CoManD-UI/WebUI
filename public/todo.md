@@ -1,3 +1,4 @@
-Set corresponding flag for active language in CmdSwitchLanguage 
-Enabling to set i18n-.translations for components
+Set corresponding flag for active language in CmdSwitchLanguage
 Translations for links in CmdSocialMedia
+Replace section by components json-files
+CmdWebsite mit OnePager-Funktionalität testen (ggf. CmdOnePager löschen)

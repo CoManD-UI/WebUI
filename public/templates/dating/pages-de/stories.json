@@ -1,0 +1,34 @@
+{
+  "metadata": {
+    "title": "Inhalt",
+    "description": "Kurzbeschreibung für Inhaltsseite",
+    "rating": "",
+    "robots": "index/follow",
+    "author": ""
+  },
+  "mainContent": {
+    "pageHeadlineText": "Register",
+    "sections": [
+      {
+        "id": "section1",
+        "useFullDeviceWidth": false,
+        "contentOrientation": "vertical",
+        "iconClass": "icon-home",
+        "allowAddComponent": true,
+        "showLinkInMainNavigation": true,
+        "navEntry": "Text Block",
+        "order": 3,
+        "components": [
+          {
+            "name": "CmdBasicForm",
+            "props": {
+              "headlineText": "Register now",
+              "headlineLevel": "1",
+              "i18n": "$active"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

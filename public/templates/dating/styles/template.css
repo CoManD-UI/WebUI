@@ -109,7 +109,7 @@ button, .button {
 
     .cmd-login-form, .register-form fieldset, .cmd-tabs > div {
         backdrop-filter: var(--background-blur);
-        background: rgba(255, 255, 255, .2);
+        background: var(--background-high-transparency);
     }
 
     #age-wrapper {
@@ -198,6 +198,10 @@ button, .button {
                         font-size: 2rem;
                     }
                 }
+
+                &:not(:last-child) {
+                    border-bottom: none;
+                }
             }
         }
     }
@@ -251,14 +255,9 @@ html.dark-mode {
     #welcome {
         & section {
             & #top-container {
-                width: 60%;
+                width: 80%;
                 margin: 0 auto;
             }
-        }
-
-        .cmd-login-form, .register-form fieldset, .cmd-tabs > div {
-            backdrop-filter: var(--background-blur);
-            background: rgba(255, 255, 255, .5);
         }
     }
 }
@@ -292,5 +291,19 @@ html.dark-mode {
 }
 
 @media (prefers-color-scheme: dark) {
+    --background-low-transparency: rgba(0, 0, 0, .75);
+    --background-high-transparency: rgba(0, 0, 0, .2);
     --background-login-form: var(--fieldset-background);
+    --box-header-background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(15,15,15,1) 100%);
+    --site-footer-hyperlink-color: var(--pure-white);
+    --site-footer-text-decoration-color-highlighted: var(--primary-color);
+}
+
+html.dark-mode {
+    --background-low-transparency: rgba(0, 0, 0, .75);
+    --background-high-transparency: rgba(0, 0, 0, .2);
+    --background-login-form: var(--fieldset-background);
+    --box-header-background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(15,15,15,1) 100%);
+    --site-footer-hyperlink-color: var(--pure-white);
+    --site-footer-text-decoration-color-highlighted: var(--primary-color);
 }

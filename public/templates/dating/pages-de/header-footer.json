@@ -54,11 +54,14 @@
                   "sectionId": "section-login"
                 },
                 {
+                  "icon": {
+                    "iconClass": "icon-questionmark"
+                  },
                   "linkType": "router",
-                  "text": "Schwerpunkte",
+                  "text": "Faq (with anchor)",
                   "path": {
-                    "name": "schwerpunkte",
-                    "hash": "#anchor-schwerpunkte-strafrecht"
+                    "name": "faq",
+                    "hash": "#section3"
                   }
                 },
                 {
