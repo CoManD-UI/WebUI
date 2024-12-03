@@ -58,8 +58,15 @@
         </template>
 
         <!-- begin CmdFancyBox with CmdCookieDisclaimer -->
-        <CmdFancyBox v-if="cookieDisclaimer.useCookieDisclaimer" :show="showCookieDisclaimer()" :allowEscapeKey="false" :fancyboxOptions="{}" ariaLabelText="Cookie Disclaimer">
-            <CmdCookieDisclaimer :cookieOptions="cookieDisclaimer.cookieOptions" @close-cookie-disclaimer="setCookies" />
+        <CmdFancyBox
+            v-if="cookieDisclaimer.useCookieDisclaimer"
+            :show="showCookieDisclaimer()"
+            :allowEscapeKey="false"
+            :fancyBoxOptions="{ 'closeIcon': { show: false }}"
+            ariaLabelText="Cookie Disclaimer">
+            <CmdCookieDisclaimer
+                v-bind="cookieDisclaimer"
+                @close-cookie-disclaimer="setCookies" />
         </CmdFancyBox>
         <!-- end CmdFancyBox with CmdCookieDisclaimer -->
     </PageWrapper>

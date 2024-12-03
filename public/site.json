@@ -22,8 +22,13 @@
     },
     "cookieDisclaimer": {
       "useCookieDisclaimer": true,
+      "buttonLabelAcceptAllCookies": "Accept all cookies",
+      "buttonLabelAcceptCurrentSettings": "Accept current settings",
+      "privacyText": "By browsing this website you accept the usage and saving of anonymous data!",
       "required": {
-        "headline": "Required cookies",
+        "cmdHeadline": {
+          "headlineText": "Required cookies"
+        },
         "cookies": [
           {
             "id": "cookie-sessionid",
@@ -38,7 +43,7 @@
             }
           },
           {
-            "id": "cookie-google-recaptcha",
+            "id": "cookie-google-recaptcha2",
             "value": "google-recaptcha",
             "description": "This cookie prevents bots from sending forms",
             "labelText": "Google reCaptcha™",
@@ -53,7 +58,9 @@
         ]
       },
       "optional": {
-        "headline": "Optional cookies",
+        "cmdHeadline": {
+          "headlineText": "Optional cookies"
+        },
         "cookies": [
           {
             "id": "cookie-google-maps",
@@ -166,7 +173,7 @@
   "pageFooter": {
     "buttonPrintView": {
       "show": true,
-      "text": "Druckvorschau"
+      "text": "page_footer.text.button_print_preview"
     },
     "cmdSocialNetworks": {
       "cmdFormElement": {

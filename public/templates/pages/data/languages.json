@@ -70,7 +70,9 @@
     "social_networks.link_text.share_facebook": "Share",
     "social_networks.link_text.share_x": "Share",
     "social_networks.link_text.share_xing": "Share",
-    "social_networks.link_text.share_linkedin": "Share"
+    "social_networks.link_text.share_linkedin": "Share",
+    "page_footer.text.button_print_preview": "Print preview",
+    "cookie_disclaimer.tooltip.toggle_box_content": "Sichtbarkeit des Boxinhalts umschalten"
   },
   "de": {
     "main_navigation.close_navigation": "Navigation schließen",
@@ -143,6 +145,8 @@
     "social_networks.link_text.share_facebook": "Teilen",
     "social_networks.link_text.share_x": "Teilen",
     "social_networks.link_text.share_xing": "Teilen",
-    "social_networks.link_text.share_linkedin": "Teilen"
+    "social_networks.link_text.share_linkedin": "Teilen",
+    "page_footer.text.button_print_preview": "Druckvorschau",
+    "cookie_disclaimer.tooltip.toggle_box_content": "Sichtbarkeit des Boxinhalts umschalten"
   }
 }

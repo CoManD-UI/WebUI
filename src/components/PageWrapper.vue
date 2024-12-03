@@ -133,6 +133,7 @@
 
         <!-- begin cmd-back-to-top-button -->
         <CmdBackToTopButton
+            v-if="!offCanvasOpen"
             href="#anchor-back-to-top"
             :iconBackToTop="iconBackToTop"
             scroll-container=".page-wrapper"

@@ -1,7 +1,7 @@
 {
   "name": "comand-web-ui",
   "private": false,
-  "version": "1.0.61",
+  "version": "1.0.75",
   "license": "GPL-3.0-only",
   "author": "CoManD-UI",
   "type": "module",
@@ -24,8 +24,8 @@
   },
   "dependencies": {
     "axios": "^1.6.8",
-    "comand-component-library": "^4.1.23",
-    "comand-frontend-framework": "^4.1.4",
+    "comand-component-library": "^4.1.42",
+    "comand-frontend-framework": "^4.1.10",
     "comand-ui-iconfonts": "^1.0.14",
     "pinia": "^2.1.7",
     "vue": "^3.4.23",

@@ -136,5 +136,11 @@ export default {
             }
         }
     }
+
+    @media only screen and (width <= 1024px) {
+        .cmd-width-limitation-wrapper > section:has(:not(.cmd-width-limitation-wrapper)) {
+            opacity: 1;
+        }
+    }
 }
 </style>

@@ -14,7 +14,7 @@ html {
     --section-padding-bottom: calc(var(--default-padding) * 4) !important;
     --background-blur: blur(.7rem);
     --background-low-transparency: rgba(255, 255, 255, .75);
-    --background-high-transparency: rgba(255, 255, 255, .2);
+    --background-high-transparency: rgba(255, 255, 255, .4);
     --fieldset-background: var(--background-high-transparency);
     --site-footer-hyperlink-color: var(--default-text-color);
     --site-footer-hyperlink-color-highlighted: var(--primary-color);
@@ -237,16 +237,21 @@ html.dark-mode {
 @media only screen and (max-width: 1023px) {
     .site-header header .main-navigation-wrapper {
         nav {
-            --nav-border-radius: 0rem;
+            --nav-border-radius: 0;
+            background: none;
 
             > ul {
-                background: none;
+                background: rgba(255, 255, 255, .4) !important;
 
                 > li {
                     > a {
                         padding-top: 1rem;
                         padding-bottom: 1rem;
                     }
+                }
+
+                li {
+                    background: none;
                 }
             }
         }

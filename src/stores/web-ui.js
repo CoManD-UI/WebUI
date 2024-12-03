@@ -97,8 +97,12 @@ export const useWebUIStore = defineStore("cms", {
             // create deep-copy of pageFooterContent from state
             const pageFooterContent = JSON.parse(JSON.stringify(this.pageFooterContent))
 
+            if (pageFooterContent.buttonPrintView?.show) {
+                pageFooterContent.buttonPrintView.text = this.currentLanguageData[pageFooterContent.buttonPrintView.text] ?? pageFooterContent.buttonPrintView.text
+            }
+
             if (pageFooterContent.cmdSocialNetworks.cmdFormElement) {
-                // assign key from site.json to translate label-text
+            // assign key from site.json to translate label-text
                 pageFooterContent.cmdSocialNetworks.cmdFormElement.labelText = this.currentLanguageData[pageFooterContent.cmdSocialNetworks.cmdFormElement.labelText]
             }
 
@@ -113,6 +117,9 @@ export const useWebUIStore = defineStore("cms", {
         cookieDisclaimer() {
             return {
                 useCookieDisclaimer: this.siteConfiguration.cookieDisclaimer?.useCookieDisclaimer,
+                buttonLabelAcceptAllCookies: this.siteConfiguration.cookieDisclaimer?.buttonLabelAcceptAllCookies,
+                buttonLabelAcceptCurrentSettings: this.siteConfiguration.cookieDisclaimer?.buttonLabelAcceptCurrentSettings,
+                privacyText: this.siteConfiguration.cookieDisclaimer?.privacyText,
                 cookieOptions: {
                     required: this.siteConfiguration.cookieDisclaimer?.required,
                     optional: this.siteConfiguration.cookieDisclaimer?.optional
