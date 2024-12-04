@@ -65,6 +65,7 @@
             :fancyBoxOptions="{ 'closeIcon': { show: false }}"
             ariaLabelText="Cookie Disclaimer">
             <CmdCookieDisclaimer
+                :i18n="currentLanguageData"
                 v-bind="cookieDisclaimer"
                 @close-cookie-disclaimer="setCookies" />
         </CmdFancyBox>
