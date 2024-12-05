@@ -159,6 +159,7 @@ export default {
             "sections"
         ]),
         ...mapState(useWebUIStore, [
+            "currentLanguage",
             "mainNavigationEntries",
             "showSiteHeader",
             "showSiteFooter",
