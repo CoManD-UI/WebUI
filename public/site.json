@@ -43,16 +43,16 @@
             }
           },
           {
-            "id": "cookie-google-recaptcha2",
+            "id": "cookie-google-recaptcha",
             "value": "google-recaptcha",
-            "description": "This cookie prevents bots from sending forms",
-            "labelText": "Google reCaptcha™",
+            "description": "cookie_disclaimer.google_recaptcha.description",
+            "labelText": "cookie_disclaimer.google_recaptcha.labeltext",
             "disabled": true,
             "linkDataPrivacy": {
-              "label": "Details for this cookie:",
-              "link": "https://policies.google.com/privacy?hl=en-US",
+              "label": "cookie_disclaimer.google_recaptcha.link_data_privacy.label",
+              "link": "cookie_disclaimer.google_recaptcha.link_data_privacy.link",
               "target": "_blank",
-              "linkText": "Open data privacy from Google"
+              "linkText": "cookie_disclaimer.google_recaptcha.link_data_privacy.link_text"
             }
           }
         ]
@@ -65,14 +65,14 @@
           {
             "id": "cookie-google-maps",
             "value": "google-maps",
-            "description": "This cookie enables the Google Map™",
-            "labelText": "Google Maps™",
+            "description": "cookie_disclaimer.google_maps.description",
+            "labelText": "cookie_disclaimer.google_maps.labeltext",
             "disabled": false,
             "linkDataPrivacy": {
-              "label": "Details for this cookie:",
-              "link": "https://policies.google.com/privacy?hl=en-US",
+              "label": "cookie_disclaimer.google_maps.link_data_privacy_label.label",
+              "link": "cookie_disclaimer.google_maps.link_data_privacy_label.link",
               "target": "_blank",
-              "linkText": "Open data privacy from Google"
+              "linkText": "cookie_disclaimer.google_maps.link_data_privacy_label.link_text"
             }
           },
           {
@@ -108,41 +108,26 @@
           "id": "subpage1",
           "iconClass": "icon-globe",
           "navEntry": "subpage 1",
-          "navigation": [
-            "main"
-          ],
           "subEntries": [
             {
               "id": "sub-subpage",
               "iconClass": "icon-globe",
-              "navEntry": "sub-subpage",
-              "navigation": [
-                "main"
-              ]
+              "navEntry": "sub-subpage"
             }
           ]
         },
         {
           "id": "subpage2",
           "iconClass": "icon-user-profile",
-          "navEntry": "subpage 2",
-          "navigation": [
-            "main"
-          ]
+          "navEntry": "subpage 2"
         },
         {
           "id": "external",
           "iconClass": "icon-export",
           "navEntry": "External Link",
           "externalLink": true,
-          "path": "https://www.comand-ui.com",
-          "navigation": [
-            "main"
-          ]
+          "path": "https://www.comand-ui.com"
         }
-      ],
-      "navigation": [
-        "main"
       ]
     },
     {

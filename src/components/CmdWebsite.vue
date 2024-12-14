@@ -121,9 +121,6 @@ export default {
         // register event-listener to check if location.hash has changed, so 'active'-class for navigation can be set correctly
         addEventListener("hashchange", this.onLocationHashChanged)
 
-        // load labels and section-content from store
-        this.loadLabels()
-
         // save privacy settings
         this.fancyBoxCookieDisclaimer = localStorage.getItem('onepagerPrivacySettingsAccepted') !== "true"
 
@@ -159,7 +156,7 @@ export default {
             "sections"
         ]),
         ...mapState(useWebUIStore, [
-            "currentLanguage",
+            "currentLanguageData",
             "mainNavigationEntries",
             "showSiteHeader",
             "showSiteFooter",

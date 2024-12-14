@@ -72,7 +72,17 @@
     "social_networks.link_text.share_xing": "Share",
     "social_networks.link_text.share_linkedin": "Share",
     "page_footer.text.button_print_preview": "Print preview",
-    "cookie_disclaimer.tooltip.toggle_box_content": "Sichtbarkeit des Boxinhalts umschalten"
+    "cookie_disclaimer.tooltip.toggle_box_content": "Toggle visibility of box content",
+    "cookie_disclaimer.google_recaptcha.description": "This cookie prevents bots from sending forms.",
+    "cookie_disclaimer.google_recaptcha.labeltext": "Google reCaptcha™",
+    "cookie_disclaimer.google_recaptcha.link_data_privacy.label": "Details for this cookie:",
+    "cookie_disclaimer.google_recaptcha.link_data_privacy.link": "https://policies.google.com/privacy?hl=en-US",
+    "cookie_disclaimer.google_recaptcha.link_data_privacy.link_text": "Open data privacy from Google",
+    "cookie_disclaimer.google_maps.labeltext": "Google Map™",
+    "cookie_disclaimer.google_maps.description": "This cookie enables the Google Map™.",
+    "cookie_disclaimer.google_maps.link_data_privacy_label.label": "Details for this cookie:",
+    "cookie_disclaimer.google_maps.link_data_privacy_label.link": "https://policies.google.com/privacy?hl=en-US",
+    "cookie_disclaimer.google_maps.link_data_privacy_label.link_text": "Open data privacy from Google"
   },
   "de": {
     "main_navigation.close_navigation": "Navigation schließen",
@@ -147,6 +157,16 @@
     "social_networks.link_text.share_xing": "Teilen",
     "social_networks.link_text.share_linkedin": "Teilen",
     "page_footer.text.button_print_preview": "Druckvorschau",
-    "cookie_disclaimer.tooltip.toggle_box_content": "Sichtbarkeit des Boxinhalts umschalten"
+    "cookie_disclaimer.tooltip.toggle_box_content": "Sichtbarkeit des Boxinhalts umschalten",
+    "cookie_disclaimer.google_recaptcha.description": "Dieser Cookie verhindert das Absenden von Formularen durch Bots.",
+    "cookie_disclaimer.google_recaptcha.labeltext": "Google reCaptcha™",
+    "cookie_disclaimer.google_recaptcha.link_data_privacy.label": "Details zu diesem Cookie:",
+    "cookie_disclaimer.google_recaptcha.link_data_privacy.link": "https://policies.google.com/privacy?hl=en-US",
+    "cookie_disclaimer.google_recaptcha.link_data_privacy.link_text": "Datenschutzerklärung von Google öffnen",
+    "cookie_disclaimer.google_maps.labeltext": "Google Map™",
+    "cookie_disclaimer.google_maps.description": "Dieser Cookie aktiviert die Google Map™.",
+    "cookie_disclaimer.google_maps.link_data_privacy_label.label": "Details zu diesem Cookie:",
+    "cookie_disclaimer.google_maps.link_data_privacy_label.link": "https://policies.google.com/privacy?hl=de-DE",
+    "cookie_disclaimer.google_maps.link_data_privacy_label.link_text": "Datenschutzerklärung von Google öffnen"
   }
 }

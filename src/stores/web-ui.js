@@ -117,12 +117,35 @@ export const useWebUIStore = defineStore("cms", {
         cookieDisclaimer() {
             return {
                 useCookieDisclaimer: this.siteConfiguration.cookieDisclaimer?.useCookieDisclaimer,
-                buttonLabelAcceptAllCookies: this.siteConfiguration.cookieDisclaimer?.buttonLabelAcceptAllCookies,
-                buttonLabelAcceptCurrentSettings: this.siteConfiguration.cookieDisclaimer?.buttonLabelAcceptCurrentSettings,
-                privacyText: this.siteConfiguration.cookieDisclaimer?.privacyText,
                 cookieOptions: {
-                    required: this.siteConfiguration.cookieDisclaimer?.required,
-                    optional: this.siteConfiguration.cookieDisclaimer?.optional
+                    required: {
+                        ...this.siteConfiguration.cookieDisclaimer?.required,
+                        cookies: this.siteConfiguration.cookieDisclaimer?.required?.cookies?.map(cookie => ({
+                            ...cookie,
+                            description: this.currentLanguageData[cookie.description] ?? cookie.description,
+                            labelText: this.currentLanguageData[cookie.labelText] ?? cookie.labelText,
+                            linkDataPrivacy: {
+                                ...cookie.linkDataPrivacy,
+                                label: this.currentLanguageData[cookie.linkDataPrivacy?.label] ?? cookie.linkDataPrivacy?.label,
+                                link: this.currentLanguageData[cookie.linkDataPrivacy?.link] ?? cookie.linkDataPrivacy?.link,
+                                linkText: this.currentLanguageData[cookie.linkDataPrivacy?.linkText] ?? cookie.linkDataPrivacy?.linkText
+                            }
+                        })) || []
+                    },
+                    optional: {
+                         ...this.siteConfiguration.cookieDisclaimer?.optional,
+                            cookies: this.siteConfiguration.cookieDisclaimer?.optional?.cookies?.map(cookie => ({
+                            ...cookie,
+                            description: this.currentLanguageData[cookie.description] ?? cookie.description,
+                            labelText: this.currentLanguageData[cookie.labelText] ?? cookie.labelText,
+                            linkDataPrivacy: {
+                                ...cookie.linkDataPrivacy,
+                                label: this.currentLanguageData[cookie.linkDataPrivacy?.label] ?? cookie.linkDataPrivacy?.label,
+                                link: this.currentLanguageData[cookie.linkDataPrivacy?.link] ?? cookie.linkDataPrivacy?.link,
+                                linkText: this.currentLanguageData[cookie.linkDataPrivacy?.linkText] ?? cookie.linkDataPrivacy?.linkText
+                            }
+                        })) || []
+                    }
                 }
             }
         },
@@ -195,14 +218,18 @@ export const useWebUIStore = defineStore("cms", {
                 }))
         },
         pageEntries(state) {
-            const filterbyNavigation = (pages) => {
+            const filterbyNavigation = (pages, isSubentry = false) => {
+
                 return (pages || [])
-                    .filter(page => page.navigation?.includes("main"))
+                    // check if page has a navEntry (displayed text for navigation)
+                    .filter((page) => page.navEntry)
+                    // check if subentry (else check location of navigation-entry (i.e. "main", "footer")
+                    .filter((page) => isSubentry || !page.navigation || page.navigation?.includes("main"))
                     .map(page => ({
                         iconClass: page.iconClass,
                         text: this.currentLanguageData[page.navEntry] ?? page.navEntry,
                         ...navEntryType(page),
-                        subentries: filterbyNavigation(page.subEntries)
+                        subentries: filterbyNavigation(page.subEntries, true)
                     }))
             }
 
